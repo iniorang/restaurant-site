@@ -20,759 +20,850 @@
 </head>
 
 <body>
-  <!--Navigation Bar Start-->
-  <nav class="navbar navbar-expand-md navbar-scrolled fixed-top " aria-label="Second navbar example">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <h3>Warung Hati</h3>
-      </a>
-      <a class="btn d-md-none" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button"
-        aria-controls="offcanvasNav">
-        <i class="fa-solid fa-bars" style="color: white;"></i>
-      </a>
-      <div class="d-none d-md-block" id="navbarsExample02">
-        <ul class="navbar-nav me-auto ms-1">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutus.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="menu.html">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mealplans.html">Meal Plans</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Offcanvas -->
-  <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasNav"
-    aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <h3 class="offcanvas-title text-white" id="offcanvasRightLabel">Warung Hati</h3>
-      <button type="button" class="btn-close end-100" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="nav-canvas">
-        <div class="link-canvas">
-          <a href="index.html">
-            <h1>Home</h1>
-          </a>
-        </div>
-        <div class="link-canvas">
-          <a href="aboutus.html">
-            <h1>About Us</h1>
-          </a>
-        </div>
-        <div class="link-canvas">
-          <a href="menu.html">
-            <h1>Menu</h1>
-          </a>
-        </div>
-        <div class="link-canvas">
-          <a href="mealplans.html">
-            <h1>Meal Plans</h1>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--End of Navbar-->
-  <!--Tabs of category-->
-  <div class="abouthead" style="background-image: url(./img/Front_Page/JajanPasar.png); object-position: 30% 80%;">
-    <div class="abouthead-overlay d-inline-flex p-2 align-items-center">
-      <div class="container text-center">
-        <h1 class="text-center">Warung Hati's Greatest Creation</h1>
-        <div class="container d-none d-lg-block d-xl-block d-xxl-block mt-3">
-          <ul class="nav nav-colorfirst justify-content-center mt-3" id="Food-Tab">
+  <header>
+    <!--Navigation Bar Start-->
+    <nav class="navbar navbar-expand-md navbar-scrolled fixed-top " aria-label="Second navbar example">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <h3>Warung Hati</h3>
+        </a>
+        <a class="btn d-md-none" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button"
+          aria-controls="offcanvasNav">
+          <i class="fa-solid fa-bars" style="color: white;"></i>
+        </a>
+        <div class="d-none d-md-block" id="navbarsExample02">
+          <ul class="navbar-nav me-auto ms-1">
             <li class="nav-item">
-              <a href="#primary" class="nav-link active" data-bs-toggle="tab">
-                <p>Main</p>
-              </a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#snack" class="nav-link" data-bs-toggle="tab">
-                <P>Snack</P>
-              </a>
+              <a class="nav-link" href="aboutus.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a href="#side" class="nav-link" data-bs-toggle="tab">
-                <p>Side</p>
-              </a>
+              <a class="nav-link active" href="menu.html">Menu</a>
             </li>
             <li class="nav-item">
-              <a href="#vegetable" class="nav-link" data-bs-toggle="tab">
-                <p>Veggies</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#drink" class="nav-link" data-bs-toggle="tab">
-                <p>Beverage</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#party" class="nav-link" data-bs-toggle="tab">
-                <p>Party</p>
-              </a>
+              <a class="nav-link" href="mealplans.html">Meal Plans</a>
             </li>
           </ul>
         </div>
-        <div class="container d-block d-md-block d-lg-none d-xl-none d-xxl-none mt-5">
-          <select class="form-select" id="Food-tab" aria-label="Navigation for category">
-            <option value="#primary" data-bs-toggle="tab" selected>Main</option>
-            <option value="#snack" data-bs-toggle="tab">Snack</option>
-            <option value="#side" data-bs-toggle="tab">Side</option>
-            <option value="#vegetable" data-bs-toggle="tab">Veggies</option>
-            <option value="#drink" data-bs-toggle="tab">Beverage</option>
-            <option value="#party" data-bs-toggle="tab">Party</option>
-          </select>
-        </div>
       </div>
-    </div>
-  </div>
-  </div>
-  <div class="tab-content my-5">
-    <div class="tab-pane active show" id="primary">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Asinan Betawi.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Asinan Betawi</h2>
-                <p class="card-text"> A harmonious blend of sweet, sour, and nutty flavors. Crisp vegetables and fruits
-                  mingle with a zesty tamarind dressing, topped with crushed peanuts for a delightful crunch.</p>
-              </div>
-            </div>
+    </nav>
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasNav"
+      aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title text-white" id="offcanvasRightLabel">Warung Hati</h3>
+        <button type="button" class="btn-close end-100" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="nav-canvas">
+          <div class="link-canvas">
+            <a href="index.html">
+              <h1>Home</h1>
+            </a>
           </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Gado-Gado 3.png" class="card-img-top">
-              <div class="card-body">
-                <h2 class="card-title">Gado-Gado</h2>
-                <p class="card-text">A delightful texture dance. Crisp vegetables, tofu, and tempeh embrace a creamy
-                  peanut sauce infused with tamarind and chili's vibrant notes.</p>
-              </div>
-            </div>
+          <div class="link-canvas">
+            <a href="aboutus.html">
+              <h1>About Us</h1>
+            </a>
           </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Kupat Tahu Magelang 1.png" class="card-img-top"
-                style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Kupat Tahu Magelang</h2>
-                <p class="card-text">Embrace the medley of textures. Steamed rice cake and silky tofu meet a rich peanut
-                  sauce, enriched with a sprinkle of sprouts and herbs.
-                </p>
-              </div>
-            </div>
+          <div class="link-canvas">
+            <a href="menu.html">
+              <h1>Menu</h1>
+            </a>
           </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Laksa Medan.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Laksa Medan</h2>
-                <p class="card-text">A feast for your senses. Creamy coconut broth, noodles, and a harmonious blend of
-                  toppings. Laksa Medan takes you on a flavor-packed journey.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Mie Kocok Bandung.png" class="card-img-top" style="object-position: 50% 35%;">
-              <div class="card-body">
-                <h2 class="card-title">Mie Kocok Bandung</h2>
-                <p class="card-text">Savor the symphony of tender beef, chewy noodles, and aromatic herbs in a savory
-                  broth. A taste that lingers long after each spoonful.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Nasi Betutu.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Betutu</h2>
-                <p class="card-text">Unwrap Bali's traditions. Slow-cooked chicken or duck wrapped in fragrant spices,
-                  delivers a tender taste of the island's heart.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Nasi Gudeg Jogja.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Gudeg</h2>
-                <p class="card-text">Unlock Java's heart with sweetly stewed young jackfruit. A fragrant blend of
-                  coconut milk, palm sugar, and spices weaves a captivating tale of flavors.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Nasi Liwet.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Liwet</h2>
-                <p class="card-text">Relish the fragrant embrace of coconut-milk-infused rice, tender chicken, egg, and
-                  a medley of herbs and spices. Nasi Liwet is pure Indonesian comfort.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Nasi Pecel 2.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Pecel</h2>
-                <p class="card-text">Indulge in a burst of colors and tastes. Crisp veggies adorned with a bold peanut
-                  sauce, kissed by kaffir lime leaves and a hint of spice.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Nasi Tutug Oncom.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Tutug Oncom</h2>
-                <p class="card-text">Savor West Java's flavors. Warm rice and oncom (fermented soybean) mingle,
-                  accentuated by savory spices. A taste that speaks of tradition and love.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Nasi Uduk.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Uduk</h2>
-                <p class="card-text">Delight in fragrant Nasi Uduk. Coconut-milk-infused rice, pandan leaves, and a
-                  parade of tempting sides. An ode to Indonesia's culinary artistry.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Soto Ayam.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Soto Ayam</h2>
-                <p class="card-text">Warmth in every sip. Soto Ayam delights with its fragrant chicken broth,
-                  vermicelli, and the invigorating touch of lemongrass and lime.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Soto Betawi 2.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Soto Betawi</h2>
-                <p class="card-text">Warm your soul with rich coconut broth, tender beef, and fragrant spices. A bowl of
-                  Soto Betawi captures Jakarta's essence in every spoonful.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Menu_Utama/Nasi Timbel 2.png" class="card-img-top">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Timbel</h2>
-                <p class="card-text"> A whole food meal from Sundanese consisting of Sayur Asem, sambal, ungkep kampong
-                  chicken, and organic rice wrapped with banana leaves.</p>
-              </div>
-            </div>
+          <div class="link-canvas">
+            <a href="mealplans.html">
+              <h1>Meal Plans</h1>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="tab-pane" id="snack">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Asinan Bogor (2).png" class="card-img-top" style="object-position: 50% 50%;">
-              <div class="card-body">
-                <h2 class="card-title">Asinan Bogor</h2>
-                <p class="card-text">A harmonious blend of sweet, sour, and nutty flavors. Crisp vegetables and fruits
-                  mingle with a zesty tamarind dressing, topped with crushed peanuts for a delightful crunch.</p>
-              </div>
-            </div>
+  </header>
+  <!--End of Navbar-->
+  <!--Tabs of category-->
+  <main>
+    <!-- Hero / heading menu -->
+    <section class="abouthead" style="background-image: url(./img/Front_Page/JajanPasar.png); object-position: 30% 80%;">
+      <div class="abouthead-overlay d-inline-flex p-2 align-items-center">
+        <div class="container text-center">
+          <h1 class="text-center">Warung Hati's Greatest Creation</h1>
+          <div class="container d-none d-lg-block d-xl-block d-xxl-block mt-3">
+            <ul class="nav nav-colorfirst justify-content-center mt-3" id="Food-Tab">
+              <li class="nav-item">
+                <a href="#primary" class="nav-link active" data-bs-toggle="tab">
+                  <p>Main</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#snack" class="nav-link" data-bs-toggle="tab">
+                  <P>Snack</P>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#side" class="nav-link" data-bs-toggle="tab">
+                  <p>Side</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#vegetable" class="nav-link" data-bs-toggle="tab">
+                  <p>Veggies</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#drink" class="nav-link" data-bs-toggle="tab">
+                  <p>Beverage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#party" class="nav-link" data-bs-toggle="tab">
+                  <p>Party</p>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Batagor.png" class="card-img-top" style="object-position: 50% 100%;">
-              <div class="card-body">
-                <h2 class="card-title">Batagor</h2>
-                <p class="card-text">Batagor beckons with its magic. Crunchy fried dumplings, filled with fish and
-                  chicken, served with a nutty peanut sauce.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Bika Ambon.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Bika Ambon</h2>
-                <p class="card-text">Indulge in Bika Ambon's allure. A sweet blend of tapioca and coconut milk, graced
-                  with a touch of pandan. Its honeycomb texture and pandan aroma enchant with every bite.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Bubur .png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Bubur</h2>
-                <p class="card-text">Comfort in a bowl. Bubur delights with its warm embrace of rice porridge,
-                  accompanied by a medley of toppings and a sprinkle of crispy shallots.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Combro.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Combro</h2>
-                <p class="card-text">Savor the thrill of Combro. Cassava and corn fritters, crisp outside and soft
-                  inside, kissed by aromatic spices for an irresistible taste.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Jajan Pasar 5.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Jajan Pasar</h2>
-                <p class="card-text">Delight in Jajan Pasar's treasures. Assorted traditional sweets showcase
-                  Indonesia's culinary heritage, embodying flavors that enchant generations.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Kue Lumpang Pandan.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Kue Lumpang Pandan</h2>
-                <p class="card-text">Explore Kue Lumpang Pandan's charm. Coconut and pandan-infused rice cakes, layered
-                  with fragrant palm sugar. A dessert that captivates with every layer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Lumpia.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Lumpia</h2>
-                <p class="card-text">Crisp and delightful Lumpia await. Golden-fried spring rolls embrace a medley of
-                  veggies and sometimes meat, promising a harmonious blend of flavors.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Lupis Ketan.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Lopis Ketan</h2>
-                <p class="card-text">A festival favorite. Chewy savory glutinous rice cakes infused with palm sugar,
-                  coated in coconut flakes, and a hint of aromatic pandan. Perfect for celebrations or everyday snacks.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Pempek Palembang.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Pempek Palembang</h2>
-                <p class="card-text">Dive into Pempek Palembang—a symphony of fish, sago, and spices. The perfect
-                  harmony of textures, served with a tangy tamarind sauce.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Rujak Buah 2.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Rujak Buah</h2>
-                <p class="card-text">A dance of tastes. A mix of tropical fruits, drizzled with a spicy palm
-                  sugar dressing and topped with crushed peanuts.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Serabi Petulo.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Serabi Petulo</h2>
-                <p class="card-text">A blend of coconut and rice flour, graced by palm sugar. Fragrant pandan leaves
-                  enhance its enchanting taste.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Siomay Bandung 5.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Siomay Bandung</h2>
-                <p class="card-text">Elevate your senses with Siomay Bandung. Steamed fish and shrimp dumplings, crowned
-                  with peanut sauce and a dash of zesty lime. A taste sensation awaits.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Jajanan/Tahu Gejrot 1.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Tahu Gejrot</h2>
-                <p class="card-text">Revel in Tahu Gejrot's excitement. Deep-fried tofu, tangy-spicy sauce, and a
-                  sprinkle of shallots create an explosion of taste and texture.</p>
-              </div>
-            </div>
+          <div class="container d-block d-md-block d-lg-none d-xl-none d-xxl-none mt-5">
+            <select class="form-select" id="Food-tab" aria-label="Navigation for category">
+              <option value="#primary" data-bs-toggle="tab" selected>Main</option>
+              <option value="#snack" data-bs-toggle="tab">Snack</option>
+              <option value="#side" data-bs-toggle="tab">Side</option>
+              <option value="#vegetable" data-bs-toggle="tab">Veggies</option>
+              <option value="#drink" data-bs-toggle="tab">Beverage</option>
+              <option value="#party" data-bs-toggle="tab">Party</option>
+            </select>
           </div>
         </div>
       </div>
-    </div>
-    <div class="tab-pane" id="side">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Ayam Bakar.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Ayam Bakar</h2>
-                <p class="card-text">Succulent grilled chicken glazed with honey goodness. Marinated to perfection, this
-                  dish boasts a harmonious blend of sweet, smoky, and savory flavors that ignite your taste buds.</p>
+    </section>
+
+    <!-- Tab content -->
+    <section class="tab-content my-5">
+      <!-- Main -->
+      <section class="tab-pane active show" id="primary" aria-label="Main dishes">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Asinan Betawi.png" class="card-img-top" style="object-position: 50% 75%;" alt="Asinan Betawi">
+                <div class="card-body">
+                  <h2 class="card-title">Asinan Betawi</h2>
+                  <p class="card-text">A harmonious blend of sweet, sour, and nutty flavors. Crisp vegetables and
+                    fruits
+                    mingle with a zesty tamarind dressing, topped with crushed peanuts for a delightful crunch.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Ayam Betutu.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Ayam Betutu</h2>
-                <p class="card-text">Unveil the magic of Ayam Betutu. Chicken marinated with a blend of spices, wrapped
-                  in banana leaves and slow-cooked until tender. A flavorful journey for your palate.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Gado-Gado 3.png" class="card-img-top">
+                <div class="card-body">
+                  <h2 class="card-title">Gado-Gado</h2>
+                  <p class="card-text">A delightful texture dance. Crisp vegetables, tofu, and tempeh embrace a creamy
+                    peanut sauce infused with tamarind and chili's vibrant notes.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Ayam Goreng.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Ayam Goreng</h2>
-                <p class="card-text">Crispy perfection awaits with our Ayam Goreng. Golden-fried chicken infused with
-                  aromatic spices for an explosion of taste and crunch in every bite.</p>
+            </article>
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Kupat Tahu Magelang 1.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Kupat Tahu Magelang</h2>
+                  <p class="card-text">Embrace the medley of textures. Steamed rice cake and silky tofu meet a rich
+                    peanut
+                    sauce, enriched with a sprinkle of sprouts and herbs.
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Iga Penyet.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Iga Penyet</h2>
-                <p class="card-text">Savor the succulence of Iga Penyet. Crispy fried ribs, lovingly smashed and served
-                  with sambal, deliver a fiery kick of flavor.</p>
+            </article>
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Laksa Medan.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Laksa Medan</h2>
+                  <p class="card-text">A feast for your senses. Creamy coconut broth, noodles, and a harmonious blend of
+                    toppings. Laksa Medan takes you on a flavor-packed journey.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Ikan Goreng.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Ikan Goreng</h2>
-                <p class="card-text">Dive into the crispy world of Ikan Goreng. Our golden-fried fish is seasoned with a
-                  blend of spices, creating a delightful harmony of textures and flavors.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Mie Kocok Bandung.png" class="card-img-top" style="object-position: 50% 35%;">
+                <div class="card-body">
+                  <h2 class="card-title">Mie Kocok Bandung</h2>
+                  <p class="card-text">Savor the symphony of tender beef, chewy noodles, and aromatic herbs in a savory
+                    broth. A taste that lingers long after each spoonful.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Ikan With Dabu Sambal.png" class="card-img-top"
-                style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Ikan Sambal Dabu</h2>
-                <p class="card-text">A fiery delight of Ikan Sambal Dabu. Fish dressed in vibrant chili sambal, enriched
-                  with Dabu-Dabu, a tangy mix of herbs and spices.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Nasi Betutu.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Betutu</h2>
+                  <p class="card-text">Unwrap Bali's traditions. Slow-cooked chicken or duck wrapped in fragrant spices,
+                    delivers a tender taste of the island's heart.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Pampis Cakalang.png" class="card-img-top"
-                style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Pampis Cakalang</h2>
-                <p class="card-text">Experience the richness of Pampis Cakalang. Tender shredded tuna, seasoned and
-                  slow-cooked to perfection. A flavor journey that captures the essence of Indonesia.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Nasi Gudeg Jogja.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Gudeg</h2>
+                  <p class="card-text">Unlock Java's heart with sweetly stewed young jackfruit. A fragrant blend of
+                    coconut milk, palm sugar, and spices weaves a captivating tale of flavors.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Pepes Ikan.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Pepes Ikan</h2>
-                <p class="card-text">Unwrap the secret of Pepes Ikan. Fish, fragrant herbs, and spices cocooned in
-                  banana leaves, resulting in a tender, aromatic masterpiece.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Nasi Liwet.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Liwet</h2>
+                  <p class="card-text">Relish the fragrant embrace of coconut-milk-infused rice, tender chicken, egg,
+                    and
+                    a medley of herbs and spices. Nasi Liwet is pure Indonesian comfort.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Pepes Tahu 3.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Pepes Tahu</h2>
-                <p class="card-text">Delight in Pepes Tahu. Soft tofu, aromatic herbs, and spices wrapped in banana
-                  leaves, create a fragrant, steamed treasure trove of taste.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Nasi Pecel 2.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Pecel</h2>
+                  <p class="card-text">Indulge in a burst of colors and tastes. Crisp veggies adorned with a bold peanut
+                    sauce, kissed by kaffir lime leaves and a hint of spice.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Rendang 2.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Rendang</h2>
-                <p class="card-text">Experience the legend of Rendang. Slow-cooked beef infused with a rich blend of
-                  coconut milk and spices, creates a symphony of flavors that's pure delight.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Nasi Tutug Oncom.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Tutug Oncom</h2>
+                  <p class="card-text">Savor West Java's flavors. Warm rice and oncom (fermented soybean) mingle,
+                    accentuated by savory spices. A taste that speaks of tradition and love.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Sate Ayam 1.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Sate Ayam</h2>
-                <p class="card-text">Embark on a culinary adventure with Sate Ayam. Skewered, grilled chicken marinated
-                  in a tantalizing blend of spices served with a rich peanut sauce.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Nasi Uduk.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Uduk</h2>
+                  <p class="card-text">Delight in fragrant Nasi Uduk. Coconut-milk-infused rice, pandan leaves, and a
+                    parade of tempting sides. An ode to Indonesia's culinary artistry.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Sate Lilit.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Sate Lilit</h2>
-                <p class="card-text">Sate Lilit, is a culinary gem. Minced fish and aromatic spices molded onto
-                  lemongrass sticks, grilled to perfection, and served with a tantalizing sauce.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Soto Ayam.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Soto Ayam</h2>
+                  <p class="card-text">Warmth in every sip. Soto Ayam delights with its fragrant chicken broth,
+                    vermicelli, and the invigorating touch of lemongrass and lime.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Tahu Goreng.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Tahu Goreng</h2>
-                <p class="card-text">Crispy meets creamy in Tahu Goreng. Golden-fried tofu served with a zesty chili
-                  sauce. A taste sensation that's both satisfying and refreshing.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Soto Betawi 2.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Soto Betawi</h2>
+                  <p class="card-text">Warm your soul with rich coconut broth, tender beef, and fragrant spices. A bowl
+                    of
+                    Soto Betawi captures Jakarta's essence in every spoonful.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Lauk/Tempe Orek.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Tempe Orek</h2>
-                <p class="card-text">Tempe Orek beckons with its sweet and savory allure. Tempeh, cooked to perfection
-                  with a medley of spices, offers a delightful textural and flavor contrast.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Menu_Utama/Nasi Timbel 2.png" class="card-img-top">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Timbel</h2>
+                  <p class="card-text"> A whole food meal from Sundanese consisting of Sayur Asem, sambal, ungkep
+                    kampong
+                    chicken, and organic rice wrapped with banana leaves.</p>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tab-pane" id="vegetable">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Lalapan.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Lalapan</h2>
-                <p class="card-text">Organic veggies meet savory sambal. Dive into our Lalapan featuring crisp
-                  cucumbers, tangy tomatoes, and spicy chili paste. A refreshing delight for your senses.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Oncom Leunca.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Tumis Oncom Leunca</h2>
-                <p class="card-text">Savory oncom "fermented soy cake" and crunchy leunca "black nightshade" stir-fried
-                  with garlic, chili, and a medley of spices. A satisfying umami explosion.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Sayur Asem.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Sayur Asem</h2>
-                <p class="card-text">A vibrant medley of chayote, long beans, and corn, balanced by tangy tamarind and
-                  sweet palm sugar. A symphony of flavors awaits.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Sayur Bayam 3.png" class="card-img-top"
-                style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Sayur Bayem</h2>
-                <p class="card-text">A delicate dance of spinach, carrot, and sponge gourd in a soothing broth.
-                  Enlivened by finger root, kemangi, and a subtle sweet-sour symphony. Pure comfort in every spoonful.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Sayur Lodeh.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Sayur Lodeh</h2>
-                <p class="card-text">Creamy coconut broth embraces tender veggies—green beans, cabbage, and tofu. A
-                  blend of flavors that's rich, soothing, and utterly satisfying.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Sayur Pecel.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Sayur Pecel</h2>
-                <p class="card-text">Dive into a plate of mixed organic veggies drizzled with the irresistible flavors
-                  of cashew sauce. A tantalizing harmony of crunch and creaminess.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Sayur Sop.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Soup</h2>
-                <p class="card-text">A bowl of comfort awaits. Enjoy a medley of fresh vegetables in a light, flavorful
-                  broth. Nutrient-rich goodness that warms your soul.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/5. Ala Carte/Sayur/Tumis Bunga Pepaya.png" class="card-img-top"
-                style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Tumis Bunga Pepeaya</h2>
-                <p class="card-text">Papaya blossoms stir-fried to perfection with a medley of aromatics. Savory,
-                  tender, and utterly captivating on your palate.</p>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="tab-pane" id="drink">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Minuman/Bandrek.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Bandrek</h2>
-                <p class="card-text">A warm embrace of ginger, palm sugar, and spices. Comfort in every sip, perfect for
-                  cozy moments.</p>
+      </section>
+
+      <!-- Snack -->
+      <section class="tab-pane" id="snack" aria-label="Snack dishes">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Asinan Bogor (2).png" class="card-img-top" style="object-position: 50% 50%;">
+                <div class="card-body">
+                  <h2 class="card-title">Asinan Bogor</h2>
+                  <p class="card-text">A harmonious blend of sweet, sour, and nutty flavors. Crisp vegetables and fruits
+                    mingle with a zesty tamarind dressing, topped with crushed peanuts for a delightful crunch.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Minuman/Es Campur.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Es Campur</h2>
-                <p class="card-text">A delightful mix of fruits, jellies, and syrups. Every spoonful reveals
-                  surprises—cool, colorful, and simply irresistible.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Batagor.png" class="card-img-top" style="object-position: 50% 100%;">
+                <div class="card-body">
+                  <h2 class="card-title">Batagor</h2>
+                  <p class="card-text">Batagor beckons with its magic. Crunchy fried dumplings, filled with fish and
+                    chicken, served with a nutty peanut sauce.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Minuman/Es Dawet 2.png" class="card-img-top">
-              <div class="card-body">
-                <h2 class="card-title">Es Cendol Dawet</h2>
-                <p class="card-text">Tropical paradise in a glass. Avocado, jackfruit, and coconut meat, drenched in
-                  sweet syrup. A harmony of richness and freshness.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Bika Ambon.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Bika Ambon</h2>
+                  <p class="card-text">Indulge in Bika Ambon's allure. A sweet blend of tapioca and coconut milk, graced
+                    with a touch of pandan. Its honeycomb texture and pandan aroma enchant with every bite.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Minuman/Es Cincau 2.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Es Cincau</h2>
-                <p class="card-text">Dive into the magic of green grass jelly, melded with coconut milk and a touch of
-                  palm sugar. A cool classic that's pure enchantment.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Bubur .png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Bubur</h2>
+                  <p class="card-text">Comfort in a bowl. Bubur delights with its warm embrace of rice porridge,
+                    accompanied by a medley of toppings and a sprinkle of crispy shallots.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Minuman/Es Kuwut Bali(1).png" class="card-img-top">
-              <div class="card-body">
-                <h2 class="card-title">Es Kuwut Bali</h2>
-                <p class="card-text">A tropical symphony in a glass. Shredded young coconut, refreshing melon, crisp
-                  cucumber, zesty lime, and fragrant selasih and mint. A sweet and tangy sensation with delightful
-                  textures, capturing the essence of Bali.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Combro.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Combro</h2>
+                  <p class="card-text">Savor the thrill of Combro. Cassava and corn fritters, crisp outside and soft
+                    inside, kissed by aromatic spices for an irresistible taste.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Minuman/Es Puter 2.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Es Puter</h2>
-                <p class="card-text">Creamy coconut ice cream, a taste of pure indulgence. Treat yourself to the smooth
-                  sensation of Es Puter, a dessert that's simply irresistible.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Jajan Pasar 5.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Jajan Pasar</h2>
+                  <p class="card-text">Delight in Jajan Pasar's treasures. Assorted traditional sweets showcase
+                    Indonesia's culinary heritage, embodying flavors that enchant generations.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Minuman/Es Teler.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Es Teler</h2>
-                <p class="card-text">Tropical paradise in a glass. Avocado, jackfruit, and coconut meat, drenched in
-                  sweet syrup. A harmony of richness and freshness.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Kue Lumpang Pandan.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Kue Lumpang Pandan</h2>
+                  <p class="card-text">Explore Kue Lumpang Pandan's charm. Coconut and pandan-infused rice cakes,
+                    layered
+                    with fragrant palm sugar. A dessert that captivates with every layer.</p>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Lumpia.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Lumpia</h2>
+                  <p class="card-text">Crisp and delightful Lumpia await. Golden-fried spring rolls embrace a medley of
+                    veggies and sometimes meat, promising a harmonious blend of flavors.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Lupis Ketan.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Lopis Ketan</h2>
+                  <p class="card-text">A festival favorite. Chewy savory glutinous rice cakes infused with palm sugar,
+                    coated in coconut flakes, and a hint of aromatic pandan. Perfect for celebrations or everyday
+                    snacks.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Pempek Palembang.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Pempek Palembang</h2>
+                  <p class="card-text">Dive into Pempek Palembang—a symphony of fish, sago, and spices. The perfect
+                    harmony of textures, served with a tangy tamarind sauce.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Rujak Buah 2.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Rujak Buah</h2>
+                  <p class="card-text">A dance of tastes. A mix of tropical fruits, drizzled with a spicy palm
+                    sugar dressing and topped with crushed peanuts.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Serabi Petulo.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Serabi Petulo</h2>
+                  <p class="card-text">A blend of coconut and rice flour, graced by palm sugar. Fragrant pandan leaves
+                    enhance its enchanting taste.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Siomay Bandung 5.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Siomay Bandung</h2>
+                  <p class="card-text">Elevate your senses with Siomay Bandung. Steamed fish and shrimp dumplings,
+                    crowned
+                    with peanut sauce and a dash of zesty lime. A taste sensation awaits.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Jajanan/Tahu Gejrot 1.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Tahu Gejrot</h2>
+                  <p class="card-text">Revel in Tahu Gejrot's excitement. Deep-fried tofu, tangy-spicy sauce, and a
+                    sprinkle of shallots create an explosion of taste and texture.</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="tab-pane" id="party">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Perayaan/Nasi Bancaan.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Bancaan</h2>
-                <p class="card-text">A festival of flavors on one plate. Nutty brown/red rice accompanied by aromatic
-                  rempah, grilled chicken/fish, curry tofu and tempe, and a fiery sambal. A celebration of Indonesia's
-                  culinary artistry.</p>
+      </section>
+
+      <!-- Side -->
+      <section class="tab-pane" id="side" aria-label="Side dishes">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Ayam Bakar.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Ayam Bakar</h2>
+                  <p class="card-text">Succulent grilled chicken glazed with honey goodness. Marinated to perfection,
+                    this
+                    dish boasts a harmonious blend of sweet, smoky, and savory flavors that ignite your taste buds.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card food-card">
-              <img src="img/Perayaan/Nasi Kuning 3.png" class="card-img-top" style="object-position: 50% 75%;">
-              <div class="card-body">
-                <h2 class="card-title">Nasi Kuning</h2>
-                <p class="card-text">A golden tribute to tradition. Turmeric-infused rice, caramelized tempe, coconut
-                  oil-fried chicken, serundeng, and sambal. A harmonious feast that embodies the spirit of festivities
-                  in every bite.</p>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Ayam Betutu.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Ayam Betutu</h2>
+                  <p class="card-text">Unveil the magic of Ayam Betutu. Chicken marinated with a blend of spices,
+                    wrapped
+                    in banana leaves and slow-cooked until tender. A flavorful journey for your palate.</p>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Ayam Goreng.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Ayam Goreng</h2>
+                  <p class="card-text">Crispy perfection awaits with our Ayam Goreng. Golden-fried chicken infused with
+                    aromatic spices for an explosion of taste and crunch in every bite.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Iga Penyet.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Iga Penyet</h2>
+                  <p class="card-text">Savor the succulence of Iga Penyet. Crispy fried ribs, lovingly smashed and
+                    served
+                    with sambal, deliver a fiery kick of flavor.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Ikan Goreng.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Ikan Goreng</h2>
+                  <p class="card-text">Dive into the crispy world of Ikan Goreng. Our golden-fried fish is seasoned with
+                    a
+                    blend of spices, creating a delightful harmony of textures and flavors.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Ikan With Dabu Sambal.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Ikan Sambal Dabu</h2>
+                  <p class="card-text">A fiery delight of Ikan Sambal Dabu. Fish dressed in vibrant chili sambal,
+                    enriched
+                    with Dabu-Dabu, a tangy mix of herbs and spices.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Pampis Cakalang.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Pampis Cakalang</h2>
+                  <p class="card-text">Experience the richness of Pampis Cakalang. Tender shredded tuna, seasoned and
+                    slow-cooked to perfection. A flavor journey that captures the essence of Indonesia.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Pepes Ikan.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Pepes Ikan</h2>
+                  <p class="card-text">Unwrap the secret of Pepes Ikan. Fish, fragrant herbs, and spices cocooned in
+                    banana leaves, resulting in a tender, aromatic masterpiece.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Pepes Tahu 3.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Pepes Tahu</h2>
+                  <p class="card-text">Delight in Pepes Tahu. Soft tofu, aromatic herbs, and spices wrapped in banana
+                    leaves, create a fragrant, steamed treasure trove of taste.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Rendang 2.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Rendang</h2>
+                  <p class="card-text">Experience the legend of Rendang. Slow-cooked beef infused with a rich blend of
+                    coconut milk and spices, creates a symphony of flavors that's pure delight.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Sate Ayam 1.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Sate Ayam</h2>
+                  <p class="card-text">Embark on a culinary adventure with Sate Ayam. Skewered, grilled chicken
+                    marinated
+                    in a tantalizing blend of spices served with a rich peanut sauce.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Sate Lilit.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Sate Lilit</h2>
+                  <p class="card-text">Sate Lilit, is a culinary gem. Minced fish and aromatic spices molded onto
+                    lemongrass sticks, grilled to perfection, and served with a tantalizing sauce.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Tahu Goreng.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Tahu Goreng</h2>
+                  <p class="card-text">Crispy meets creamy in Tahu Goreng. Golden-fried tofu served with a zesty chili
+                    sauce. A taste sensation that's both satisfying and refreshing.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Lauk/Tempe Orek.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Tempe Orek</h2>
+                  <p class="card-text">Tempe Orek beckons with its sweet and savory allure. Tempeh, cooked to perfection
+                    with a medley of spices, offers a delightful textural and flavor contrast.</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
+
+      <!-- Veggies -->
+      <section class="tab-pane" id="vegetable" aria-label="Vegetable dishes">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Lalapan.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Lalapan</h2>
+                  <p class="card-text">Organic veggies meet savory sambal. Dive into our Lalapan featuring crisp
+                    cucumbers, tangy tomatoes, and spicy chili paste. A refreshing delight for your senses.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Oncom Leunca.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Tumis Oncom Leunca</h2>
+                  <p class="card-text">Savory oncom "fermented soy cake" and crunchy leunca "black nightshade"
+                    stir-fried
+                    with garlic, chili, and a medley of spices. A satisfying umami explosion.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Sayur Asem.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Sayur Asem</h2>
+                  <p class="card-text">A vibrant medley of chayote, long beans, and corn, balanced by tangy tamarind and
+                    sweet palm sugar. A symphony of flavors awaits.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Sayur Bayam 3.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Sayur Bayem</h2>
+                  <p class="card-text">A delicate dance of spinach, carrot, and sponge gourd in a soothing broth.
+                    Enlivened by finger root, kemangi, and a subtle sweet-sour symphony. Pure comfort in every spoonful.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Sayur Lodeh.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Sayur Lodeh</h2>
+                  <p class="card-text">Creamy coconut broth embraces tender veggies—green beans, cabbage, and tofu. A
+                    blend of flavors that's rich, soothing, and utterly satisfying.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Sayur Pecel.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Sayur Pecel</h2>
+                  <p class="card-text">Dive into a plate of mixed organic veggies drizzled with the irresistible flavors
+                    of cashew sauce. A tantalizing harmony of crunch and creaminess.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Sayur Sop.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Soup</h2>
+                  <p class="card-text">A bowl of comfort awaits. Enjoy a medley of fresh vegetables in a light,
+                    flavorful
+                    broth. Nutrient-rich goodness that warms your soul.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/5. Ala Carte/Sayur/Tumis Bunga Pepaya.png" class="card-img-top"
+                  style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Tumis Bunga Pepeaya</h2>
+                  <p class="card-text">Papaya blossoms stir-fried to perfection with a medley of aromatics. Savory,
+                    tender, and utterly captivating on your palate.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Drink -->
+      <section class="tab-pane" id="drink" aria-label="Beverages">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Minuman/Bandrek.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Bandrek</h2>
+                  <p class="card-text">A warm embrace of ginger, palm sugar, and spices. Comfort in every sip, perfect
+                    for
+                    cozy moments.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Minuman/Es Campur.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Es Campur</h2>
+                  <p class="card-text">A delightful mix of fruits, jellies, and syrups. Every spoonful reveals
+                    surprises—cool, colorful, and simply irresistible.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Minuman/Es Dawet 2.png" class="card-img-top">
+                <div class="card-body">
+                  <h2 class="card-title">Es Cendol Dawet</h2>
+                  <p class="card-text">Tropical paradise in a glass. Avocado, jackfruit, and coconut meat, drenched in
+                    sweet syrup. A harmony of richness and freshness.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Minuman/Es Cincau 2.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Es Cincau</h2>
+                  <p class="card-text">Dive into the magic of green grass jelly, melded with coconut milk and a touch of
+                    palm sugar. A cool classic that's pure enchantment.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Minuman/Es Kuwut Bali(1).png" class="card-img-top">
+                <div class="card-body">
+                  <h2 class="card-title">Es Kuwut Bali</h2>
+                  <p class="card-text">A tropical symphony in a glass. Shredded young coconut, refreshing melon, crisp
+                    cucumber, zesty lime, and fragrant selasih and mint. A sweet and tangy sensation with delightful
+                    textures, capturing the essence of Bali.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Minuman/Es Puter 2.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Es Puter</h2>
+                  <p class="card-text">Creamy coconut ice cream, a taste of pure indulgence. Treat yourself to the
+                    smooth
+                    sensation of Es Puter, a dessert that's simply irresistible.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Minuman/Es Teler.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Es Teler</h2>
+                  <p class="card-text">Tropical paradise in a glass. Avocado, jackfruit, and coconut meat, drenched in
+                    sweet syrup. A harmony of richness and freshness.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Party -->
+      <section class="tab-pane" id="party" aria-label="Party menus">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Perayaan/Nasi Bancaan.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Bancaan</h2>
+                  <p class="card-text">A festival of flavors on one plate. Nutty brown/red rice accompanied by aromatic
+                    rempah, grilled chicken/fish, curry tofu and tempe, and a fiery sambal. A celebration of Indonesia's
+                    culinary artistry.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="card food-card">
+                <img src="img/Perayaan/Nasi Kuning 3.png" class="card-img-top" style="object-position: 50% 75%;">
+                <div class="card-body">
+                  <h2 class="card-title">Nasi Kuning</h2>
+                  <p class="card-text">A golden tribute to tradition. Turmeric-infused rice, caramelized tempe, coconut
+                    oil-fried chicken, serundeng, and sambal. A harmonious feast that embodies the spirit of festivities
+                    in every bite.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
   <!--End of tabs category-->
   <!--Footer-->
   <footer class="footer pt-3">
@@ -785,7 +876,8 @@
           <a href="https://twitter.com/?lang=id" aria-label="go to twitter" class="text-decoration-none">
             <i class="fa-brands fa-twitter px-2 fa-xl social"></i>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=100080306831431" aria-label="go to facebook" class="text-decoration-none">
+          <a href="https://www.facebook.com/profile.php?id=100080306831431" aria-label="go to facebook"
+            class="text-decoration-none">
             <i class="fa-brands fa-square-facebook px-2 fa-xl social"></i>
           </a>
           <a href="https://www.instagram.com/warunghati/" aria-label="go to instagram" class="text-decoration-none">
