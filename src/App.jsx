@@ -1,18 +1,7 @@
 import './App.css'
-import { Routes, Route, Link } from 'react-router-dom'
-
-function HomePage() {
-  return (
-    <main>
-      <section className="page-section">
-        <h1>Warung Hati</h1>
-        <p>
-          The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients.
-        </p>
-      </section>
-    </main>
-  )
-}
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/navbar'
+import MainPage from './pages/MainPage'
 
 function AboutPage() {
   return (
@@ -54,28 +43,9 @@ function MealPlansPage() {
 function App() {
   return (
     <div className="app-root">
-      <header className="main-header">
-        <nav className="nav-bar">
-          <div className="nav-brand">Warung Hati</div>
-          <ul className="nav-links">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/aboutus">About Us</Link>
-            </li>
-            <li>
-              <Link to="/menu">Menu</Link>
-            </li>
-            <li>
-              <Link to="/mealplans">Meal Plans</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/aboutus" element={<AboutPage />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/mealplans" element={<MealPlansPage />} />
