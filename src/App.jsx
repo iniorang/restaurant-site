@@ -2,6 +2,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/navbar'
 import MainPage from './pages/MainPage'
+import Footer from './components/footer'
 
 function AboutPage() {
   return (
@@ -50,10 +51,7 @@ function App() {
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/mealplans" element={<MealPlansPage />} />
       </Routes>
-
-      <footer className="main-footer">
-        <p>© Warung Hati.</p>
-      </footer>
+      <Footer />
     </div>
   )
 }
