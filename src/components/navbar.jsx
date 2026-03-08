@@ -7,6 +7,18 @@ const activeLink = "text-white bg-emerald-600 hover:bg-emerald-700"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header>
@@ -25,7 +37,6 @@ export default function Navbar() {
                     }>
                     Home
                   </NavLink>
-
                 </div>
 
                 <NavLink

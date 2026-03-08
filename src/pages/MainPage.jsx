@@ -4,19 +4,27 @@ export default function MainPage() {
     return (
         <main>
             <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.png')] bg-cover bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
-                <div className="flex items-center justify-between px-10">
-                    <div>
-                        <h1 className="text-white text-9xl">
+                <div className="flex justify-between px-10 py-5 w-full h-full">
+                    <div className="flex flex-col justify-center max-w-4xl">
+                        <h1 className="text-white font-extrabold text-8xl mb-10">
                             Lorem ipsum dolor sit
                         </h1>
-                        <p className="text-white z-10">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.
+                        <p className="text-white text-xl max-w-xl mb-5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.
                         </p>
+                        <section className="flex items-center gap-5 mt-5" id="cta">
+                            <button className="text-white font-bold py-2 px-4 rounded bg-amber-400">
+                                Explore Menu
+                            </button>
+                            <p className="text-white">Or</p>
+                            <button className="text-white font-bold py-2 px-4 rounded border-2 border-amber-400">
+                                Learn More
+                            </button>
+                        </section>
                     </div>
-                    <div className="bg-white/50 p-5 rounded-lg ml-10">
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
+                    <div className="bg-white/70 p-5 rounded-lg text-end self-end">
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
                     </div>
                 </div>
             </section>
