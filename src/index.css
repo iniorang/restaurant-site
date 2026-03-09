@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@theme{ 
+  --color-background: #e7e7e7;
+  --color-primary: #5F8A42;
+  --color-secondary: #86AD59;
+  --color-accent: #F28410;
+  --color-accent-dark: #D66011;
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background)
 }

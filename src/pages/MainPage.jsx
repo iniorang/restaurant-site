@@ -9,24 +9,27 @@ export default function MainPage() {
                         <h1 className="text-white font-extrabold text-8xl mb-10">
                             Lorem ipsum dolor sit
                         </h1>
-                        <p className="text-white text-xl max-w-xl mb-5">
+                        <h2 className="text-white text-lg max-w-xl mb-5">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.
-                        </p>
+                        </h2>
                         <section className="flex items-center gap-5 mt-5" id="cta">
-                            <button className="text-white font-bold py-2 px-4 rounded bg-amber-400">
+                            <button className="text-white font-bold py-2 px-4 rounded bg-accent hover:bg-accent-dark">
                                 Explore Menu
                             </button>
                             <p className="text-white">Or</p>
-                            <button className="text-white font-bold py-2 px-4 rounded border-2 border-amber-400">
+                            <button className="text-white font-bold py-2 px-4 rounded border-2 border-accent hover:border-accent-dark">
                                 Learn More
                             </button>
                         </section>
                     </div>
-                    <div className="bg-white/70 p-5 rounded-lg text-end self-end">
-                        <p>Lorem ipsum dolor</p>
+                    <div className="bg-white/50 p-5 rounded-lg text-end self-end">
+                        <p>Nama Makanan</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
                     </div>
                 </div>
+            </section>
+            <section>
+                
             </section>
         </main>
     )

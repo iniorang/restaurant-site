@@ -1,33 +1,21 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 
-const baseLink = "px-3 py-2 rounded-md text-sm font-medium"
-const inactiveLink = "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-const activeLink = "text-white bg-emerald-600 hover:bg-emerald-700"
+const baseLink = "px-3 py-2 rounded-md text-md font-medium"
+const inactiveLink = "hover:text-accent"
+const activeLink = "text-accent-dark"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <header>
-      <nav className="bg-white fixed top-0 w-full z-50 opacity-90 py-3 ">
-        <div className="max-w-6xl mx-auto px-2">
+      <nav className="bg-background fixed top-0 w-full z-50 py-3 ">
+        <div className="mx-auto px-2">
           <div className="flex h-16 items-center justify-between md:justify-center">
-            <div className="flex items-center justify-between space-x-2">
+            <div className="flex items-center justify-between">
               {/* Desktop Menu links */}
-              <div className="hidden justify-center gap-5 items-center md:flex space-x-2">
+              <div className="hidden justify-center gap-10 items-center md:flex space-x-2">
                 <div>
                   <NavLink
                     to="/"
