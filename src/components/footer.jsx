@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 export default function Footer() {
     return (
-        <footer className="w-full h-auto flex flex-col space-y-10 justify-center py-10">
+        <footer className="w-full h-auto bg-background flex flex-col space-y-10 justify-center py-10">
             <nav className="flex justify-center flex-wrap gap-6  font-medium">
                 <NavLink className="hover:text-accent" to="/">Home</NavLink>
                 <NavLink className="hover:text-accent" to="/aboutus">About</NavLink>

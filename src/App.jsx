@@ -4,6 +4,7 @@ import Navbar from './components/navbar'
 import MainPage from './pages/MainPage'
 import Footer from './components/footer'
 
+
 function AboutPage() {
   return (
     <main>
