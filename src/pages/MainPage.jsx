@@ -1,33 +1,56 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, ButtonOutlined } from "../components/button";
 import Carrousel from "../components/carrousel";
 
 export default function MainPage() {
     const navigate = useNavigate();
-    const foodRecommendations = [
-        {
-            title: "Nasi Campur Bali",
-            description: "Nasi campur khas Bali dengan berbagai macam lauk pauk pilihan.",
-            imageUrl: "/assets/img/Utama/NasiCampurBali2.png"
-        },
-        {
-            title: "Nasi Betutu",
-            description: "Ayam betutu pedas yang disajikan dengan nasi hangat dan sambal matah.",
-            imageUrl: "/assets/img/Utama/NasiBetutu.png"
-        },
-        {
-            title: "Es Cendol",
-            description: "Minuman segar dengan cendol, santan, dan gula merah.",
-            imageUrl: "/assets/img/Minuman/EsCendol.png"
+    const [foodRecommendations, setFoodRecommendations] = useState([]);
+    const [menuError, setMenuError] = useState("");
+
+    useEffect(() => {
+        const controller = new AbortController();
+
+        async function loadFeaturedMenu() {
+            try {
+                const response = await fetch("/menu.json", {
+                    signal: controller.signal
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Menu request failed with status ${response.status}`);
+                }
+
+                const menu = await response.json();
+                const featuredItems = menu
+                    .filter((item) => item.featured === true)
+                    .map((item) => ({
+                        id: item.id,
+                        title: item.name,
+                        description: item.desc,
+                        imageUrl: item.pict
+                    }));
+
+                setFoodRecommendations(featuredItems);
+            } catch (error) {
+                if (error.name !== "AbortError") {
+                    setMenuError("Menu unggulan tidak dapat dimuat.");
+                    console.error("Failed to load featured menu:", error);
+                }
+            }
         }
-    ]
+
+        loadFeaturedMenu();
+
+        return () => controller.abort();
+    }, []);
 
     return (
         <main>
             <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.png')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
                 <div className="flex flex-row justify-between pl-15 pr-5 py-5 w-full h-full">
                     <div className="flex flex-col justify-center max-w-4xl">
-                        <h1 className="text-white font-extrabold text-8xl mb-5">
+                        <h1 className="text-5xl sm:text-6xl lg:text-8xl font-extrabold text-white">
                             Warung Hati
                         </h1>
                         <h2 className="text-white text-lg max-w-xl mb-5">
@@ -71,7 +94,13 @@ export default function MainPage() {
             </section>
             <section className="w-full h-screen" id="our-recomendation">
                 <div className="w-full h-full">
-                    <Carrousel items={foodRecommendations} />
+                    {menuError ? (
+                        <p className="flex h-full items-center justify-center text-red-600">
+                            {menuError}
+                        </p>
+                    ) : (
+                        <Carrousel items={foodRecommendations} />
+                    )}
                 </div>
             </section>
         </main>

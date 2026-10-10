@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "featured": false,
     "category": "main",
     "name": "Asinan Betawi",
     "desc": "A harmonious blend of sweet, sour, and nutty flavors. Crisp vegetables and fruits mingle with a zesty tamarind dressing, topped with crushed peanuts for a delightful crunch.",
@@ -8,6 +9,7 @@
   },
   {
     "id": 2,
+    "featured": true,
     "category": "main",
     "name": "Gado-Gado",
     "desc": "A delightful texture dance. Crisp vegetables, tofu, and tempeh embrace a creamy peanut sauce infused with tamarind and chili's vibrant notes.",
@@ -15,6 +17,7 @@
   },
   {
     "id": 3,
+    "featured": false,
     "category": "main",
     "name": "Kupat Tahu Magelang",
     "desc": "Embrace the medley of textures. Steamed rice cake and silky tofu meet a rich peanut sauce, enriched with a sprinkle of sprouts and herbs.",
@@ -22,6 +25,7 @@
   },
   {
     "id": 4,
+    "featured": false,
     "category": "main",
     "name": "Laksa Medan",
     "desc": "A feast for your senses. Creamy coconut broth, noodles, and a harmonious blend of toppings. Laksa Medan takes you on a flavor-packed journey.",
@@ -29,6 +33,7 @@
   },
   {
     "id": 5,
+    "featured": false,
     "category": "main",
     "name": "Mie Kocok Bandung",
     "desc": "Savor the symphony of tender beef, chewy noodles, and aromatic herbs in a savory broth. A taste that lingers long after each spoonful.",
@@ -36,6 +41,7 @@
   },
   {
     "id": 6,
+    "featured": false,
     "category": "main",
     "name": "Nasi Betutu",
     "desc": "Unwrap Bali's traditions. Slow-cooked chicken or duck wrapped in fragrant spices, delivers a tender taste of the island's heart.",
@@ -43,6 +49,7 @@
   },
   {
     "id": 7,
+    "featured": true,
     "category": "main",
     "name": "Nasi Gudeg",
     "desc": "Unlock Java's heart with sweetly stewed young jackfruit. A fragrant blend of coconut milk, palm sugar, and spices weaves a captivating tale of flavors.",
@@ -50,6 +57,7 @@
   },
   {
     "id": 8,
+    "featured": false,
     "category": "main",
     "name": "Nasi Liwet",
     "desc": "Relish the fragrant embrace of coconut-milk-infused rice, tender chicken, egg, and a medley of herbs and spices. Nasi Liwet is pure Indonesian comfort.",
@@ -57,6 +65,7 @@
   },
   {
     "id": 9,
+    "featured": false,
     "category": "main",
     "name": "Nasi Pecel",
     "desc": "Indulge in a burst of colors and tastes. Crisp veggies adorned with a bold peanut sauce, kissed by kaffir lime leaves and a hint of spice.",
@@ -64,6 +73,7 @@
   },
   {
     "id": 10,
+    "featured": false,
     "category": "main",
     "name": "Nasi Tutug Oncom",
     "desc": "Savor West Java's flavors. Warm rice and oncom (fermented soybean) mingle, accentuated by savory spices. A taste that speaks of tradition and love.",
@@ -71,6 +81,7 @@
   },
   {
     "id": 11,
+    "featured": false,
     "category": "main",
     "name": "Nasi Uduk",
     "desc": "Delight in fragrant Nasi Uduk. Coconut-milk-infused rice, pandan leaves, and a parade of tempting sides. An ode to Indonesia's culinary artistry.",
@@ -78,6 +89,7 @@
   },
   {
     "id": 12,
+    "featured": false,
     "category": "main",
     "name": "Soto Ayam",
     "desc": "Warmth in every sip. Soto Ayam delights with its fragrant chicken broth, vermicelli, and the invigorating touch of lemongrass and lime.",
@@ -85,6 +97,7 @@
   },
   {
     "id": 13,
+    "featured": false,
     "category": "main",
     "name": "Soto Betawi",
     "desc": "Warm your soul with rich coconut broth, tender beef, and fragrant spices. A bowl of Soto Betawi captures Jakarta's essence in every spoonful.",
@@ -92,6 +105,7 @@
   },
   {
     "id": 14,
+    "featured": true,
     "category": "main",
     "name": "Nasi Timbel",
     "desc": "A whole food meal from Sundanese consisting of Sayur Asem, sambal, ungkep kampong chicken, and organic rice wrapped with banana leaves.",
@@ -99,6 +113,7 @@
   },
   {
     "id": 15,
+    "featured": false,
     "category": "snack",
     "name": "Asinan Bogor",
     "desc": "A harmonious blend of sweet, sour, and nutty flavors. Crisp vegetables and fruits mingle with a zesty tamarind dressing, topped with crushed peanuts for a delightful crunch.",
@@ -106,6 +121,7 @@
   },
   {
     "id": 16,
+    "featured": false,
     "category": "snack",
     "name": "Batagor",
     "desc": "Batagor beckons with its magic. Crunchy fried dumplings, filled with fish and chicken, served with a nutty peanut sauce.",
@@ -113,6 +129,7 @@
   },
   {
     "id": 17,
+    "featured": false,
     "category": "snack",
     "name": "Bika Ambon",
     "desc": "Indulge in Bika Ambon's allure. A sweet blend of tapioca and coconut milk, graced with a touch of pandan. Its honeycomb texture and pandan aroma enchant with every bite.",
@@ -120,6 +137,7 @@
   },
   {
     "id": 18,
+    "featured": false,
     "category": "snack",
     "name": "Bubur",
     "desc": "Comfort in a bowl. Bubur delights with its warm embrace of rice porridge, accompanied by a medley of toppings and a sprinkle of crispy shallots.",
@@ -127,6 +145,7 @@
   },
   {
     "id": 19,
+    "featured": false,
     "category": "snack",
     "name": "Combro",
     "desc": "Savor the thrill of Combro. Cassava and corn fritters, crisp outside and soft inside, kissed by aromatic spices for an irresistible taste.",
@@ -134,6 +153,7 @@
   },
   {
     "id": 20,
+    "featured": true,
     "category": "snack",
     "name": "Jajan Pasar",
     "desc": "Delight in Jajan Pasar's treasures. Assorted traditional sweets showcase Indonesia's culinary heritage, embodying flavors that enchant generations.",
@@ -141,6 +161,7 @@
   },
   {
     "id": 21,
+    "featured": false,
     "category": "snack",
     "name": "Kue Lumpang Pandan",
     "desc": "Explore Kue Lumpang Pandan's charm. Coconut and pandan-infused rice cakes, layered with fragrant palm sugar. A dessert that captivates with every layer.",
@@ -148,6 +169,7 @@
   },
   {
     "id": 22,
+    "featured": false,
     "category": "snack",
     "name": "Lumpia",
     "desc": "Crisp and delightful Lumpia await. Golden-fried spring rolls embrace a medley of veggies and sometimes meat, promising a harmonious blend of flavors.",
@@ -155,6 +177,7 @@
   },
   {
     "id": 23,
+    "featured": false,
     "category": "snack",
     "name": "Lopis Ketan",
     "desc": "A festival favorite. Chewy savory glutinous rice cakes infused with palm sugar, coated in coconut flakes, and a hint of aromatic pandan. Perfect for celebrations or everyday snacks.",
@@ -162,6 +185,7 @@
   },
   {
     "id": 24,
+    "featured": false,
     "category": "snack",
     "name": "Pempek Palembang",
     "desc": "Dive into Pempek Palembang—a symphony of fish, sago, and spices. The perfect harmony of textures, served with a tangy tamarind sauce.",
@@ -169,6 +193,7 @@
   },
   {
     "id": 25,
+    "featured": false,
     "category": "snack",
     "name": "Rujak Buah",
     "desc": "A dance of tastes. A mix of tropical fruits, drizzled with a spicy palm sugar dressing and topped with crushed peanuts.",
@@ -176,6 +201,7 @@
   },
   {
     "id": 26,
+    "featured": false,
     "category": "snack",
     "name": "Serabi Petulo",
     "desc": "A blend of coconut and rice flour, graced by palm sugar. Fragrant pandan leaves enhance its enchanting taste.",
@@ -183,6 +209,7 @@
   },
   {
     "id": 27,
+    "featured": false,
     "category": "snack",
     "name": "Siomay Bandung",
     "desc": "Elevate your senses with Siomay Bandung. Steamed fish and shrimp dumplings, crowned with peanut sauce and a dash of zesty lime. A taste sensation awaits.",
@@ -190,6 +217,7 @@
   },
   {
     "id": 28,
+    "featured": false,
     "category": "snack",
     "name": "Tahu Gejrot",
     "desc": "Revel in Tahu Gejrot's excitement. Deep-fried tofu, tangy-spicy sauce, and a sprinkle of shallots create an explosion of taste and texture.",
@@ -197,6 +225,7 @@
   },
   {
     "id": 29,
+    "featured": false,
     "category": "side",
     "name": "Ayam Bakar",
     "desc": "Succulent grilled chicken glazed with honey goodness. Marinated to perfection, this dish boasts a harmonious blend of sweet, smoky, and savory flavors that ignite your taste buds.",
@@ -204,6 +233,7 @@
   },
   {
     "id": 30,
+    "featured": false,
     "category": "side",
     "name": "Ayam Betutu",
     "desc": "Unveil the magic of Ayam Betutu. Chicken marinated with a blend of spices, wrapped in banana leaves and slow-cooked until tender. A flavorful journey for your palate.",
@@ -211,6 +241,7 @@
   },
   {
     "id": 31,
+    "featured": false,
     "category": "side",
     "name": "Ayam Goreng",
     "desc": "Crispy perfection awaits with our Ayam Goreng. Golden-fried chicken infused with aromatic spices for an explosion of taste and crunch in every bite.",
@@ -218,6 +249,7 @@
   },
   {
     "id": 32,
+    "featured": false,
     "category": "side",
     "name": "Iga Penyet",
     "desc": "Savor the succulence of Iga Penyet. Crispy fried ribs, lovingly smashed and served with sambal, deliver a fiery kick of flavor.",
@@ -225,6 +257,7 @@
   },
   {
     "id": 33,
+    "featured": false,
     "category": "side",
     "name": "Ikan Goreng",
     "desc": "Dive into the crispy world of Ikan Goreng. Our golden-fried fish is seasoned with a blend of spices, creating a delightful harmony of textures and flavors.",
@@ -232,6 +265,7 @@
   },
   {
     "id": 34,
+    "featured": false,
     "category": "side",
     "name": "Ikan Sambal Dabu",
     "desc": "A fiery delight of Ikan Sambal Dabu. Fish dressed in vibrant chili sambal, enriched with Dabu-Dabu, a tangy mix of herbs and spices.",
@@ -239,6 +273,7 @@
   },
   {
     "id": 35,
+    "featured": false,
     "category": "side",
     "name": "Pampis Cakalang",
     "desc": "Experience the richness of Pampis Cakalang. Tender shredded tuna, seasoned and slow-cooked to perfection. A flavor journey that captures the essence of Indonesia.",
@@ -246,6 +281,7 @@
   },
   {
     "id": 36,
+    "featured": false,
     "category": "side",
     "name": "Pepes Ikan",
     "desc": "Unwrap the secret of Pepes Ikan. Fish, fragrant herbs, and spices cocooned in banana leaves, resulting in a tender, aromatic masterpiece.",
@@ -253,6 +289,7 @@
   },
   {
     "id": 37,
+    "featured": false,
     "category": "side",
     "name": "Pepes Tahu",
     "desc": "Delight in Pepes Tahu. Soft tofu, aromatic herbs, and spices wrapped in banana leaves, create a fragrant, steamed treasure trove of taste.",
@@ -260,6 +297,7 @@
   },
   {
     "id": 38,
+    "featured": false,
     "category": "side",
     "name": "Rendang",
     "desc": "Experience the legend of Rendang. Slow-cooked beef infused with a rich blend of coconut milk and spices, creates a symphony of flavors that's pure delight.",
@@ -267,6 +305,7 @@
   },
   {
     "id": 39,
+    "featured": false,
     "category": "side",
     "name": "Sate Ayam",
     "desc": "Embark on a culinary adventure with Sate Ayam. Skewered, grilled chicken marinated in a tantalizing blend of spices served with a rich peanut sauce.",
@@ -274,6 +313,7 @@
   },
   {
     "id": 40,
+    "featured": false,
     "category": "side",
     "name": "Sate Lilit",
     "desc": "Sate Lilit, is a culinary gem. Minced fish and aromatic spices molded onto lemongrass sticks, grilled to perfection, and served with a tantalizing sauce.",
@@ -281,6 +321,7 @@
   },
   {
     "id": 41,
+    "featured": false,
     "category": "side",
     "name": "Tahu Goreng",
     "desc": "Crispy meets creamy in Tahu Goreng. Golden-fried tofu served with a zesty chili sauce. A taste sensation that's both satisfying and refreshing.",
@@ -288,6 +329,7 @@
   },
   {
     "id": 42,
+    "featured": false,
     "category": "side",
     "name": "Tempe Orek",
     "desc": "Tempe Orek beckons with its sweet and savory allure. Tempeh, cooked to perfection with a medley of spices, offers a delightful textural and flavor contrast.",
@@ -295,6 +337,7 @@
   },
   {
     "id": 43,
+    "featured": false,
     "category": "vegetable",
     "name": "Lalapan",
     "desc": "Organic veggies meet savory sambal. Dive into our Lalapan featuring crisp cucumbers, tangy tomatoes, and spicy chili paste. A refreshing delight for your senses.",
@@ -302,6 +345,7 @@
   },
   {
     "id": 44,
+    "featured": false,
     "category": "vegetable",
     "name": "Tumis Oncom Leunca",
     "desc": "Savory oncom \"fermented soy cake\" and crunchy leunca \"black nightshade\" stir-fried with garlic, chili, and a medley of spices. A satisfying umami explosion.",
@@ -309,6 +353,7 @@
   },
   {
     "id": 45,
+    "featured": false,
     "category": "vegetable",
     "name": "Sayur Asem",
     "desc": "A vibrant medley of chayote, long beans, and corn, balanced by tangy tamarind and sweet palm sugar. A symphony of flavors awaits.",
@@ -316,6 +361,7 @@
   },
   {
     "id": 46,
+    "featured": false,
     "category": "vegetable",
     "name": "Sayur Bayem",
     "desc": "A delicate dance of spinach, carrot, and sponge gourd in a soothing broth. Enlivened by finger root, kemangi, and a subtle sweet-sour symphony. Pure comfort in every spoonful.",
@@ -323,6 +369,7 @@
   },
   {
     "id": 47,
+    "featured": false,
     "category": "vegetable",
     "name": "Sayur Lodeh",
     "desc": "Creamy coconut broth embraces tender veggies—green beans, cabbage, and tofu. A blend of flavors that's rich, soothing, and utterly satisfying.",
@@ -330,6 +377,7 @@
   },
   {
     "id": 48,
+    "featured": false,
     "category": "vegetable",
     "name": "Sayur Pecel",
     "desc": "Dive into a plate of mixed organic veggies drizzled with the irresistible flavors of cashew sauce. A tantalizing harmony of crunch and creaminess.",
@@ -337,6 +385,7 @@
   },
   {
     "id": 49,
+    "featured": false,
     "category": "vegetable",
     "name": "Soup",
     "desc": "A bowl of comfort awaits. Enjoy a medley of fresh vegetables in a light, flavorful broth. Nutrient-rich goodness that warms your soul.",
@@ -344,6 +393,7 @@
   },
   {
     "id": 50,
+    "featured": false,
     "category": "vegetable",
     "name": "Tumis Bunga Pepeaya",
     "desc": "Papaya blossoms stir-fried to perfection with a medley of aromatics. Savory, tender, and utterly captivating on your palate.",
@@ -351,6 +401,7 @@
   },
   {
     "id": 51,
+    "featured": false,
     "category": "drink",
     "name": "Bandrek",
     "desc": "A warm embrace of ginger, palm sugar, and spices. Comfort in every sip, perfect for cozy moments.",
@@ -358,6 +409,7 @@
   },
   {
     "id": 52,
+    "featured": false,
     "category": "drink",
     "name": "Es Campur",
     "desc": "A delightful mix of fruits, jellies, and syrups. Every spoonful reveals surprises—cool, colorful, and simply irresistible.",
@@ -365,6 +417,7 @@
   },
   {
     "id": 53,
+    "featured": true,
     "category": "drink",
     "name": "Es Cendol Dawet",
     "desc": "Tropical paradise in a glass. Avocado, jackfruit, and coconut meat, drenched in sweet syrup. A harmony of richness and freshness.",
@@ -372,6 +425,7 @@
   },
   {
     "id": 54,
+    "featured": false,
     "category": "drink",
     "name": "Es Cincau",
     "desc": "Dive into the magic of green grass jelly, melded with coconut milk and a touch of palm sugar. A cool classic that's pure enchantment.",
@@ -379,6 +433,7 @@
   },
   {
     "id": 55,
+    "featured": false,
     "category": "drink",
     "name": "Es Kuwut Bali",
     "desc": "A tropical symphony in a glass. Shredded young coconut, refreshing melon, crisp cucumber, zesty lime, and fragrant selasih and mint. A sweet and tangy sensation with delightful textures, capturing the essence of Bali.",
@@ -386,6 +441,7 @@
   },
   {
     "id": 56,
+    "featured": false,
     "category": "drink",
     "name": "Es Puter",
     "desc": "Creamy coconut ice cream, a taste of pure indulgence. Treat yourself to the smooth sensation of Es Puter, a dessert that's simply irresistible.",
@@ -393,6 +449,7 @@
   },
   {
     "id": 57,
+    "featured": false,
     "category": "drink",
     "name": "Es Teler",
     "desc": "Tropical paradise in a glass. Avocado, jackfruit, and coconut meat, drenched in sweet syrup. A harmony of richness and freshness.",
@@ -400,6 +457,7 @@
   },
   {
     "id": 58,
+    "featured": false,
     "category": "party",
     "name": "Nasi Bancaan",
     "desc": "A festival of flavors on one plate. Nutty brown/red rice accompanied by aromatic rempah, grilled chicken/fish, curry tofu and tempe, and a fiery sambal. A celebration of Indonesia's culinary artistry.",
@@ -407,6 +465,7 @@
   },
   {
     "id": 59,
+    "featured": false,
     "category": "party",
     "name": "Nasi Kuning",
     "desc": "A golden tribute to tradition. Turmeric-infused rice, caramelized tempe, coconut oil-fried chicken, serundeng, and sambal. A harmonious feast that embodies the spirit of festivities in every bite.",

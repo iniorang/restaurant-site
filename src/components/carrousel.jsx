@@ -14,6 +14,7 @@ export default function Carrousel({ items = [] }) {
             effect="fade"
             spaceBetween={50}
             slidesPerView={1}
+            pagination={{ clickable: true }}
             style={{ width: "100%", height: "100%" }}
             loop={true}
             navigation
