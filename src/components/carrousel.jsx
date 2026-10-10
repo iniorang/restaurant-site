@@ -30,7 +30,7 @@ export default function Carrousel({ items = [] }) {
                     style={{ backgroundImage: `url(${item.imageUrl})` }}
                 >
                     <div className="w-full h-full hidden md:flex px-20 items-center bg-black/40">
-                        <div className="text-white flex gap-5 flex-col max-h-xl">
+                        <div className="text-white flex gap-5 flex-col max-h-xl max-w-2xl">
                             <h3 className="font-bold text-7xl">{item.title}</h3>
                             <hr className="my-2 bg-neutral-quaternary" />
                             <p className="text-2xl">{item.description}</p>

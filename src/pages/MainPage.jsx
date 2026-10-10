@@ -58,7 +58,7 @@ export default function MainPage() {
                         </h2>
                         <section className="flex items-center gap-5" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
-                            <ButtonOutlined name="Learn More" onClick={() => navigate('/about')} />
+                            <ButtonOutlined name="Learn More" onClick={() => navigate('/aboutus')} />
                         </section>
                     </div>
                 </div>
