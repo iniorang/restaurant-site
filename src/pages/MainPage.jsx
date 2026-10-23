@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, ButtonOutlined } from "../components/button";
+import { Button, TwoLineButton } from "../components/button";
 import Carrousel from "../components/carrousel";
 
 export default function MainPage() {
@@ -58,7 +58,7 @@ export default function MainPage() {
                         </h2>
                         <section className="flex items-center gap-5" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
-                            <ButtonOutlined name="Learn More" onClick={() => navigate('/aboutus')} />
+                            <Button variant="outlined" name="Learn More" onClick={() => navigate('/aboutus')} />
                         </section>
                     </div>
                 </div>
@@ -83,8 +83,11 @@ export default function MainPage() {
                         />
                     </div>
                     <div className="flex flex-col">
+                        <p className="mb-3 font-semibold uppercase tracking-widest text-accent">
+                            Welcome to
+                        </p>
                         <h2 className="text-5xl font-extrabold text-primary mb-6 leading-tight">
-                            Welcome to your life-changing journey
+                            Your life changing journey
                         </h2>
                         <p className="mb-4 text-lg">
                             Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
@@ -92,7 +95,7 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
-            <section className="w-full h-screen" id="our-recomendation">
+            <section className="w-screen h-screen" id="our-recomendation">
                 <div className="w-full h-full">
                     {menuError ? (
                         <p className="flex h-full items-center justify-center text-red-600">
@@ -101,6 +104,32 @@ export default function MainPage() {
                     ) : (
                         <Carrousel items={foodRecommendations} />
                     )}
+                </div>
+            </section>
+            <section className="bg-background py-40 px-4" id="contact-us">
+                <div className="container mx-auto flex w-full flex-col items-center justify-between gap-12 lg:flex-row lg:gap-20">
+                    <div className="w-full lg:basis-3/5">
+                        <p className="mb-3 font-semibold uppercase tracking-widest text-accent">
+                            Catch Us
+                        </p>
+                        <h2 className="mb-6 text-5xl font-extrabold leading-tight text-primary">
+                            Get in touch
+                        </h2>
+                        <div className="max-w-xl">
+                            <p className="text-lg">
+                                Curious about our food or have a special request? Drop us a
+                                line and enjoy tasty Indonesian dishes made with fresh,
+                                organic, locally sourced ingredients.
+                            </p>
+                            <div className="mt-5 flex flex-col gap-3">
+                                <TwoLineButton header="Email" subheader="info@warunghati.com" icon="fi fi-sr-envelope" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-full">
+                        <script src="https://elfsightcdn.com/platform.js" async></script>
+                        <div className="elfsight-app-c2ec6df7-89c7-4b7d-9c3c-c4c2a9b520c4" data-elfsight-app-lazy></div>
+                    </div>
                 </div>
             </section>
         </main>

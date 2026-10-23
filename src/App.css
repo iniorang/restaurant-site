@@ -3,3 +3,12 @@
     --swiper-pagination-color: var(--color-accent);
     --swiper-pagination-bullet-inactive-color: var(--color-accent-dark);
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}

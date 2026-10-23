@@ -1,23 +1,43 @@
 import React from "react";
+const baseStyles =
+    "inline-flex items-center justify-center gap-2 font-bold py-2 px-4 rounded transition-colors cursor-pointer";
 
-export function Button({ name, onClick }) {
+const variantStyles = {
+    solid: "bg-accent hover:bg-accent-dark text-white",
+    outlined:
+        "border-2 border-accent text-white hover:bg-accent-dark hover:border-accent-dark",
+};
+
+export function Button({ name, onClick, icon, variant = "solid", className = "" }) {
+
     return (
         <button
-            className="text-white font-bold py-2 px-4 rounded bg-accent hover:bg-accent-dark cursor-pointer"
+            className={`${baseStyles} ${variantStyles[variant] || variantStyles.solid} ${className}`}
             onClick={onClick}
         >
-            {name}
+            {icon && <i className={icon}></i>}
+            {name && <span>{name}</span>}
         </button>
-    )
+    );
 }
 
-export function ButtonOutlined({ name, onClick }) {
+export function TwoLineButton({ header, subheader, onClick, icon }) {
     return (
         <button
-            className="text-white font-bold py-2 px-4 rounded border-2 border-accent hover:bg-accent-dark hover:border-accent-dark cursor-pointer"
+            className={'inline-flex w-full items-center gap-2 font-bold py-2 px-4 rounded transition-colors cursor-pointer bg-accent hover:bg-accent-dark text-white'}
             onClick={onClick}
         >
-            {name}
+            <div className="flex shrink-0 items-center justify-center">
+                {icon && <i className={`${icon} text-4xl leading-none`}></i>}
+            </div>
+            <div className="flex min-w-0 flex-col items-start text-start">
+                {header && (
+                    <span className="w-fit border-b border-white ">
+                        {header}
+                    </span>
+                )}
+                {subheader && <span>{subheader}</span>}
+            </div>
         </button>
-    )
+    );
 }
