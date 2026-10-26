@@ -1,46 +1,49 @@
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay, Parallax } from "swiper/modules"
+import { Navigation, Pagination, A11y, EffectFade, Autoplay } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import "swiper/css/scrollbar"
 import "swiper/css/effect-fade"
 
-export default function Carrousel({ items = [] }) {
+export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
+    const hasMultipleItems = items.length > 1
+
+    if (items.length === 0) {
+        return (
+            <div className="flex h-full items-center justify-center bg-background px-6 text-center">
+                <p className="text-lg text-primary">Belum ada rekomendasi menu.</p>
+            </div>
+        )
+    }
+
     return (
         <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
+            modules={[Navigation, Pagination, A11y, EffectFade, Autoplay]}
             effect="fade"
-            spaceBetween={50}
             slidesPerView={1}
-            pagination={{ clickable: true }}
-            style={{ width: "100%", height: "100%" }}
-            loop={true}
-            navigation
-            autoplay={{
+            className="h-full w-full"
+            loop={hasMultipleItems}
+            navigation={hasMultipleItems}
+            pagination={hasMultipleItems ? { clickable: true } : false}
+            autoplay={hasMultipleItems ? {
                 delay: 5000,
                 disableOnInteraction: false,
-            }}
+                pauseOnMouseEnter: true,
+            } : false}
+            aria-label={ariaLabel}
         >
             {items.map((item, index) => (
                 <SwiperSlide
-                    key={index}
-                    className="bg-cover bg-center"
-                    style={{ backgroundImage: `url(${item.imageUrl})` }}
+                    key={item.id ?? item.imageUrl ?? index}
+                    className="relative flex h-screen overflow-hidden bg-cover bg-center"
+                    style={{ backgroundImage: `url("${item.imageUrl}")` }}
                 >
-                    <div className="w-full h-full hidden md:flex px-20 items-center bg-black/40">
-                        <div className="text-white flex gap-5 flex-col max-h-xl max-w-2xl">
-                            <h3 className="font-bold text-7xl">{item.title}</h3>
-                            <hr className="my-2 bg-neutral-quaternary" />
-                            <p className="text-2xl">{item.description}</p>
-                        </div>
-                    </div>
-                    <div className="w-full h-full flex md:hidden items-end p-10 bg-black/40">
-                        <div className="text-white flex gap-5 flex-col max-h-xl">
-                            <h3 className="font-bold text-6xl">{item.title}</h3>
-                            <hr className="my-1 bg-neutral-quaternary" />
-                            <p className="text-xl">{item.description}</p>
+                    <div className="flex h-full w-full items-end bg-black/40 p-10 md:items-center md:px-20">
+                        <div className="flex max-w-2xl flex-col gap-5 text-white">
+                            <h2 className="text-5xl font-bold md:text-7xl">{item.title}</h2>
+                            <hr className="my-1 bg-neutral-quaternary md:my-2" />
+                            <p className="text-xl md:text-2xl">{item.description}</p>
                         </div>
                     </div>
                 </SwiperSlide>

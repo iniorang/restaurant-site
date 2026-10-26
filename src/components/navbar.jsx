@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="bg-white sticky top-0 w-full z-50 py-3 ">
+      <nav className="bg-white fixed top-0 w-full z-10 py-3 ">
         <div className="mx-auto px-2">
           <div className="flex h-16 items-center justify-between md:justify-center">
             <div className="flex items-center justify-between">

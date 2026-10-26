@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, TwoLineButton } from "../components/button";
+import { Button } from "../components/button";
+import { HeaderWithoutBG } from "../components/header";
 import Carrousel from "../components/carrousel";
 
 export default function MainPage() {
@@ -28,6 +29,7 @@ export default function MainPage() {
                         id: item.id,
                         title: item.name,
                         description: item.desc,
+                        alt: item.alt,
                         imageUrl: item.pict
                     }));
 
@@ -63,7 +65,7 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
-            <section className="bg-background py-40 px-4" id="short-intro">
+            <section className="bg-background py-40 px-4 md:px-0" id="short-intro">
                 <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     <div className="md:relative hidden md:block h-full w-full">
                         <img
@@ -83,12 +85,7 @@ export default function MainPage() {
                         />
                     </div>
                     <div className="flex flex-col">
-                        <p className="mb-3 font-semibold uppercase tracking-widest text-accent">
-                            Welcome to
-                        </p>
-                        <h2 className="text-5xl font-extrabold text-primary mb-6 leading-tight">
-                            Your life changing journey
-                        </h2>
+                        <HeaderWithoutBG subtitle="Welcome to" title="Your life changing journey" />
                         <p className="mb-4 text-lg">
                             Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
                         </p>
@@ -107,22 +104,34 @@ export default function MainPage() {
                 </div>
             </section>
             <section className="bg-background py-40 px-4" id="contact-us">
-                <div className="container mx-auto flex w-full flex-col items-center justify-between gap-12 lg:flex-row lg:gap-20">
+                <div className="container flex md:flex-row flex-col gap-10 mx-auto px-4 md:px-0">
                     <div className="w-full lg:basis-3/5">
-                        <p className="mb-3 font-semibold uppercase tracking-widest text-accent">
-                            Catch Us
-                        </p>
-                        <h2 className="mb-6 text-5xl font-extrabold leading-tight text-primary">
-                            Get in touch
-                        </h2>
-                        <div className="max-w-xl">
-                            <p className="text-lg">
+                        <HeaderWithoutBG subtitle="Get in touch" title="Contact us" />
+                        <div className="flex flex-col">
+                            <p className="text-lg mb-4">
                                 Curious about our food or have a special request? Drop us a
                                 line and enjoy tasty Indonesian dishes made with fresh,
                                 organic, locally sourced ingredients.
                             </p>
-                            <div className="mt-5 flex flex-col gap-3">
-                                <TwoLineButton header="Email" subheader="info@warunghati.com" icon="fi fi-sr-envelope" />
+                            <div className="flex flex-col gap-4">
+                                <Button header="Email" subheader="info@warunghati.com" icon="fi fi-rr-envelope" />
+                                <Button header="Phone" subheader="+62 812-3456-7890" icon="fi fi-brands-whatsapp" />
+                                <p className="text-center">or</p>
+                                <p className="text-lg">Check out our social media for more updates and special offers!</p>
+                                <div className="container mx-auto flex flex-row justify-center gap-4">
+                                    <Button
+                                        icon="fi fi-brands-instagram"
+                                        iconOnly
+                                        ariaLabel="Instagram Warung Hati"
+                                        onClick={() => window.open("https://www.instagram.com/warunghati", "_blank")}
+                                    />
+                                    <Button
+                                        icon="fi fi-brands-facebook"
+                                        iconOnly
+                                        ariaLabel="Facebook Warung Hati"
+                                        onClick={() => window.open("https://www.facebook.com/profile.php?id=100080306831431", "_blank")}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
