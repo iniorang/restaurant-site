@@ -1,6 +1,6 @@
 import React from "react";
 const baseStyles =
-    "inline-flex items-center justify-center gap-2 font-bold py-2 px-4 transition-colors cursor-pointer";
+    "items-center gap-2 font-bold py-2 px-4 transition-colors cursor-pointer";
 
 const variantStyles = {
     solid: "bg-accent hover:bg-accent-dark text-white",
@@ -20,7 +20,7 @@ export function Button({
     className = "",
 }) {
     const isTwoLine = header || subheader;
-    const buttonStyles = isTwoLine ? "w-full justify-start" : "";
+    const buttonStyles = isTwoLine ? "w-full justify-start inline-flex" : "justify-center";
     const iconOnlyStyles = iconOnly ? "size-12 rounded-full p-0" : "";
 
     return (
@@ -30,7 +30,17 @@ export function Button({
             onClick={onClick}
         >
             {icon && (
-                <i className={isTwoLine ? `${icon} text-4xl align-middle p-0.5 leading-none` : icon}></i>
+                <span
+                    className={
+                        isTwoLine
+                            ? "flex size-14 shrink-0 items-center justify-start"
+                            : iconOnly
+                                ? "flex items-center justify-center"
+                                : ""
+                    }
+                >
+                    <i className={`${icon} ${isTwoLine ? "text-5xl leading-none" : iconOnly ? "text-2xl leading-none" : ""}`}></i>
+                </span>
             )}
             {isTwoLine ? (
                 <span className="flex w-full flex-col gap-y-0.5 items-start text-start">

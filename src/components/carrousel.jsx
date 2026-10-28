@@ -12,7 +12,7 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
     if (items.length === 0) {
         return (
             <div className="flex h-full items-center justify-center bg-background px-6 text-center">
-                <p className="text-lg text-primary">Belum ada rekomendasi menu.</p>
+                <p className="text-lg text-primary">Loading</p>
             </div>
         )
     }
@@ -39,7 +39,7 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
                     className="relative flex h-screen overflow-hidden bg-cover bg-center"
                     style={{ backgroundImage: `url("${item.imageUrl}")` }}
                 >
-                    <div className="flex h-full w-full items-end bg-black/40 p-10 md:items-center md:px-20">
+                    <div className="flex h-full w-full items-end bg-black/40 p-10 py-20 lg:items-center md:px-20">
                         <div className="flex max-w-2xl flex-col gap-5 text-white">
                             <h2 className="text-5xl font-bold md:text-7xl">{item.title}</h2>
                             <hr className="my-1 bg-neutral-quaternary md:my-2" />

@@ -67,7 +67,7 @@ export default function MainPage() {
             </section>
             <section className="bg-background py-40 px-4 md:px-0" id="short-intro">
                 <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                    <div className="md:relative hidden md:block h-full w-full">
+                    <div className="lg:relative hidden lg:block h-full w-full">
                         <img
                             src="/assets/img/Utama/NasiBetutu.png"
                             alt="Freshly cooked meal"
@@ -85,7 +85,7 @@ export default function MainPage() {
                         />
                     </div>
                     <div className="flex flex-col">
-                        <HeaderWithoutBG subtitle="Welcome to" title="Your life changing journey" />
+                        <HeaderWithoutBG subtitle="Welcome to Your" title="Life Changing Journey" />
                         <p className="mb-4 text-lg">
                             Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
                         </p>
@@ -104,7 +104,7 @@ export default function MainPage() {
                 </div>
             </section>
             <section className="bg-background py-40 px-4" id="contact-us">
-                <div className="container flex md:flex-row flex-col gap-10 mx-auto px-4 md:px-0">
+                <div className="container flex lg:flex-row flex-col gap-10 mx-auto px-4 md:px-0">
                     <div className="w-full lg:basis-3/5">
                         <HeaderWithoutBG subtitle="Get in touch" title="Contact us" />
                         <div className="flex flex-col">

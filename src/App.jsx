@@ -5,19 +5,7 @@ import Footer from './components/footer'
 
 import MainPage from './pages/MainPage'
 import MenuPage from './pages/menuPage'
-
-function AboutPage() {
-  return (
-    <main>
-      <section className="page-section">
-        <h1>About Us</h1>
-        <p>
-          In Bahasa, “Hati” means heart. We pour our hearts into every dish we create.
-        </p>
-      </section>
-    </main>
-  )
-}
+import AboutPage from './pages/aboutPage'
 
 
 function MealPlansPage() {
