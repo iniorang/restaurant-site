@@ -47,7 +47,7 @@ const commitments = [
 
 export default function AboutPage() {
     return (
-        <main className="bg-background">
+        <main className="bg-background ">
             <HeaderWithBG
                 subtitle="Our story"
                 title="The Story of Hati"
@@ -55,17 +55,17 @@ export default function AboutPage() {
                 titleId="about-title"
             />
             <section
-                className="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center"
+                className="flex lg:flex-row flex-col"
                 aria-labelledby="story-heading"
             >
-                <div className="overflow-hidden rounded-3xl shadow-xl">
+                <div className="overflow-hidden lg:basis-3/5">
                     <img
                         src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.jpg"
                         alt="Healthy food education session with youngsters"
                         className="h-full min-h-96 w-full object-cover object-left"
                     />
                 </div>
-                <div>
+                <div className="flex flex-col justify-center gap-y-5 px-4 py-12 md:px-11 md:py-24 lg:basis-2/5">
                     <HeaderWithoutBG
                         subtitle="A journey driven by purpose"
                         title={'The Story of "Hati"'}
