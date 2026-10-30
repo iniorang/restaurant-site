@@ -52,8 +52,7 @@ export default function MainPage() {
                 <div className="home-hero__wash" aria-hidden="true" />
                 <div className="home-hero__inner">
                     <div className="home-hero__panel">
-                        <img src="/assets/img/logo2.png" alt="Warung Hati" className="home-hero__logo" />
-                        <p className="home-kicker">Indonesian heritage, held with care</p>
+                        <img src="/assets/img/logo.png" alt="Warung Hati" className="home-hero__logo" />
                         <h1>Food that carries a place, a memory, a little heart.</h1>
                         <p className="home-hero__lede">
                             Traditional Indonesian dishes made with indigenous herbs, natural ingredients, and the patience they deserve.
@@ -61,7 +60,7 @@ export default function MainPage() {
                         <div className="home-hero__actions">
                             <Button name="Explore the menu" onClick={() => navigate('/menu')} />
                             <button className="home-text-link" type="button" onClick={() => navigate('/aboutus')}>
-                                Meet Warung Hati <span aria-hidden="true">↗</span>
+                                Meet Warung Hati <span className="arrow-mark" aria-hidden="true" />
                             </button>
                         </div>
                     </div>
@@ -74,13 +73,12 @@ export default function MainPage() {
 
             <section className="home-intro page-shell" id="short-intro">
                 <div className="home-intro__copy">
-                    <p className="home-kicker">A living tradition</p>
                     <h2>Modern in the way we care. Traditional in what we serve.</h2>
                     <p>
                         Warung Hati brings the richness of Indonesia's cultural heritage to the table through recipes shaped by indigenous herbs, spices, and natural ingredients. We keep the wisdom intact, then make room for you.
                     </p>
                     <button className="home-text-link home-text-link--green" type="button" onClick={() => navigate('/aboutus')}>
-                        Our story <span aria-hidden="true">↗</span>
+                        Our story <span className="arrow-mark" aria-hidden="true" />
                     </button>
                 </div>
                 <div className="home-intro__images" aria-label="Warung Hati ingredients and partners">
@@ -100,11 +98,10 @@ export default function MainPage() {
                 <div className="page-shell">
                     <div className="home-section-heading">
                         <div>
-                            <p className="home-kicker">The table is open</p>
                             <h2 id="featured-title">A few favourites, today.</h2>
                         </div>
                         <button className="home-text-link home-text-link--green" type="button" onClick={() => navigate('/menu')}>
-                            See the full menu <span aria-hidden="true">↗</span>
+                            See the full menu <span className="arrow-mark" aria-hidden="true" />
                         </button>
                     </div>
                     {menuError ? (
@@ -117,7 +114,6 @@ export default function MainPage() {
                                 <article className={`home-dish home-dish--${index + 1}`} key={item.id}>
                                     <div className="home-dish__image-wrap">
                                         <img src={item.imageUrl} alt={item.alt} className="home-dish__image" />
-                                        <span className="home-dish__number">0{index + 1}</span>
                                     </div>
                                     <div className="home-dish__copy">
                                         <h3>{item.title}</h3>
@@ -132,13 +128,12 @@ export default function MainPage() {
 
             <section className="home-contact page-shell" id="contact-us">
                 <div className="home-contact__intro">
-                    <p className="home-kicker">Come closer</p>
                     <h2>Save a seat in the story.</h2>
                     <p>Have a question, a special request, or simply want to say hello? We would love to hear from you.</p>
                 </div>
                 <div className="home-contact__details">
-                    <Button header="Email" subheader="info@warunghati.com" icon="fi fi-rr-envelope" />
-                    <Button header="WhatsApp" subheader="+62 812-3456-7890" icon="fi fi-brands-whatsapp" />
+                    <Button href="mailto:info@warunghati.com" header="Email" subheader="info@warunghati.com" icon="fi fi-rr-envelope" />
+                    <Button href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" header="WhatsApp" subheader="+62 812-3456-7890" icon="fi fi-brands-whatsapp" />
                     <div className="home-socials">
                         <span>Follow the table</span>
                         <Button icon="fi fi-brands-instagram" iconOnly ariaLabel="Instagram Warung Hati" onClick={() => window.open("https://www.instagram.com/warunghati", "_blank", "noopener,noreferrer")} />

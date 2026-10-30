@@ -6,20 +6,7 @@ import Footer from './components/footer'
 import MainPage from './pages/MainPage'
 import MenuPage from './pages/menuPage'
 import AboutPage from './pages/aboutPage'
-
-
-function MealPlansPage() {
-  return (
-    <main>
-      <section className="page-section">
-        <h1>Meal Plans</h1>
-        <p>
-          Selection of healthy meals to support immune system, stamina, and overall wellness.
-        </p>
-      </section>
-    </main>
-  )
-}
+import PlansPage from './pages/plansPage'
 
 function App() {
   return (
@@ -29,7 +16,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/aboutus" element={<AboutPage />} />
         <Route path="/menu" element={<MenuPage />} />
-        <Route path="/mealplans" element={<MealPlansPage />} />
+        <Route path="/mealplans" element={<PlansPage />} />
       </Routes>
       <Footer />
     </div>

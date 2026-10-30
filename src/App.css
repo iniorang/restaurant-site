@@ -80,6 +80,10 @@ body {
     display: none;
 }
 
+.site-nav__mobile-brand {
+    display: none;
+}
+
 .button {
     display: inline-flex;
     min-height: 48px;
@@ -162,6 +166,315 @@ body {
 
 .site-footer p {
     margin: 0;
+}
+
+.page-masthead {
+    max-width: 740px;
+    padding: 190px 0 94px;
+}
+
+.page-masthead h1,
+.about-hero h1,
+.plans-note h2 {
+    margin: 0;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-size: clamp(3.2rem, 7vw, 7.2rem);
+    font-weight: 500;
+    letter-spacing: -.05em;
+    line-height: .9;
+}
+
+.page-masthead h1 em,
+.about-hero h1 em,
+.plans-note h2 em {
+    color: var(--heart);
+    font-style: normal;
+}
+
+.page-masthead > p:last-child {
+    max-width: 56ch;
+    margin: 30px 0 0;
+    color: var(--muted-ink);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.menu-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    padding: 19px 0;
+    border-top: 1px solid rgba(33, 30, 26, .24);
+    border-bottom: 1px solid rgba(33, 30, 26, .24);
+}
+
+.menu-filter button {
+    padding: 8px 0;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: var(--muted-ink);
+    cursor: pointer;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.menu-filter button:hover,
+.menu-filter button.is-active {
+    border-bottom-color: var(--heart);
+    color: var(--ink);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 70px 28px;
+    padding: 74px 0 148px;
+}
+
+.menu-item--feature {
+    grid-column: span 2;
+}
+
+.menu-item__image-wrap {
+    position: relative;
+    height: 265px;
+    overflow: hidden;
+    background: var(--paper-deep);
+}
+
+.menu-item--feature .menu-item__image-wrap {
+    height: 370px;
+}
+
+.menu-item__image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s cubic-bezier(.16, 1, .3, 1);
+}
+
+.menu-item:hover .menu-item__image-wrap img {
+    transform: scale(1.04);
+}
+
+.menu-item__tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 6px 9px;
+    background: var(--heart);
+    color: white;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.menu-item__copy {
+    padding-top: 16px;
+}
+
+.menu-item__copy h2 {
+    margin: 0 0 8px;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: -.03em;
+}
+
+.menu-item__copy p {
+    max-width: 46ch;
+    margin: 0;
+    color: var(--muted-ink);
+    font-size: .9rem;
+    line-height: 1.65;
+}
+
+.page-message {
+    padding: 80px 0;
+    color: var(--muted-ink);
+}
+
+.page-message--error {
+    color: var(--heart);
+}
+
+.about-hero {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 80px;
+    align-items: end;
+    padding-top: 168px;
+    padding-bottom: 104px;
+}
+
+.about-hero img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 0 120px 0 0;
+}
+
+.about-story {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 80px;
+    padding-top: 92px;
+    padding-bottom: 138px;
+    border-top: 1px solid rgba(33, 30, 26, .24);
+}
+
+.about-story h2,
+.about-section-heading h2 {
+    margin: 0;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-size: clamp(2.7rem, 5vw, 5rem);
+    font-weight: 500;
+    letter-spacing: -.045em;
+    line-height: .95;
+}
+
+.about-story__copy {
+    max-width: 62ch;
+    color: var(--muted-ink);
+    font-size: 1.04rem;
+    line-height: 1.8;
+}
+
+.about-story__copy p {
+    margin: 0 0 22px;
+}
+
+.about-commitments {
+    padding: 110px 0 148px;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.about-section-heading {
+    display: grid;
+    grid-template-columns: 1fr .75fr;
+    gap: 80px;
+    align-items: end;
+    padding-bottom: 55px;
+    border-bottom: 1px solid rgba(247, 241, 230, .3);
+}
+
+.about-section-heading .home-kicker {
+    color: var(--turmeric);
+}
+
+.about-section-heading > p {
+    max-width: 38ch;
+    margin: 0;
+    color: rgba(247, 241, 230, .72);
+    line-height: 1.7;
+}
+
+.about-commitment-list {
+    display: grid;
+}
+
+.about-commitment {
+    display: grid;
+    grid-template-columns: 42px 220px 1fr;
+    gap: 28px;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(247, 241, 230, .2);
+}
+
+.about-commitment__index {
+    color: var(--turmeric);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+.about-commitment img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.about-commitment h3 {
+    margin: 0 0 8px;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.about-commitment p {
+    max-width: 58ch;
+    margin: 0;
+    color: rgba(247, 241, 230, .7);
+    line-height: 1.65;
+}
+
+.plans-masthead {
+    max-width: 800px;
+}
+
+.plans-list {
+    border-top: 1px solid rgba(33, 30, 26, .24);
+    padding: 22px 0 120px;
+}
+
+.plan-row {
+    display: grid;
+    grid-template-columns: 42px 260px 1fr;
+    gap: 28px;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(33, 30, 26, .24);
+}
+
+.plan-row__number {
+    color: var(--heart);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+.plan-row img {
+    width: 260px;
+    height: 175px;
+    object-fit: cover;
+}
+
+.plan-row h2 {
+    margin: 0 0 10px;
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -.04em;
+}
+
+.plan-row p {
+    max-width: 52ch;
+    margin: 0;
+    color: var(--muted-ink);
+    line-height: 1.7;
+}
+
+.plans-note {
+    max-width: 680px;
+    padding: 0 0 148px;
+}
+
+.plans-note h2 {
+    font-size: clamp(2.7rem, 5vw, 5rem);
+}
+
+.plans-note > p:not(.home-kicker) {
+    max-width: 50ch;
+    margin: 26px 0;
+    color: var(--muted-ink);
+    line-height: 1.7;
 }
 
 button,
@@ -251,7 +564,7 @@ a:focus-visible {
 .home-featured h2,
 .home-contact h2 {
     margin: 0;
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'IBM Plex Serif', Georgia, serif;
     font-weight: 500;
     letter-spacing: -.035em;
     line-height: .98;
@@ -294,6 +607,35 @@ a:focus-visible {
     transition: transform .2s ease;
 }
 
+.arrow-mark {
+    position: relative;
+    width: 14px;
+    height: 10px;
+    margin-left: 7px;
+}
+
+.arrow-mark::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 13px;
+    height: 1px;
+    background: currentColor;
+    content: "";
+}
+
+.arrow-mark::after {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    content: "";
+    transform: rotate(45deg);
+}
+
 .home-text-link:hover span {
     transform: translate(3px, -3px);
 }
@@ -308,7 +650,7 @@ a:focus-visible {
     gap: 12px;
     padding-bottom: 12px;
     color: white;
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'IBM Plex Serif', Georgia, serif;
     font-size: .95rem;
     line-height: 1.25;
 }
@@ -405,7 +747,7 @@ a:focus-visible {
     border: 1px solid var(--heart);
     border-radius: 50%;
     color: var(--heart);
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'IBM Plex Serif', Georgia, serif;
     font-size: .78rem;
     line-height: 1.05;
     text-align: center;
@@ -498,7 +840,7 @@ a:focus-visible {
 .home-dish__copy h3 {
     margin: 0 0 9px;
     color: var(--paper);
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'IBM Plex Serif', Georgia, serif;
     font-size: 1.65rem;
     font-weight: 500;
 }
@@ -573,9 +915,21 @@ a:focus-visible {
 
     .site-nav__mobile-toggle {
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: space-between;
         min-height: 76px;
         padding-top: 16px;
+    }
+
+    .site-nav__mobile-brand {
+        display: block;
+    }
+
+    .site-nav__mobile-brand img {
+        display: block;
+        width: 68px;
+        height: auto;
+        mix-blend-mode: multiply;
     }
 
     .site-nav__menu-button {
@@ -708,5 +1062,109 @@ a:focus-visible {
 
     .home-hero__lede {
         font-size: .92rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .page-masthead {
+        padding: 132px 0 62px;
+    }
+
+    .page-masthead h1,
+    .about-hero h1 {
+        font-size: clamp(2.8rem, 14vw, 4.4rem);
+    }
+
+    .menu-filter {
+        gap: 7px 16px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 52px 0 88px;
+    }
+
+    .menu-item--feature {
+        grid-column: auto;
+    }
+
+    .menu-item__image-wrap,
+    .menu-item--feature .menu-item__image-wrap {
+        height: min(340px, 78vw);
+    }
+
+    .about-hero,
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .about-hero {
+        padding-top: 132px;
+        padding-bottom: 78px;
+    }
+
+    .about-hero img {
+        height: min(440px, 110vw);
+        border-radius: 0 70px 0 0;
+    }
+
+    .about-story {
+        padding-top: 70px;
+        padding-bottom: 88px;
+    }
+
+    .about-section-heading {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .about-commitments {
+        padding: 78px 0 88px;
+    }
+
+    .about-commitment {
+        grid-template-columns: 28px 1fr;
+        gap: 14px;
+        align-items: start;
+    }
+
+    .about-commitment img {
+        grid-column: 2;
+        width: 100%;
+        height: 190px;
+    }
+
+    .about-commitment > div {
+        grid-column: 2;
+    }
+
+    .plan-row {
+        grid-template-columns: 28px 1fr;
+        gap: 14px;
+        align-items: start;
+    }
+
+    .plan-row img,
+    .plan-row > div {
+        grid-column: 2;
+    }
+
+    .plan-row img {
+        width: 100%;
+        height: min(280px, 70vw);
+    }
+
+    .plan-row h2 {
+        font-size: 2rem;
+    }
+
+    .plans-list {
+        padding-bottom: 78px;
+    }
+
+    .plans-note {
+        padding-bottom: 88px;
     }
 }

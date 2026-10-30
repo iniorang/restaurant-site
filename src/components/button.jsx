@@ -11,6 +11,9 @@ export function Button({
     header,
     subheader,
     onClick,
+    href,
+    target,
+    rel,
     icon,
     iconOnly = false,
     ariaLabel,
@@ -20,11 +23,12 @@ export function Button({
     const isTwoLine = header || subheader;
     const buttonStyles = isTwoLine ? "button--wide" : "";
     const iconOnlyStyles = iconOnly ? "button--icon-only" : "";
+    const Element = href ? "a" : "button";
 
     return (
-        <button
+        <Element
             aria-label={ariaLabel}
-            type="button"
+            {...(href ? { href, target, rel } : { type: "button" })}
             className={`${baseStyles} ${buttonStyles} ${iconOnlyStyles} ${variantStyles[variant] || variantStyles.solid} ${className}`}
             onClick={onClick}
         >
@@ -54,6 +58,6 @@ export function Button({
             ) : (
                 name && <span>{name}</span>
             )}
-        </button>
+        </Element>
     );
 }

@@ -1,5 +1,3 @@
-import { HeaderWithoutBG, HeaderWithBG } from "../components/header";
-
 const commitments = [
     {
         title: "Delicious and Healthy Meals with Balanced Proteins",
@@ -47,71 +45,40 @@ const commitments = [
 
 export default function AboutPage() {
     return (
-        <main className="bg-background ">
-            <HeaderWithBG
-                subtitle="Our story"
-                title="The Story of Hati"
-                backgroundImageUrl="/assets/img/aboutus/HealthyFoodEducationtoYoungsters2.jpg"
-                titleId="about-title"
-            />
-            <section
-                className="flex lg:flex-row flex-col"
-                aria-labelledby="story-heading"
-            >
-                <div className="overflow-hidden lg:basis-3/5">
-                    <img
-                        src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.jpg"
-                        alt="Healthy food education session with youngsters"
-                        className="h-full min-h-96 w-full object-cover object-left"
-                    />
+        <main className="about-page">
+            <section className="about-hero page-shell">
+                <div>
+                    <h1>The heart behind<br /><em>the table.</em></h1>
                 </div>
-                <div className="flex flex-col justify-center gap-y-5 px-4 py-12 md:px-11 md:py-24 lg:basis-2/5">
-                    <HeaderWithoutBG
-                        subtitle="A journey driven by purpose"
-                        title={'The Story of "Hati"'}
-                        titleId="story-heading"
-                    />
-                    <div className="space-y-5 text-lg leading-relaxed">
-                        <p>
-                            In Bahasa, “Hati” means heart. We pour our hearts into every dish we create and everything we
-                            do. Warung Hati is more than a catering service; it is a journey driven by passion and purpose.
-                        </p>
-                        <p>
-                            Our story began in January 2017, when Farid, a passionate health activist in Surabaya, set out
-                            to bring health and wellness to the heart of our community.
-                        </p>
-                        <p>
-                            Warung Hati grew from a response to Indonesia’s growing health challenges. We believe food can
-                            transform individual wellbeing while supporting environmental sustainability, local farmers,
-                            and the wider community.
-                        </p>
-                    </div>
+                <img src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters2.jpg" alt="A Warung Hati food education session with young people" />
+            </section>
+
+            <section className="about-story page-shell" aria-labelledby="story-heading">
+                <div className="about-story__lead">
+                    <h2 id="story-heading">Hati means heart.</h2>
+                </div>
+                <div className="about-story__copy">
+                    <p>In Bahasa, “Hati” means heart. We pour ours into every dish we create and everything we do. Warung Hati is more than a catering service; it is a journey driven by passion and purpose.</p>
+                    <p>Our story began in January 2017, when Farid, a passionate health activist in Surabaya, set out to bring health and wellness to the heart of our community.</p>
+                    <p>We believe food can transform individual wellbeing while supporting environmental sustainability, local farmers, and the wider community.</p>
                 </div>
             </section>
 
-            <section className="bg-white px-6 py-24 md:px-12" aria-labelledby="commitment-heading">
-                <div className="mx-auto max-w-7xl">
-                    <HeaderWithoutBG
-                        subtitle="What we stand for"
-                        title="Warung Hati’s Impact Commitment"
-                        titleId="commitment-heading"
-                    />
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <section className="about-commitments" aria-labelledby="commitment-heading">
+                <div className="page-shell">
+                    <div className="about-section-heading">
+                        <div>
+                            <h2 id="commitment-heading">Good food has a wider table.</h2>
+                        </div>
+                        <p>Our commitments show up in the ingredients we choose, the people we work with, and the knowledge we share.</p>
+                    </div>
+                    <div className="about-commitment-list">
                         {commitments.map((commitment) => (
-                            <article
-                                key={commitment.title}
-                                className="overflow-hidden rounded-2xl bg-background shadow-lg transition-transform duration-300 hover:-translate-y-2"
-                            >
-                                <img
-                                    src={commitment.image}
-                                    alt={commitment.alt}
-                                    className="h-56 w-full object-cover"
-                                />
-                                <div className="p-6">
-                                    <h3 className="mb-3 text-2xl font-bold text-primary">
-                                        {commitment.title}
-                                    </h3>
-                                    <p className="leading-relaxed">{commitment.description}</p>
+                            <article className="about-commitment" key={commitment.title}>
+                                <img src={commitment.image} alt={commitment.alt} />
+                                <div>
+                                    <h3>{commitment.title}</h3>
+                                    <p>{commitment.description}</p>
                                 </div>
                             </article>
                         ))}

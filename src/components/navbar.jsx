@@ -31,6 +31,9 @@ export default function Navbar() {
             </div>
 
           <div className="site-nav__mobile-toggle">
+            <NavLink to="/" className="site-nav__mobile-brand" aria-label="Warung Hati home">
+              <img src="/assets/img/logo.png" alt="Warung Hati" />
+            </NavLink>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="site-nav__menu-button"
