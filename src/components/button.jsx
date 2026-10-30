@@ -1,11 +1,9 @@
 import React from "react";
-const baseStyles =
-    "items-center gap-2 font-bold py-2 px-4 transition-colors cursor-pointer";
+const baseStyles = "button items-center gap-2 cursor-pointer";
 
 const variantStyles = {
-    solid: "bg-accent hover:bg-accent-dark text-white",
-    outlined:
-        "border-2 border-accent text-white hover:bg-accent-dark hover:border-accent-dark",
+    solid: "button--solid",
+    outlined: "button--outline",
 };
 
 export function Button({
@@ -20,12 +18,13 @@ export function Button({
     className = "",
 }) {
     const isTwoLine = header || subheader;
-    const buttonStyles = isTwoLine ? "w-full justify-start inline-flex" : "justify-center";
-    const iconOnlyStyles = iconOnly ? "size-12 rounded-full p-0" : "";
+    const buttonStyles = isTwoLine ? "button--wide" : "";
+    const iconOnlyStyles = iconOnly ? "button--icon-only" : "";
 
     return (
         <button
             aria-label={ariaLabel}
+            type="button"
             className={`${baseStyles} ${buttonStyles} ${iconOnlyStyles} ${variantStyles[variant] || variantStyles.solid} ${className}`}
             onClick={onClick}
         >
@@ -33,9 +32,9 @@ export function Button({
                 <span
                     className={
                         isTwoLine
-                            ? "flex size-14 shrink-0 items-center justify-start"
+                            ? "button__icon button__icon--large"
                             : iconOnly
-                                ? "flex items-center justify-center"
+                                ? "button__icon"
                                 : ""
                     }
                 >
@@ -47,7 +46,7 @@ export function Button({
                     {header && (
                         <>
                             <p>{header}</p>
-                            <div className="w-full border-b border-white" />
+                            <span className="button__rule" />
                         </>
                     )}
                     {subheader && <span>{subheader}</span>}

@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/button";
-import { HeaderWithoutBG } from "../components/header";
-import Carrousel from "../components/carrousel";
 
 export default function MainPage() {
     const navigate = useNavigate();
@@ -48,96 +46,103 @@ export default function MainPage() {
     }, []);
 
     return (
-        <main>
-            <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.png')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
-                <div className="flex flex-row justify-between pl-15 pr-5 py-5 w-full h-full">
-                    <div className="flex flex-col justify-center max-w-4xl">
-                        <h1 className="text-5xl sm:text-6xl lg:text-8xl font-extrabold text-white">
-                            Warung Hati
-                        </h1>
-                        <h2 className="text-white text-lg max-w-xl mb-5">
-                            The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients
-                        </h2>
-                        <section className="flex items-center gap-5" id="cta">
-                            <Button name="Explore Menu" onClick={() => navigate('/menu')} />
-                            <Button variant="outlined" name="Learn More" onClick={() => navigate('/aboutus')} />
-                        </section>
-                    </div>
-                </div>
-            </section>
-            <section className="bg-background py-40 px-4 md:px-0" id="short-intro">
-                <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                    <div className="lg:relative hidden lg:block h-full w-full">
-                        <img
-                            src="/assets/img/Utama/NasiBetutu.png"
-                            alt="Freshly cooked meal"
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10/12 h-auto object-cover rounded-lg shadow-xl transform -rotate-3"
-                        />
-                        <img
-                            src="/assets/img/aboutus/OurPartnerOrganicFarmerFromSidoarjo.jpeg"
-                            alt="Our local farmer"
-                            className="absolute top-5 left-5 w-4/12 h-auto object-cover rounded-lg shadow-lg border-4 border-white transform rotate-6"
-                        />
-                        <img
-                            src="/assets/img/Minuman/EsCendol.png"
-                            alt="Refreshing Es Cendol"
-                            className="absolute bottom-5 right-5 w-5/12 h-auto object-cover rounded-lg shadow-2xl border-4 border-white transform -rotate-6"
-                        />
-                    </div>
-                    <div className="flex flex-col">
-                        <HeaderWithoutBG subtitle="Welcome to Your" title="Life Changing Journey" />
-                        <p className="mb-4 text-lg">
-                            Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
+        <main className="home-page">
+            <section className="home-hero" id="hero-section">
+                <div className="home-hero__image" aria-hidden="true" />
+                <div className="home-hero__wash" aria-hidden="true" />
+                <div className="home-hero__inner">
+                    <div className="home-hero__panel">
+                        <img src="/assets/img/logo2.png" alt="Warung Hati" className="home-hero__logo" />
+                        <p className="home-kicker">Indonesian heritage, held with care</p>
+                        <h1>Food that carries a place, a memory, a little heart.</h1>
+                        <p className="home-hero__lede">
+                            Traditional Indonesian dishes made with indigenous herbs, natural ingredients, and the patience they deserve.
                         </p>
+                        <div className="home-hero__actions">
+                            <Button name="Explore the menu" onClick={() => navigate('/menu')} />
+                            <button className="home-text-link" type="button" onClick={() => navigate('/aboutus')}>
+                                Meet Warung Hati <span aria-hidden="true">↗</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div className="home-hero__note" aria-label="Warung Hati introduction">
+                        <span className="home-hero__note-line" />
+                        <span>From the archipelago<br />to your table</span>
                     </div>
                 </div>
             </section>
-            <section className="w-screen h-screen" id="our-recomendation">
-                <div className="w-full h-full">
+
+            <section className="home-intro page-shell" id="short-intro">
+                <div className="home-intro__copy">
+                    <p className="home-kicker">A living tradition</p>
+                    <h2>Modern in the way we care. Traditional in what we serve.</h2>
+                    <p>
+                        Warung Hati brings the richness of Indonesia's cultural heritage to the table through recipes shaped by indigenous herbs, spices, and natural ingredients. We keep the wisdom intact, then make room for you.
+                    </p>
+                    <button className="home-text-link home-text-link--green" type="button" onClick={() => navigate('/aboutus')}>
+                        Our story <span aria-hidden="true">↗</span>
+                    </button>
+                </div>
+                <div className="home-intro__images" aria-label="Warung Hati ingredients and partners">
+                    <figure className="home-image home-image--main">
+                        <img src="/assets/img/Utama/NasiBetutu.png" alt="Nasi Betutu, a Balinese spiced dish" />
+                        <figcaption>Slow-cooked, spice-wrapped Nasi Betutu</figcaption>
+                    </figure>
+                    <figure className="home-image home-image--small">
+                        <img src="/assets/img/aboutus/OurPartnerOrganicFarmerFromSidoarjo.jpeg" alt="A local organic farmer partner" />
+                        <figcaption>Grown with our partners</figcaption>
+                    </figure>
+                    <span className="home-stamp" aria-hidden="true">from<br />the soil</span>
+                </div>
+            </section>
+
+            <section className="home-featured" id="our-recommendation" aria-labelledby="featured-title">
+                <div className="page-shell">
+                    <div className="home-section-heading">
+                        <div>
+                            <p className="home-kicker">The table is open</p>
+                            <h2 id="featured-title">A few favourites, today.</h2>
+                        </div>
+                        <button className="home-text-link home-text-link--green" type="button" onClick={() => navigate('/menu')}>
+                            See the full menu <span aria-hidden="true">↗</span>
+                        </button>
+                    </div>
                     {menuError ? (
-                        <p className="flex h-full items-center justify-center text-red-600">
-                            {menuError}
-                        </p>
+                        <p className="home-message home-message--error">{menuError}</p>
+                    ) : foodRecommendations.length === 0 ? (
+                        <p className="home-message">Gathering today's dishes...</p>
                     ) : (
-                        <Carrousel items={foodRecommendations} />
+                        <div className="home-dishes">
+                            {foodRecommendations.slice(0, 3).map((item, index) => (
+                                <article className={`home-dish home-dish--${index + 1}`} key={item.id}>
+                                    <div className="home-dish__image-wrap">
+                                        <img src={item.imageUrl} alt={item.alt} className="home-dish__image" />
+                                        <span className="home-dish__number">0{index + 1}</span>
+                                    </div>
+                                    <div className="home-dish__copy">
+                                        <h3>{item.title}</h3>
+                                        <p>{item.description}</p>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
                     )}
                 </div>
             </section>
-            <section className="bg-background py-40 px-4" id="contact-us">
-                <div className="container flex lg:flex-row flex-col gap-10 mx-auto px-4 md:px-0">
-                    <div className="w-full lg:basis-3/5">
-                        <HeaderWithoutBG subtitle="Get in touch" title="Contact us" />
-                        <div className="flex flex-col">
-                            <p className="text-lg mb-4">
-                                Curious about our food or have a special request? Drop us a
-                                line and enjoy tasty Indonesian dishes made with fresh,
-                                organic, locally sourced ingredients.
-                            </p>
-                            <div className="flex flex-col gap-4">
-                                <Button header="Email" subheader="info@warunghati.com" icon="fi fi-rr-envelope" />
-                                <Button header="Phone" subheader="+62 812-3456-7890" icon="fi fi-brands-whatsapp" />
-                                <p className="text-center">or</p>
-                                <p className="text-lg">Check out our social media for more updates and special offers!</p>
-                                <div className="container mx-auto flex flex-row justify-center gap-4">
-                                    <Button
-                                        icon="fi fi-brands-instagram"
-                                        iconOnly
-                                        ariaLabel="Instagram Warung Hati"
-                                        onClick={() => window.open("https://www.instagram.com/warunghati", "_blank")}
-                                    />
-                                    <Button
-                                        icon="fi fi-brands-facebook"
-                                        iconOnly
-                                        ariaLabel="Facebook Warung Hati"
-                                        onClick={() => window.open("https://www.facebook.com/profile.php?id=100080306831431", "_blank")}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <script src="https://elfsightcdn.com/platform.js" async></script>
-                        <div className="elfsight-app-c2ec6df7-89c7-4b7d-9c3c-c4c2a9b520c4" data-elfsight-app-lazy></div>
+
+            <section className="home-contact page-shell" id="contact-us">
+                <div className="home-contact__intro">
+                    <p className="home-kicker">Come closer</p>
+                    <h2>Save a seat in the story.</h2>
+                    <p>Have a question, a special request, or simply want to say hello? We would love to hear from you.</p>
+                </div>
+                <div className="home-contact__details">
+                    <Button header="Email" subheader="info@warunghati.com" icon="fi fi-rr-envelope" />
+                    <Button header="WhatsApp" subheader="+62 812-3456-7890" icon="fi fi-brands-whatsapp" />
+                    <div className="home-socials">
+                        <span>Follow the table</span>
+                        <Button icon="fi fi-brands-instagram" iconOnly ariaLabel="Instagram Warung Hati" onClick={() => window.open("https://www.instagram.com/warunghati", "_blank", "noopener,noreferrer")} />
+                        <Button icon="fi fi-brands-facebook" iconOnly ariaLabel="Facebook Warung Hati" onClick={() => window.open("https://www.facebook.com/profile.php?id=100080306831431", "_blank", "noopener,noreferrer")} />
                     </div>
                 </div>
             </section>

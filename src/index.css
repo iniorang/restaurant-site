@@ -2,11 +2,11 @@
 @import "@flaticon/flaticon-uicons/css/all/all";
 
 @theme{ 
-  --color-background: #FFFAF0;
-  --color-primary: #5F8A42;
-  --color-secondary: #86AD59;
-  --color-accent: #E03F4F;
-  --color-accent-dark: #C83F4F;
+  --color-background: #f7f1e6;
+  --color-primary: #547a43;
+  --color-secondary: #d7a62f;
+  --color-accent: #e9434d;
+  --color-accent-dark: #c9343d;
 }
 
 :root {
@@ -15,4 +15,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
