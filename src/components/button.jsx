@@ -1,6 +1,5 @@
-import React from "react";
 const baseStyles =
-    "items-center gap-2 font-bold py-2 px-4 transition-colors cursor-pointer";
+    "items-center border-b-2 rounded-lg px-5 py-3 gap-2 font-bold py-2 px-4 transition-colors cursor-pointer";
 
 const variantStyles = {
     solid: "bg-accent hover:bg-accent-dark text-white",

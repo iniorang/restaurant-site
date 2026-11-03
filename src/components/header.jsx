@@ -1,10 +1,10 @@
 export function HeaderWithoutBG({ subtitle, title, titleId }) {
     return (
         <div className="flex flex-col">
-            <p className="font-semibold uppercase tracking-widest text-apple-heading">
+            <p className="font-semibold uppercase tracking-widest text-apple-red">
                 {subtitle}
             </p>
-            <h2 id={titleId} className="text-5xl font-extrabold text-primary mb-6 leading-tight text-left">
+            <h2 id={titleId} className="text-5xl font-extrabold text-leaf mb-6 leading-tight text-left">
                 {title}
             </h2>
         </div>
