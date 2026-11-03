@@ -50,14 +50,15 @@ export default function MainPage() {
     return (
         <main>
             <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.png')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
-                <div className="flex flex-row justify-between pl-15 pr-5 py-5 w-full h-full">
-                    <div className="flex flex-col justify-center max-w-4xl">
-                        <h1 className="text-5xl sm:text-6xl lg:text-8xl font-extrabold text-white">
-                            Warung Hati
-                        </h1>
-                        <h2 className="text-white text-lg max-w-xl mb-5">
-                            The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients
+                <div className="flex h-full w-full flex-row items-center justify-start px-5 ">
+                    <div className="flex w-full flex-col justify-center gap-y-3 bg-apple-cream p-5 md:mx-5 md:w-1/3 md:p-10">
+                        <img src="/assets/img/logo2.png" className="w-52 h-auto" />
+                        <h2 className="text-5xl font-extrabold text-start text-apple-heading">
+                            Ullamco laborum consequat.
                         </h2>
+                        <p className="text-apple-body md:text-lg">
+                            In ea ea pariatur occaecat anim. In sint ut tempor nulla mollit exercitation consequat. Magna aliquip nostrud non excepteur proident incididunt in minim ullamco.
+                        </p>
                         <section className="flex items-center gap-5" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
                             <Button variant="outlined" name="Learn More" onClick={() => navigate('/aboutus')} />
@@ -65,26 +66,26 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
-            <section className="bg-background py-40 px-4 md:px-0" id="short-intro">
-                <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                    <div className="lg:relative hidden lg:block h-full w-full">
+            <section className="flex min-h-screen items-center justify-center bg-background px-4 py-10 md:h-screen md:px-0" id="short-intro">
+                <div className="container mx-auto flex h-auto w-full flex-col items-center justify-center gap-10 md:h-full md:flex-row">
+                    <div className="flex h-[40vh] min-h-64 w-full items-stretch gap-2 md:h-full md:gap-4">
                         <img
                             src="/assets/img/Utama/NasiBetutu.png"
                             alt="Freshly cooked meal"
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10/12 h-auto object-cover rounded-lg shadow-xl transform -rotate-3"
+                            className="h-full w-1/3 min-w-0 rounded-lg object-cover"
                         />
                         <img
                             src="/assets/img/aboutus/OurPartnerOrganicFarmerFromSidoarjo.jpeg"
                             alt="Our local farmer"
-                            className="absolute top-5 left-5 w-4/12 h-auto object-cover rounded-lg shadow-lg border-4 border-white transform rotate-6"
+                            className="h-full w-1/3 min-w-0 rounded-lg object-cover"
                         />
                         <img
                             src="/assets/img/Minuman/EsCendol.png"
                             alt="Refreshing Es Cendol"
-                            className="absolute bottom-5 right-5 w-5/12 h-auto object-cover rounded-lg shadow-2xl border-4 border-white transform -rotate-6"
+                            className="h-full w-1/3 min-w-0 rounded-lg object-cover"
                         />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col md:basis-2/6">
                         <HeaderWithoutBG subtitle="Welcome to Your" title="Life Changing Journey" />
                         <p className="mb-4 text-lg">
                             Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
@@ -92,15 +93,15 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
-            <section className="w-screen h-screen" id="our-recomendation">
-                <div className="w-full h-full">
-                    {menuError ? (
-                        <p className="flex h-full items-center justify-center text-red-600">
-                            {menuError}
-                        </p>
-                    ) : (
-                        <Carrousel items={foodRecommendations} />
-                    )}
+            <section className="h-screen w-full bg-seed-body" id="our-recomendation">
+                <div className="container py-4 px-10 mx-auto">
+                    <div className="mx-auto flex  items-center justify-between border-b-2 border-white">
+                        <h2 className="">Help</h2>
+                        <h2 className="">Help</h2>
+                    </div>
+                    <div className="grid grid-flow-col gap-4">
+                        <div></div>
+                    </div>
                 </div>
             </section>
             <section className="bg-background py-40 px-4" id="contact-us">

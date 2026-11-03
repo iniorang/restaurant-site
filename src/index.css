@@ -1,12 +1,29 @@
 @import "tailwindcss";
 @import "@flaticon/flaticon-uicons/css/all/all";
 
-@theme{ 
+@theme {
   --color-background: #FFFAF0;
   --color-primary: #5F8A42;
   --color-secondary: #86AD59;
   --color-accent: #E03F4F;
   --color-accent-dark: #C83F4F;
+
+  --color-apple-cream: #FFFAF0;
+  --color-apple-card: #F2EBE1;
+  --color-apple-heading: #24140E;
+  --color-apple-body: #61463A;
+
+  --color-seed-bg: #1D100B;
+  --color-seed-card: #2B1A13;
+  --color-seed-heading: #F5EBE1;
+  --color-seed-body: #D1C2B5;
+  --color-seed-badge: #3D2115;
+
+  --color-apple-red: #C62828;
+  --color-apple-red-hover: #9A0007;
+  --color-apple-red-bright: #E53935;
+  --color-apple-green: #2E7D32;
+  --color-apple-green-hover: #1B5E20;
 }
 
 :root {
@@ -14,5 +31,29 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-background);
+  background-color: var(--color-apple-cream);
+}
+
+@keyframes settle-plate {
+  from {
+    opacity: 0;
+    transform: translateY(24px) rotate(-1.5deg);
+    box-shadow: 0 0 0 rgba(36, 20, 14, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    box-shadow: 0 24px 60px rgba(36, 20, 14, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
