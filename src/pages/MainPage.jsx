@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../components/button";
+import { Button, TextButton } from "../components/button";
 import { HeaderWithoutBG } from "../components/header";
 import Card from "../components/card";
 
@@ -54,7 +54,7 @@ export default function MainPage() {
             <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.png')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
                 <div className="flex h-full w-full flex-row items-center justify-start px-5 ">
                     <div className="flex w-full flex-col justify-center gap-y-3 bg-apple-cream p-5 md:mx-5 md:w-1/3 md:p-10">
-                        <img src="/assets/img/logo2.png" className="w-52 h-auto" alt="Warung Hati Logo"/>
+                        <img src="/assets/img/logo2.png" className="w-52 h-auto" alt="Warung Hati Logo" />
                         <h1 className="text-5xl font-extrabold text-start text-apple-heading">
                             Nusantara Taste, Crafted with Hati.
                         </h1>
@@ -63,14 +63,17 @@ export default function MainPage() {
                         </p>
                         <section className="flex items-center gap-5" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
-                            <Button variant="outlined" name="Learn More" onClick={() => navigate('/aboutus')} />
+                            <TextButton
+                                name="More Know"
+                                onClick={() => navigate("/aboutus")}
+                            />
                         </section>
                     </div>
                 </div>
             </section>
             <section className="flex items-center justify-center bg-background px-4 py-24 md:px-0 md:py-32" id="short-intro">
                 <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 md:flex-row">
-                    <div className="flex h-[32vh] min-h-64 w-full items-stretch gap-2 md:h-[420px] md:gap-4">
+                    <div className="flex h-[32vh] min-h-64 w-full items-stretch gap-2 md:h-105 md:gap-4">
                         <img
                             src="/assets/img/Utama/NasiBetutu.png"
                             alt="Freshly cooked meal"
@@ -92,23 +95,25 @@ export default function MainPage() {
                         <p className="mb-4 max-w-2xl text-lg">
                             Warung Hati brings Indonesia's cultural heritage to the table through recipes shaped by place, season, and memory. We cook with indigenous herbs, spices, and natural ingredients to keep every plate generous, grounded, and unmistakably ours.
                         </p>
+                        <TextButton
+                            name="More about us"
+                            onClick={() => navigate("/aboutus")}
+                            className="text-start"
+                        />
                     </div>
                 </div>
             </section>
             <section className="w-full bg-seed-body" id="our-recommendations">
                 <div className="container mx-auto px-4 py-10 md:px-10">
-                    <div className="mx-auto flex items-center justify-between border-b-2 border-white">
-                        <h2 className="text-2xl font-bold">A Few Recommendations</h2>
-                        <button
-                            type="button"
-                            className="font-semibold text-apple-red underline underline-offset-4 hover:text-apple-red-hover"
+                    <div className="mx-auto flex items-center justify-between border-b-2 border-white ">
+                        <h2 className="md:text-3xl text-xl font-bold">Little Recommendations</h2>
+                        <TextButton
+                            name="Full Menu"
                             onClick={() => navigate("/menu")}
-                        >
-                            View full menu
-                        </button>
+                        />
                     </div>
                     {menuError ? (
-                        <div className="flex flex-col items-center gap-4 py-10 text-center">
+                        <div className="flex flex-col items-center gap-4 py-5 text-center">
                             <p className="text-red-600">{menuError}</p>
                             <button
                                 type="button"

@@ -57,3 +57,16 @@ export function Button({
         </button>
     );
 }
+
+export function TextButton({ name, onClick, className = "" }) {
+    return (
+        <button
+            type="button"
+            className={`font-bold text-apple-red hover:text-apple-red-hover cursor-pointer ${className}`}
+            onClick={onClick}
+        >
+            {name}
+            <i className="fi fi-rr-arrow-up-right-from-square ml-1 text-lg" />
+        </button>
+    )
+}

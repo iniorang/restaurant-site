@@ -8,7 +8,7 @@ export default function Card({
     descriptionClassName = "line-clamp-3"
 }) {
     return (
-        <div className={`flex h-full flex-col rounded bg-apple-card p-4 shadow-xl ${className}`}>
+        <div className={`flex h-full flex-col bg-apple-card p-4 shadow-xl ${className}`}>
             <img
                 src={imageUrl}
                 alt={alt}
