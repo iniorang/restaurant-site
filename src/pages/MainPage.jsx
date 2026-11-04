@@ -52,7 +52,7 @@ export default function MainPage() {
     return (
         <main>
             <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.png')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
-                <div className="flex h-full w-full flex-row items-center justify-start px-5 ">
+                <div className="flex h-full w-full flex-row items-center justify-start mt-5 md:mt-0 px-5 ">
                     <div className="flex w-full flex-col justify-center gap-y-3 bg-apple-cream p-5 md:mx-5 md:w-1/3 md:p-10">
                         <img src="/assets/img/logo2.png" className="w-52 h-auto" alt="Warung Hati Logo" />
                         <h1 className="text-5xl font-extrabold text-start text-apple-heading">
@@ -145,7 +145,7 @@ export default function MainPage() {
                                         alt={item.alt}
                                         imageClassName="aspect-[4/3]"
                                         descriptionClassName={index === 0 ? "line-clamp-4" : "line-clamp-3"}
-                                        className={`group min-h-48 transition-transform duration-300 hover:scale-[1.01] ${layoutClasses[index]}`}
+                                        className={`group min-h-48 ${layoutClasses[index]}`}
                                     />
                                 );
                             })}

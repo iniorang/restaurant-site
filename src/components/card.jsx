@@ -8,7 +8,7 @@ export default function Card({
     descriptionClassName = "line-clamp-3"
 }) {
     return (
-        <div className={`flex h-full flex-col bg-apple-card p-4 shadow-xl ${className}`}>
+        <article className={`flex h-full flex-col bg-apple-card p-4 shadow-xl transition-transform duration-300 hover:scale-[1.01] ${className}`}>
             <img
                 src={imageUrl}
                 alt={alt}
@@ -18,6 +18,6 @@ export default function Card({
                 <h3 className="mb-2 text-2xl font-semibold text-apple-heading">{title}</h3>
                 <p className={`mb-4 text-apple-body ${descriptionClassName}`}>{description}</p>
             </div>
-        </div>
+        </article>
     );
 }

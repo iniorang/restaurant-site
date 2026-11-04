@@ -1,4 +1,5 @@
 import { HeaderWithoutBG, HeaderWithBG } from "../components/header";
+import Card from "../components/card";
 
 const commitments = [
     {
@@ -62,14 +63,15 @@ export default function AboutPage() {
                     <img
                         src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.jpg"
                         alt="Healthy food education session with youngsters"
-                        className="h-full min-h-96 w-full object-cover object-left"
+                        className="h-full p-5 rounded-lg min-h-96 w-full object-cover object-left"
                     />
                 </div>
-                <div className="flex flex-col justify-center gap-y-5 px-4 py-12 md:px-11 md:py-24 lg:basis-2/5">
+                <div className="flex flex-col justify-center px-4 py-12 md:px-11 md:py-24 lg:basis-2/5">
                     <HeaderWithoutBG
                         subtitle="A journey driven by purpose"
                         title={'The Story of "Hati"'}
                         titleId="story-heading"
+
                     />
                     <div className="space-y-5 text-lg leading-relaxed">
                         <p>
@@ -89,7 +91,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="bg-white px-6 py-24 md:px-12" aria-labelledby="commitment-heading">
+            <section className="bg-seed-body px-6 py-24 md:px-12" aria-labelledby="commitment-heading">
                 <div className="mx-auto max-w-7xl">
                     <HeaderWithoutBG
                         subtitle="What we stand for"
@@ -98,22 +100,14 @@ export default function AboutPage() {
                     />
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {commitments.map((commitment) => (
-                            <article
+                            <Card
                                 key={commitment.title}
-                                className="overflow-hidden rounded-2xl bg-background shadow-lg transition-transform duration-300 hover:-translate-y-2"
-                            >
-                                <img
-                                    src={commitment.image}
-                                    alt={commitment.alt}
-                                    className="h-56 w-full object-cover"
-                                />
-                                <div className="p-6">
-                                    <h3 className="mb-3 text-2xl font-bold text-primary">
-                                        {commitment.title}
-                                    </h3>
-                                    <p className="leading-relaxed">{commitment.description}</p>
-                                </div>
-                            </article>
+                                title={commitment.title}
+                                description={commitment.description}
+                                imageUrl={commitment.image}
+                                alt={commitment.alt}
+                                descriptionClassName=""
+                            />
                         ))}
                     </div>
                 </div>
