@@ -19,7 +19,7 @@ export function HeaderWithBG({ subtitle, title, backgroundImageUrl, titleId }) {
             style={{ backgroundImage: `url(${backgroundImageUrl})` }}
             aria-labelledby={titleId}
         >
-            <div className="absolute inset-0 bg-leaf/65" />
+            <div className="absolute inset-0 bg-[#1D100B]/60" />
             <div className="relative mx-auto w-full max-w-7xl px-6 pb-16 pt-40 md:px-12">
                 <p className="mb-4 font-semibold uppercase tracking-[0.3em] text-white">
                     {subtitle}

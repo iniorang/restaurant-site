@@ -48,7 +48,7 @@ const commitments = [
 
 export default function AboutPage() {
     return (
-        <main className="bg-background ">
+        <main>
             <HeaderWithBG
                 subtitle="Our story"
                 title="The Story of Hati"
@@ -63,7 +63,7 @@ export default function AboutPage() {
                     <img
                         src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.jpg"
                         alt="Healthy food education session with youngsters"
-                        className="h-full p-5 rounded-lg min-h-96 w-full object-cover object-left"
+                        className="h-full p-5 rounded min-h-96 w-full object-cover object-left"
                     />
                 </div>
                 <div className="flex flex-col justify-center px-4 py-12 md:px-11 md:py-24 lg:basis-2/5">
@@ -75,7 +75,7 @@ export default function AboutPage() {
                     />
                     <div className="space-y-5 text-lg leading-relaxed">
                         <p>
-                            In Bahasa, “Hati” means heart. We pour our hearts into every dish we create and everything we
+                            In Bahasa, "Hati" means heart. We pour our hearts into every dish we create and everything we
                             do. Warung Hati is more than a catering service; it is a journey driven by passion and purpose.
                         </p>
                         <p>
@@ -97,6 +97,8 @@ export default function AboutPage() {
                         subtitle="What we stand for"
                         title="Warung Hati’s Impact Commitment"
                         titleId="commitment-heading"
+                        titleColor="text-seed"
+                        subtitleColor="text-apple-red-bright"
                     />
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {commitments.map((commitment) => (
