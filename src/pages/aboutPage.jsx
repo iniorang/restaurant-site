@@ -52,7 +52,7 @@ export default function AboutPage() {
             <HeaderWithBG
                 subtitle="Our story"
                 title="The Story of Hati"
-                backgroundImageUrl="/assets/img/aboutus/HealthyFoodEducationtoYoungsters2.jpg"
+                backgroundImageUrl="/assets/img/aboutus/SeminaraboutFoodandItsImpact.jpg"
                 titleId="about-title"
             />
             <section
