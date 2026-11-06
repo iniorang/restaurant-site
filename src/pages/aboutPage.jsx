@@ -56,37 +56,39 @@ export default function AboutPage() {
                 titleId="about-title"
             />
             <section
-                className="flex lg:flex-row flex-col"
+                className="flex items-center justify-center bg-background px-4 py-24 md:px-0 md:py-32"
                 aria-labelledby="story-heading"
+                id="story-section"
             >
-                <div className="overflow-hidden lg:basis-3/5">
-                    <img
-                        src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.webp"
-                        alt="Healthy food education session with youngsters"
-                        className="h-full p-5 rounded min-h-96 w-full object-cover object-left"
-                    />
-                </div>
-                <div className="flex flex-col justify-center px-4 py-12 md:px-11 md:py-24 lg:basis-2/5">
-                    <HeaderWithoutBG
-                        subtitle="A journey driven by purpose"
-                        title={'The Story of "Hati"'}
-                        titleId="story-heading"
-
-                    />
-                    <div className="space-y-5 text-lg leading-relaxed">
-                        <p>
-                            In Bahasa, "Hati" means heart. We pour our hearts into every dish we create and everything we
-                            do. Warung Hati is more than a catering service; it is a journey driven by passion and purpose.
-                        </p>
-                        <p>
-                            Our story began in January 2017, when Farid, a passionate health activist in Surabaya, set out
-                            to bring health and wellness to the heart of our community.
-                        </p>
-                        <p>
-                            Warung Hati grew from a response to Indonesia’s growing health challenges. We believe food can
-                            transform individual wellbeing while supporting environmental sustainability, local farmers,
-                            and the wider community.
-                        </p>
+                <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 md:flex-row">
+                    <div className="w-full overflow-hidden rounded-lg p-5 md:basis-3/5">
+                        <img
+                            src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.webp"
+                            alt="Healthy food education session with youngsters"
+                            className="h-full min-h-96 w-full rounded-lg object-cover object-left"
+                        />
+                    </div>
+                    <div className="flex w-full flex-col justify-center md:basis-2/6">
+                        <HeaderWithoutBG
+                            subtitle="A journey driven by purpose"
+                            title={'The Story of "Hati"'}
+                            titleId="story-heading"
+                        />
+                        <div className="space-y-5 text-lg leading-relaxed">
+                            <p>
+                                In Bahasa, "Hati" means heart. We pour our hearts into every dish we create and everything we
+                                do. Warung Hati is more than a catering service; it is a journey driven by passion and purpose.
+                            </p>
+                            <p>
+                                Our story began in January 2017, when Farid, a passionate health activist in Surabaya, set out
+                                to bring health and wellness to the heart of our community.
+                            </p>
+                            <p>
+                                Warung Hati grew from a response to Indonesia’s growing health challenges. We believe food can
+                                transform individual wellbeing while supporting environmental sustainability, local farmers,
+                                and the wider community.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
