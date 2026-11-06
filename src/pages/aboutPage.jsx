@@ -4,42 +4,42 @@ import Card from "../components/card";
 const commitments = [
     {
         title: "Delicious and Healthy Meals with Balanced Proteins",
-        image: "/assets/img/Utama/NasiCampurBali.png",
+        image: "/assets/img/Utama/NasiCampurBali.webp",
         alt: "Balanced Indonesian meal",
         description:
             "We make healthy food delicious by using more plant-based sources and handpicking organic animal-based protein in moderate proportions.",
     },
     {
         title: "From Community To Community",
-        image: "/assets/img/aboutus/CollaborationwithSurabayaSehatCommunityandItsArtisans,Farmers,andProducers 2.jpg",
+        image: "/assets/img/aboutus/CollaborationwithSurabayaSehatCommunityandItsArtisans,Farmers,andProducers 2.webp",
         alt: "Collaboration with the Surabaya Sehat community",
         description:
             "Collaboration is the secret ingredient in our recipe for success. We empower underprivileged women by creating opportunities, building skills, and supporting brighter futures for their families.",
     },
     {
         title: "Empowering Local Producers",
-        image: "/assets/img/aboutus/OurPartnerOrganicFarmerFromSidoarjo.jpeg",
+        image: "/assets/img/aboutus/OurPartnerOrganicFarmerFromSidoarjo.webp",
         alt: "Organic farmer partner from Sidoarjo",
         description:
             "We proudly use indigenous and natural ingredients from nearby farmers and producers across Indonesia, including brown rice from Banyuwangi, vegetables from Mojokerto, and sea salt from Bali.",
     },
     {
         title: "Inclusive Pricing",
-        image: "/assets/img/aboutus/HealthyFoodDonationtoOrphanage.jpg",
+        image: "/assets/img/aboutus/HealthyFoodDonationtoOrphanage.webp",
         alt: "Healthy food donation to an orphanage",
         description:
             'Our local ingredients help us offer diverse products at accessible prices. Through our "Buy 1, Give 1" program, customers can share healthy meals with people in need.',
     },
     {
         title: "Environmentally Responsible",
-        image: "/assets/img/aboutus/DegradableCupForTakeaway.JPG",
+        image: "/assets/img/aboutus/DegradableCupForTakeaway.webp",
         alt: "Eco-friendly takeaway packaging",
         description:
             "Nourishing the body while saving the world is our pledge. We use natural, biodegradable products and encourage customers to bring their own containers.",
     },
     {
         title: "Health and Sustainability Education",
-        image: "/assets/img/aboutus/HealthyFoodEducationtoYoungsters1.JPG",
+        image: "/assets/img/aboutus/HealthyFoodEducationtoYoungsters1.webp",
         alt: "Health and sustainability education for youngsters",
         description:
             "We nurture the next generation through farmers markets, hands-on cooking classes, and campaigns that promote wholesome local food and sustainable living.",
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <HeaderWithBG
                 subtitle="Our story"
                 title="The Story of Hati"
-                backgroundImageUrl="/assets/img/aboutus/SeminaraboutFoodandItsImpact.jpg"
+                backgroundImageUrl="/assets/img/aboutus/SeminaraboutFoodandItsImpact.webp"
                 titleId="about-title"
             />
             <section
@@ -61,7 +61,7 @@ export default function AboutPage() {
             >
                 <div className="overflow-hidden lg:basis-3/5">
                     <img
-                        src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.jpg"
+                        src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.webp"
                         alt="Healthy food education session with youngsters"
                         className="h-full p-5 rounded min-h-96 w-full object-cover object-left"
                     />

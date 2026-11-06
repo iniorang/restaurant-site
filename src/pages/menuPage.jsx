@@ -20,7 +20,7 @@ export default function MenuPage() {
             <HeaderWithBG
                 subtitle="Our Menu"
                 title="Delicious Dishes"
-                backgroundImageUrl="/assets/img/Perayaan/NasiBancaan.png"
+                backgroundImageUrl="/assets/img/Perayaan/NasiBancaan.webp"
                 titleId="menu-title"
             />
             <section id="menu-section" className="container mx-auto px-4 py-8">
