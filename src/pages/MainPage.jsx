@@ -1,53 +1,25 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, TextButton } from "../components/button";
 import { HeaderWithoutBG } from "../components/header";
 import Card from "../components/card";
+import useLoadJson from "../hook/useLoadJson";
 
 export default function MainPage() {
-    const navigate = useNavigate();
-    const [foodRecommendations, setFoodRecommendations] = useState([]);
-    const [menuError, setMenuError] = useState("");
-    const [menuRequestKey, setMenuRequestKey] = useState(0);
+    const navigate = useNavigate()
 
-    useEffect(() => {
-        const controller = new AbortController();
-        setMenuError("");
+    const { data, loading, error, reload } = useLoadJson()
 
-        async function loadFeaturedMenu() {
-            try {
-                const response = await fetch("/menu.json", {
-                    signal: controller.signal
-                });
+    const recommendations = data
+        .filter(item => item.featured === true)
+        .map(item => ({
+            id: item.id,
+            title: item.name,
+            description: item.desc,
+            imageUrl: item.pict,
+            alt: item.alt
+        }))
 
-                if (!response.ok) {
-                    throw new Error(`Menu request failed with status ${response.status}`);
-                }
-
-                const menu = await response.json();
-                const featuredItems = menu
-                    .filter((item) => item.featured === true)
-                    .map((item) => ({
-                        id: item.id,
-                        title: item.name,
-                        description: item.desc,
-                        alt: item.alt,
-                        imageUrl: item.pict
-                    }));
-
-                setFoodRecommendations(featuredItems);
-            } catch (error) {
-                if (error.name !== "AbortError") {
-                    setMenuError("Menu unggulan tidak dapat dimuat.");
-                    console.error("Failed to load featured menu:", error);
-                }
-            }
-        }
-
-        loadFeaturedMenu();
-
-        return () => controller.abort();
-    }, [menuRequestKey]);
+    const recommendError = error ? "Failed to load recommendations. Please try again." : null
 
     return (
         <main>
@@ -112,45 +84,48 @@ export default function MainPage() {
                             onClick={() => navigate("/menu")}
                         />
                     </div>
-                    {menuError ? (
+                    {recommendError ? (
                         <div className="flex flex-col items-center gap-4 py-5 text-center">
-                            <p className="text-red-600">{menuError}</p>
+                            <p className="text-red-600">{recommendError}</p>
                             <button
                                 type="button"
                                 className="font-semibold text-apple-red underline underline-offset-4"
-                                onClick={() => setMenuRequestKey((key) => key + 1)}
+                                onClick={reload}
                             >
                                 Try again
                             </button>
                         </div>
-                    ) : foodRecommendations.length === 0 ? (
-                        <p className="py-10 text-center text-seed-body">Featured dishes are coming soon.</p>
-                    ) : (
-                        <div className="grid gap-3 py-7 md:grid-cols-4 md:grid-rows-2">
-                            {foodRecommendations.slice(0, 5).map((item, index) => {
-                                const layoutClasses = [
-                                    "md:col-span-3 md:row-span-2",
-                                    "md:col-span-1",
-                                    "md:col-span-1",
-                                    "md:col-span-2",
-                                    "md:col-span-2"
-                                ];
+                    ) : loading ? (
+                        <p className="py-10 text-center text-seed-body">Loading recommendations...</p>
+                    )
+                        : recommendations.length === 0 ? (
+                            <p className="py-10 text-center text-seed-body">Featured dishes are coming soon.</p>
+                        ) : (
+                            <div className="grid gap-3 py-7 md:grid-cols-4 md:grid-rows-2">
+                                {recommendations.slice(0, 5).map((item, index) => {
+                                    const layoutClasses = [
+                                        "md:col-span-3 md:row-span-2",
+                                        "md:col-span-1",
+                                        "md:col-span-1",
+                                        "md:col-span-2",
+                                        "md:col-span-2"
+                                    ];
 
-                                return (
-                                    <Card
-                                        key={item.id}
-                                        title={item.title}
-                                        description={item.description}
-                                        imageUrl={item.imageUrl}
-                                        alt={item.alt}
-                                        imageClassName="aspect-[4/3]"
-                                        descriptionClassName={index === 0 ? "line-clamp-4" : "line-clamp-3"}
-                                        className={`group min-h-48 ${layoutClasses[index]}`}
-                                    />
-                                );
-                            })}
-                        </div>
-                    )}
+                                    return (
+                                        <Card
+                                            key={item.id}
+                                            title={item.title}
+                                            description={item.description}
+                                            imageUrl={item.imageUrl}
+                                            alt={item.alt}
+                                            imageClassName="aspect-[4/3]"
+                                            descriptionClassName={index === 0 ? "line-clamp-4" : "line-clamp-3"}
+                                            className={`group min-h-48 ${layoutClasses[index]}`}
+                                        />
+                                    );
+                                })}
+                            </div>
+                        )}
                 </div>
             </section>
             <section className="bg-background py-40 px-4" id="contact-us">

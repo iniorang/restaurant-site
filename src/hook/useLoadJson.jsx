@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function useLoadJson() {
     const [data, setData] = useState([])
@@ -38,6 +38,8 @@ export default function useLoadJson() {
         }
 
         fetchMenu()
+
+        return () => controller.abort()
     }, [requestKey])
 
     return { data, loading, error, reload }
