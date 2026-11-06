@@ -4,6 +4,7 @@ export default function Card({
     imageUrl,
     alt = title,
     className = "",
+    loadMode = "lazy",
     imageClassName = "aspect-square",
     descriptionClassName = "line-clamp-3"
 }) {
@@ -12,6 +13,8 @@ export default function Card({
             <img
                 src={imageUrl}
                 alt={alt}
+                loading={loadMode}
+                decoding="async"
                 className={`min-h-48 w-full object-cover ${imageClassName}`}
             />
             <div className="flex flex-1 flex-col px-2 pb-2 pt-4">

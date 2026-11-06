@@ -118,6 +118,7 @@ export default function MainPage() {
                                             description={item.description}
                                             imageUrl={item.imageUrl}
                                             alt={item.alt}
+                                            loadMode="eager"
                                             imageClassName="aspect-[4/3]"
                                             descriptionClassName={index === 0 ? "line-clamp-4" : "line-clamp-3"}
                                             className={`group min-h-48 ${layoutClasses[index]}`}
