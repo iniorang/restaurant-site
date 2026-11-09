@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { HeaderWithBG } from "../components/header";
 import Card from "../components/card";
 import { Button } from "../components/button";
@@ -24,12 +24,24 @@ const categories = [
     "party",
 ];
 
-const itemsPerPage = 8;
-
 export default function MenuPage() {
-    const { data, loading, error, reload } = UseLoadJson();
-    const [selectedCategory, setSelectedCategory] = useState("all");
-    const [currentPage, setCurrentPage] = useState(1);
+    const { data, loading, error, reload } = UseLoadJson()
+    const [selectedCategory, setSelectedCategory] = useState("all")
+    const [currentPage, setCurrentPage] = useState(1)
+    const [itemsPerPage, setItemsPerPage] = useState(8)
+
+    useEffect(() => {
+        const mobileQuery = window.matchMedia("(max-width: 767px)")
+        const updateItemsPerPage = () => {
+            setItemsPerPage(mobileQuery.matches ? 4 : 8);
+        }
+
+        updateItemsPerPage();
+        mobileQuery.addEventListener("change", updateItemsPerPage)
+
+        return () =>
+            mobileQuery.removeEventListener("change", updateItemsPerPage)
+    }, [])
 
     const menuItems = useMemo(() => {
         return data
@@ -45,30 +57,34 @@ export default function MenuPage() {
                 imageUrl: item.pict,
                 alt: item.alt,
             }));
-    }, [data, selectedCategory]);
+    }, [data, selectedCategory])
 
-    const totalPages = Math.ceil(menuItems.length / itemsPerPage);
-    const firstItemIndex = (currentPage - 1) * itemsPerPage;
+    const totalPages = Math.ceil(menuItems.length / itemsPerPage)
+    const firstItemIndex = (currentPage - 1) * itemsPerPage
     const visibleItems = menuItems.slice(
         firstItemIndex,
         firstItemIndex + itemsPerPage
-    );
+    )
 
     const changeCategory = (category) => {
         setSelectedCategory(category);
         setCurrentPage(1);
-    };
+    }
+
+    useEffect(() => {
+        setCurrentPage((page) => Math.min(page, Math.max(totalPages, 1)))
+    }, [totalPages]);
 
     const changePage = (page) => {
-        setCurrentPage(Math.min(Math.max(page, 1), totalPages));
+        setCurrentPage(Math.min(Math.max(page, 1), totalPages))
         document
             .getElementById("menu-section")
-            ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            ?.scrollIntoView({ behavior: "smooth", block: "start" })
     };
 
     const errorMenu = error
         ? "Failed to load dishes. Please try again later."
-        : null;
+        : null
 
     return (
         <main>
@@ -97,7 +113,7 @@ export default function MenuPage() {
                     </div>
                 ) : loading ? (
                     <p className="py-10 text-center text-seed-body">
-                        Hang on while we load the dishes...
+                        Hang on while we load the our best dishes...
                     </p>
                 ) : (
                     <>
@@ -134,6 +150,7 @@ export default function MenuPage() {
                                         description={item.description}
                                         imageUrl={item.imageUrl}
                                         alt={item.alt}
+                                        loadmode="eager"
                                         descriptionClassName="line-clamp-5"
                                     />
                                 ))}

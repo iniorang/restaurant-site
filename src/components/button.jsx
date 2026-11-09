@@ -4,7 +4,7 @@ const baseStyles =
 const variantStyles = {
     solid: "bg-accent hover:bg-accent-dark text-white",
     outlined:
-        "border-2 border-accent text-white hover:bg-accent-dark hover:border-accent-dark",
+        "border-2 border-accent text-apple-red hover:bg-accent-dark hover:border-accent-dark hover:text-apple-cream",
 };
 
 export function Button({
