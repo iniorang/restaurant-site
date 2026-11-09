@@ -118,7 +118,31 @@ export default function MenuPage() {
                 ) : (
                     <>
                         <div
-                            className="mb-8 flex flex-wrap justify-center gap-3"
+                            className="mb-8 flex justify-center lg:hidden"
+                        >
+                            <label className="w-full max-w-sm">
+                                <span className="sr-only">
+                                    Filter menu by category
+                                </span>
+                                <select
+                                    value={selectedCategory}
+                                    onChange={(event) =>
+                                        changeCategory(event.target.value)
+                                    }
+                                    aria-label="Filter menu by category"
+                                    className="w-full rounded-lg border-2 border-accent bg-apple-card px-4 py-3 font-bold text-apple-heading outline-none transition-colors focus:border-accent-dark"
+                                >
+                                    {categories.map((category) => (
+                                        <option key={category} value={category}>
+                                            {labelsMenu[category]}
+                                        </option>
+                                    ))}
+                                </select>
+                            </label>
+                        </div>
+
+                        <div
+                            className="mb-8 hidden flex-wrap justify-center gap-3 lg:flex"
                             role="group"
                             aria-label="Filter menu by category"
                         >
