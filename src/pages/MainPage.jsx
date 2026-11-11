@@ -80,7 +80,7 @@ export default function MainPage() {
                     <div className="mx-auto flex items-center justify-between border-b-2 border-white ">
                         <h2 className="md:text-3xl text-xl font-bold">Little Recommendations</h2>
                         <TextButton
-                            name="Full Menu"
+                            name="All Dishes"
                             onClick={() => navigate("/menu")}
                         />
                     </div>

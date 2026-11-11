@@ -24,7 +24,7 @@ export function HeaderWithBG({ subtitle, title, backgroundImageUrl, titleId }) {
                 <p className="mb-4 font-semibold uppercase tracking-[0.3em] text-white">
                     {subtitle}
                 </p>
-                <h1 id={titleId} className="max-w-3xl text-5xl font-extrabold leading-tight text-left text-white md:text-7xl">
+                <h1 id={titleId} className="text-5xl font-extrabold leading-tight text-left text-white md:text-7xl">
                     {title}
                 </h1>
             </div>

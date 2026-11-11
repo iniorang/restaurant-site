@@ -211,7 +211,7 @@ export default function MenuPage() {
                                         className={`size-10 rounded-lg px-3 py-2 font-bold transition-colors ${
                                             currentPage === page
                                                 ? "bg-apple-red text-white"
-                                                : "bg-apple-card text-apple-heading hover:bg-apple-red hover:text-white"
+                                                : "bg-apple-card text-apple-heading hover:bg-apple-red hover:text-white hover:cursor-pointer"
                                         }`}
                                     >
                                         {page}
@@ -222,7 +222,7 @@ export default function MenuPage() {
                                     type="button"
                                     onClick={() => changePage(currentPage + 1)}
                                     disabled={currentPage === totalPages}
-                                    className="rounded-lg bg-accent px-4 py-2 font-bold text-white transition-colors hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="rounded-lg bg-accent px-4 py-2 font-bold text-white transition-colors hover:cursor-pointer hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-50"
                                 >
                                     Next
                                 </button>
