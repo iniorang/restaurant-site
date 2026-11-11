@@ -25,9 +25,9 @@ export default function MainPage() {
         <main>
             <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.webp')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
                 <div className="flex h-full w-full flex-row items-center justify-start md:mt-0 mt-10 px-5">
-                    <div className="flex w-full flex-col justify-center gap-y-3 bg-apple-cream p-5 md:mx-5 md:w-1/3 md:p-10">
-                        <img src="/assets/img/logo2.png" className="w-52 h-auto" alt="Warung Hati Logo" />
-                        <h1 className="text-5xl font-extrabold text-start text-apple-heading">
+                    <div className="flex w-full min-w-0 flex-col justify-center gap-y-3 bg-apple-cream p-5 md:mx-5 md:w-2/5 md:p-6 lg:w-1/3 lg:p-10">
+                        <img src="/assets/img/logo2.png" className="h-auto w-40 lg:w-52" alt="Warung Hati Logo" />
+                        <h1 className="text-start text-4xl font-extrabold text-apple-heading lg:text-5xl">
                             Nusantara Taste, Crafted with 'Hati'.
                         </h1>
                         <p className="text-apple-body md:text-lg">
@@ -44,7 +44,7 @@ export default function MainPage() {
                 </div>
             </section>
             <section className="flex items-center justify-center bg-background px-4 py-24 md:px-0 md:py-32" id="short-intro">
-                <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 md:flex-row">
+                <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
                     <div className="flex h-[32vh] min-h-64 w-full items-stretch gap-2 md:h-105 md:gap-4">
                         <img
                             src="/assets/img/Utama/NasiBetutu.webp"
