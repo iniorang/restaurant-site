@@ -78,7 +78,7 @@ export default function MainPage() {
             <section className="w-full bg-seed-body" id="our-recommendations">
                 <div className="container mx-auto px-4 py-10 md:px-10">
                     <div className="mx-auto flex items-center justify-between border-b-2 border-white ">
-                        <h2 className="md:text-3xl text-xl font-bold">Little Recommendations</h2>
+                        <h2 className="md:text-3xl text-xl font-bold">Recommendations</h2>
                         <TextButton
                             name="All Dishes"
                             onClick={() => navigate("/menu")}

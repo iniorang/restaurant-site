@@ -62,7 +62,7 @@ export function TextButton({ name, onClick, className = "" }) {
     return (
         <button
             type="button"
-            className={`font-bold text-apple-red hover:text-apple-red-hover cursor-pointer ${className}`}
+            className={`font-bold text-apple-red text-start hover:text-apple-red-hover cursor-pointer ${className}`}
             onClick={onClick}
         >
             {name}

@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="bg-apple-cream fixed top-0 w-full z-10 py-3 ">
+      <nav className="bg-apple-cream fixed top-0 w-full z-10 py-3 shadow-xs">
         <div className="mx-auto px-2">
           <div className="flex h-16 items-center justify-between md:justify-center">
             <div className="flex items-center justify-between">
@@ -61,19 +61,23 @@ export default function Navbar() {
                 </NavLink>
               </div>
             </div>
-            <div className="md:hidden flex">
-              <div className="flex items-center justify-center">
-                <div>
+            <div className="w-full md:hidden">
+              <div className="flex w-full items-center justify-between">
+                <div className="flex items-center align-bottom gap-2">
                   <NavLink to="/">
                     <img
                       src="/assets/img/logo2.png"
                       alt="Warung Hati"
-                      className="object-fill h-20 w-auto"
+                      className="object-fill h-18 w-auto"
                     />
                   </NavLink>
                 </div>
                 <button
+                  type="button"
                   onClick={() => setIsOpen(!isOpen)}
+                  aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                  aria-expanded={isOpen}
+                  aria-controls="mobile-navigation"
                   className="text-gray-600 hover:text-gray-900 focus:outline-none"
                 >
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,7 +94,7 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div id="mobile-navigation" className="md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <NavLink
               onClick={() => setIsOpen(false)}
               to="/"
