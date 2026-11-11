@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 
-const baseLink = "px-3 py-2 rounded-md text-md font-medium"
+const baseLink = "px-3 py-2 rounded-md text-md font-medium transition-colors hover:text-accent hover:cursor-pointer"
 const inactiveLink = "hover:text-accent"
 const activeLink = "text-accent"
 
@@ -14,7 +14,6 @@ export default function Navbar() {
         <div className="mx-auto px-2">
           <div className="flex h-16 items-center justify-between md:justify-center">
             <div className="flex items-center justify-between">
-              {/* Desktop Menu links */}
               <div className="hidden justify-center gap-10 items-center md:flex space-x-2">
                 <div>
                   <NavLink
@@ -62,25 +61,34 @@ export default function Navbar() {
                 </NavLink>
               </div>
             </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-600 hover:text-gray-900 focus:outline-none"
-              >
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  {isOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
-              </button>
+            <div className="md:hidden flex">
+              <div className="flex items-center justify-center">
+                <div>
+                  <NavLink to="/">
+                    <img
+                      src="/assets/img/logo2.png"
+                      alt="Warung Hati"
+                      className="object-fill h-20 w-auto"
+                    />
+                  </NavLink>
+                </div>
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-gray-600 hover:text-gray-900 focus:outline-none"
+                >
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    {isOpen ? (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    ) : (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    )}
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        {/* Mobile Menu */}
+
         {isOpen && (
           <div className="md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <NavLink
@@ -123,7 +131,6 @@ export default function Navbar() {
           </div>
         )}
       </nav>
-
     </header>
   )
 }
