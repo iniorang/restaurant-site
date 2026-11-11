@@ -61,8 +61,8 @@ export default function plansPage() {
     return (
         <main>
             <HeaderWithBG
-                subtitle="The Way of"
-                title="A Better Minds and Bodies"
+                subtitle="A Plan for"
+                title="Better Minds and Bodies"
                 backgroundImageUrl="/assets/img/Perayaan/NasiBancaan.webp"
                 titleId="menu-title"
             />

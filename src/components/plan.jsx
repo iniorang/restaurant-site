@@ -5,7 +5,7 @@ export default function PlanTable({ img, title, description, goal, menu, include
                 <img
                     src={img}
                     alt={title}
-                    className="w-full h-full rounded-full aspect-square object-cover object-center"
+                    className="w-full h-full rounded-full aspect-square object-cover object-center border-leaf border-4 shadow-lg"
                 />
             </div>
             <div className="flex h-full flex-col gap-y-5 pt-10 bg-apple-card p-4 shadow-xl ">
