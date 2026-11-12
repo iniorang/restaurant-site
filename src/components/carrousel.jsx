@@ -36,14 +36,14 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
             {items.map((item, index) => (
                 <SwiperSlide
                     key={item.id ?? item.imageUrl ?? index}
-                    className="relative flex h-screen overflow-hidden bg-cover bg-center"
+                    className="relative flex h-screen bg-cover bg-center"
                     style={{ backgroundImage: `url("${item.imageUrl}")` }}
                 >
-                    <div className="flex h-full w-full items-end bg-black/40 p-10 py-20 lg:items-center md:px-20">
-                        <div className="flex max-w-2xl flex-col gap-5 text-white">
-                            <h2 className="text-5xl font-bold md:text-7xl">{item.title}</h2>
-                            <hr className="my-1 bg-neutral-quaternary md:my-2" />
-                            <p className="text-xl md:text-2xl">{item.description}</p>
+                    <div className="absolute bottom-0 left-0 flex h-1/6 w-full items-center bg-black/40 p-5">
+                        <div className="flex flex-col text-white">
+                            <h2 className="text-4xl font-bold md:text-7xl">
+                                {item.title}
+                            </h2>
                         </div>
                     </div>
                 </SwiperSlide>

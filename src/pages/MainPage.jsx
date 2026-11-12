@@ -3,6 +3,7 @@ import { Button, TextButton } from "../components/button";
 import { HeaderWithoutBG } from "../components/header";
 import Card from "../components/card";
 import useLoadJson from "../hook/useLoadJson";
+import Carrousel from "../components/carrousel";
 
 export default function MainPage() {
     const navigate = useNavigate()
@@ -76,15 +77,15 @@ export default function MainPage() {
                 </div>
             </section>
             <section className="w-full bg-seed-body" id="our-recommendations">
-                <div className="container mx-auto px-4 py-10 md:px-10">
-                    <div className="mx-auto flex items-center justify-between border-b-2 border-white ">
+                <div className="mx-auto px-4 py-10 md:px-10">
+                    <div className="mx-auto flex items-center container justify-between border-b-2 border-white ">
                         <h2 className="md:text-3xl text-xl font-bold">Recommendations</h2>
                         <TextButton
                             name="All Dishes"
                             onClick={() => navigate("/menu")}
                         />
                     </div>
-                    {recommendError ? (
+                    {/* {recommendError ? (
                         <div className="flex flex-col items-center gap-4 py-5 text-center">
                             <p className="text-red-600">{recommendError}</p>
                             <button
@@ -126,7 +127,10 @@ export default function MainPage() {
                                     );
                                 })}
                             </div>
-                        )}
+                        )} */}
+                    <div className="mt-2 h-screen w-full overflow-hidden rounded-lg">
+                        <Carrousel items={recommendations.slice(0, 5)} />
+                    </div>
                 </div>
             </section>
             <section className="bg-background py-40 px-4" id="contact-us">
