@@ -1,12 +1,8 @@
 @import "tailwindcss";
-@import "@flaticon/flaticon-uicons/css/all/all";
+@import "@flaticon/flaticon-uicons/css/brands/all";
+@import "@flaticon/flaticon-uicons/css/regular/rounded";
 
 @theme {
-  --color-background: #FFFAF0;
-  --color-primary: #5F8A42;
-  --color-secondary: #86AD59;
-  --color-accent: #E03F4F;
-  --color-accent-dark: #C83F4F;
 
   --color-apple-cream: #FFFAF0;
   --color-apple-card: #F2EBE1;
@@ -27,6 +23,14 @@
 
   --color-leaf: #5F8A42;
   --color-leaf-hover: #4CAF50;
+}
+
+.swiper-pagination-bullet {
+  box-sizing: content-box;
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  background-clip: content-box;
 }
 
 :root {

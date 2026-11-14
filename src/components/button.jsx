@@ -2,9 +2,9 @@ const baseStyles =
     "items-center border-b-2 rounded-lg px-5 py-3 gap-2 font-bold py-2 px-4 transition-colors cursor-pointer";
 
 const variantStyles = {
-    solid: "bg-accent hover:bg-accent-dark text-white",
+    solid: "bg-apple-red hover:bg-apple-red-hover text-white",
     outlined:
-        "border-2 border-accent text-apple-red hover:bg-accent-dark hover:border-accent-dark hover:text-apple-cream",
+        "border-2 border-accent text-apple-red hover:bg-apple-red-hover hover:border-apple-red-hover hover:text-apple-cream",
 };
 
 export function Button({
@@ -62,7 +62,7 @@ export function TextButton({ name, onClick, className = "" }) {
     return (
         <button
             type="button"
-            className={`font-bold text-apple-red text-start hover:text-apple-red-hover cursor-pointer ${className}`}
+            className={`font-bold text-apple-red-hover text-start hover:text-apple-red cursor-pointer ${className}`}
             onClick={onClick}
         >
             {name}

@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 
-const baseLink = "px-3 py-2 rounded-md text-md font-medium transition-colors hover:text-accent hover:cursor-pointer"
-const inactiveLink = "hover:text-accent"
-const activeLink = "text-accent"
+const baseLink = "px-3 py-2 rounded-md text-md font-medium transition-colors hover:text-apple-red-hover hover:cursor-pointer"
+const inactiveLink = "hover:text-apple-red-hover"
+const activeLink = "text-apple-red"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

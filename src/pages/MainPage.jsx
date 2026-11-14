@@ -1,14 +1,39 @@
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, TextButton } from "../components/button";
 import { HeaderWithoutBG } from "../components/header";
-import Card from "../components/card";
 import useLoadJson from "../hook/useLoadJson";
 import Carrousel from "../components/carrousel";
 
 export default function MainPage() {
     const navigate = useNavigate()
 
-    const { data, loading, error, reload } = useLoadJson()
+    const { data } = useLoadJson()
+    const instagramRef = useRef(null)
+
+    useEffect(() => {
+        const container = instagramRef.current
+        if (!container) return undefined
+
+        const loadInstagramWidget = () => {
+            if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) return
+
+            const script = document.createElement("script")
+            script.src = "https://elfsightcdn.com/platform.js"
+            script.async = true
+            document.body.appendChild(script)
+        }
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                loadInstagramWidget()
+                observer.disconnect()
+            }
+        }, { rootMargin: "200px" })
+
+        observer.observe(container)
+        return () => observer.disconnect()
+    }, [])
 
     const recommendations = data
         .filter(item => item.featured === true)
@@ -19,8 +44,6 @@ export default function MainPage() {
             imageUrl: item.pict,
             alt: item.alt
         }))
-
-    const recommendError = error ? "Failed to load recommendations. Please try again." : null
 
     return (
         <main>
@@ -37,7 +60,7 @@ export default function MainPage() {
                         <section className="flex items-center gap-5" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
                             <TextButton
-                                name="More Know"
+                                name="Our story"
                                 onClick={() => navigate("/aboutus")}
                             />
                         </section>
@@ -128,7 +151,7 @@ export default function MainPage() {
                                 })}
                             </div>
                         )} */}
-                    <div className="mt-2 h-screen w-full overflow-hidden rounded-lg">
+                    <div className="mt-2 h-[75vh] w-full overflow-hidden rounded-lg">
                         <Carrousel items={recommendations.slice(0, 5)} />
                     </div>
                 </div>
@@ -165,8 +188,7 @@ export default function MainPage() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full">
-                        <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div ref={instagramRef} className="w-full">
                         <div className="elfsight-app-c2ec6df7-89c7-4b7d-9c3c-c4c2a9b520c4" data-elfsight-app-lazy></div>
                     </div>
                 </div>

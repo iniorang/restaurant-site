@@ -1,7 +1,7 @@
 .swiper {
     --swiper-navigation-color: #e7e7e7;
-    --swiper-pagination-color: var(--color-accent);
-    --swiper-pagination-bullet-inactive-color: var(--color-accent-dark);
+    --swiper-pagination-color: var(--color-apple-red-bright);
+    --swiper-pagination-bullet-inactive-color: var(--color-apple-red);
 }
 
 body {
