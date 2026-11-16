@@ -67,7 +67,7 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
-            <section className="flex items-center justify-center bg-background px-4 py-24 md:px-0 md:py-32" id="short-intro">
+            <section className="flex items-center justify-center px-4 py-24 md:px-0 md:py-32" id="short-intro">
                 <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
                     <div className="flex h-[32vh] min-h-64 w-full items-stretch gap-2 md:h-105 md:gap-4">
                         <img
@@ -151,13 +151,13 @@ export default function MainPage() {
                                 })}
                             </div>
                         )} */}
-                    <div className="mt-2 h-[75vh] w-full overflow-hidden rounded-lg">
+                    <div className="mt-2 h-[75vh] w-full mx-auto overflow-hidden self-center container rounded-lg">
                         <Carrousel items={recommendations.slice(0, 5)} />
                     </div>
                 </div>
             </section>
-            <section className="bg-background py-40 px-4" id="contact-us">
-                <div className="container flex lg:flex-row flex-col gap-10 mx-auto px-4 md:px-0">
+            <section className="flex items-center justify-center px-4 py-24 md:px-0 md:py-32" id="contact-us">
+                <div className="container flex lg:flex-row flex-col gap-10 ">
                     <div className="w-full lg:basis-3/5">
                         <HeaderWithoutBG subtitle="Get in touch" title="Contact us" />
                         <div className="flex flex-col">
