@@ -24,7 +24,7 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
 
     return (
         <div className="relative flex h-full w-full flex-col gap-3 bg-apple-card p-3 md:flex-row">
-            <div className="relative h-4/5 w-full overflow-hidden rounded-xl md:h-full md:flex-1">
+            <div className="relative h-4/5 w-full overflow-hidden md:h-full md:flex-1">
                 <Swiper
                     modules={[Navigation, Pagination, A11y, EffectFade, Autoplay, Thumbs, Mousewheel]}
                     thumbs={{
@@ -101,7 +101,7 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
                         {items.map((item, index) => (
                             <SwiperSlide
                                 key={`thumb-${item.id ?? item.imageUrl ?? index}`}
-                                className="group cursor-pointer overflow-hidden rounded-lg border-2 border-transparent opacity-60 transition-all duration-300 hover:opacity-100 [&.swiper-slide-thumb-active]:border-primary [&.swiper-slide-thumb-active]:opacity-100"
+                                className="group cursor-pointer overflow-hidden border-2 border-transparent opacity-60 transition-all duration-300 hover:opacity-100 [&.swiper-slide-thumb-active]:border-primary [&.swiper-slide-thumb-active]:opacity-100"
                             >
                                 <img
                                     src={item.imageUrl}
