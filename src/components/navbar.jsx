@@ -11,8 +11,6 @@ export default function Navbar() {
   return (
     <header>
       <nav className="bg-apple-cream fixed top-0 w-full z-20 py-3 shadow-xs">
-        <div className="p-2 pr-2 md:pr-0">
-          <div className="flex h-16 items-center justify-between md:justify-center">
         <div className="p-2 pr-2 lg:pr-0">
           <div className="flex h-16 items-center justify-between lg:justify-center">
             <div className="hidden justify-center gap-10 items-center lg:flex space-x-2">
