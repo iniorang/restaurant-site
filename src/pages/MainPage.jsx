@@ -47,7 +47,7 @@ export default function MainPage() {
 
     return (
         <main>
-            <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.webp')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
+            {/* <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.webp')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
                 <div className="flex h-full w-full flex-row items-center justify-start md:mt-0 mt-10 px-5">
                     <div className="flex w-full min-w-0 flex-col justify-center gap-y-3 bg-apple-cream p-5 md:mx-5 md:w-2/5 md:p-6 lg:w-1/3 lg:p-10">
                         <img src="/assets/img/logo2.png" className="h-auto w-40 lg:w-52" alt="Warung Hati Logo" />
@@ -58,6 +58,27 @@ export default function MainPage() {
                             Experience the authentic flavors of Indonesia with our handcrafted dishes, made with love and the freshest ingredients.
                         </p>
                         <section className="flex items-center gap-5" id="cta">
+                            <Button name="Explore Menu" onClick={() => navigate('/menu')} />
+                            <TextButton
+                                name="Our story"
+                                onClick={() => navigate("/aboutus")}
+                            />
+                        </section>
+                    </div>
+                </div>
+            </section> */}
+            <section className="w-full h-screen landscape:max-xl:h-[180svh] relative overflow-hidden pt-24" id="hero-section">
+                <img src="/assets/img/Utama/NasiCampurBali2.webp" alt="Nasi Campur Bali" className="absolute h-full w-full object-cover brightness-50" />
+                <div className="relative z-5 flex h-full w-full flex-row px-5 items-center justify-start">
+                    <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-apple-cream p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
+                        <img src="/assets/img/logo2.png" className="h-auto w-40 landscape:max-xl:w-40 lg:w-52" alt="Warung Hati Logo" />
+                        <h1 className="text-start text-4xl font-extrabold text-apple-heading landscape:max-xl:text-4xl landscape:max-xl:leading-snug lg:text-5xl">
+                            Nusantara Taste, Crafted with 'Hati'.
+                        </h1>
+                        <p className="text-apple-body landscape:max-xl:text-lg md:text-lg">
+                            Experience the authentic flavors of Indonesia with our handcrafted dishes, made with love and the freshest ingredients.
+                        </p>
+                        <section className="flex items-center gap-5 landscape:max-xl:gap-5 landscape:max-xl:mt-3" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
                             <TextButton
                                 name="Our story"
@@ -167,7 +188,7 @@ export default function MainPage() {
                                 organic, locally sourced ingredients.
                             </p>
                             <div className="flex flex-col gap-4">
-                                <Button header="Email" subheader="info@warunghati.com" icon="fi fi-rr-envelope" />
+                                <Button header="Email" subheader="info&#64;warunghati.com" icon="fi fi-rr-envelope" />
                                 <Button header="Phone" subheader="+62 812-3456-7890" icon="fi fi-brands-whatsapp" />
                                 <p className="text-center">or</p>
                                 <p className="text-lg">Check out our social media for more updates and special offers!</p>

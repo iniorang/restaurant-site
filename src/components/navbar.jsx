@@ -13,7 +13,9 @@ export default function Navbar() {
       <nav className="bg-apple-cream fixed top-0 w-full z-20 py-3 shadow-xs">
         <div className="p-2 pr-2 md:pr-0">
           <div className="flex h-16 items-center justify-between md:justify-center">
-            <div className="hidden justify-center gap-10 items-center md:flex space-x-2">
+        <div className="p-2 pr-2 lg:pr-0">
+          <div className="flex h-16 items-center justify-between lg:justify-center">
+            <div className="hidden justify-center gap-10 items-center lg:flex space-x-2">
               <NavLink
                 to="/"
                 end
@@ -59,9 +61,7 @@ export default function Navbar() {
                 Meal Plans
               </NavLink>
             </div>
-
-            {/* Mobile Top Bar (Logo & Tombol Hamburger/X tetap terlihat) */}
-            <div className="flex w-full items-center justify-between md:hidden">
+            <div className="flex w-full items-center justify-between lg:hidden">
               <NavLink to="/" onClick={() => setIsOpen(false)}>
                 <img
                   src="/assets/img/logo2.png"
@@ -92,7 +92,7 @@ export default function Navbar() {
       </nav>
       <aside
         id="mobile-navigation"
-        className={`fixed top-[104px] bottom-0 right-0 w-full bg-apple-cream z-10 flex flex-col justify-center items-center space-y-6 px-6 text-center transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-[104px] bottom-0 right-0 w-full bg-apple-cream z-10 flex flex-col justify-center items-center space-y-6 px-6 text-center transform transition-transform duration-300 ease-in-out lg:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
