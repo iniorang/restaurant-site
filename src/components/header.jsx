@@ -1,13 +1,20 @@
-export function HeaderWithoutBG({ subtitle, title, titleId, subtitleColor = "text-apple-red", titleColor = "text-leaf"
+export function HeaderWithoutBG({
+    subtitle,
+    title,
+    titleId,
+    subtitleColor = "text-apple-red",
+    titleColor = "text-leaf",
+    align = "text-left",
+    className = ""
 }) {
     return (
-        <div className="flex flex-col">
+        <div className={`flex flex-col ${className}`}>
             {subtitle && (
                 <p className={`font-semibold uppercase tracking-widest ${subtitleColor}`}>
                     {subtitle}
                 </p>
             )}
-            <h2 id={titleId} className={`text-5xl font-extrabold mb-6 leading-tight text-left ${titleColor}`}>
+            <h2 id={titleId} className={`text-5xl font-extrabold mb-6 leading-tight ${align} ${titleColor}`}>
                 {title}
             </h2>
         </div>

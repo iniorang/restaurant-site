@@ -74,19 +74,15 @@ export default function AboutPage() {
                             title={'The Story of "Hati"'}
                             titleId="story-heading"
                         />
-                        <div className="space-y-5 text-lg leading-relaxed">
+                        <div className="space-y-2 text-lg leading-relaxed text-justify">
                             <p>
-                                In Bahasa, "Hati" means heart. We pour our hearts into every dish we create and everything we
-                                do. Warung Hati is more than a catering service; it is a journey driven by passion and purpose.
+                                In Bahasa, “Hati” means heart. It means we pour our hearts into every dish we create, and everything we do. At Warung Hati, we're more than a catering service; we're a journey driven by passion and purpose. Our story began in January 2017, when Farid, a passionate health activist in Surabaya, embarked on a mission to bring health and wellness to the heart of our community.
                             </p>
                             <p>
-                                Our story began in January 2017, when Farid, a passionate health activist in Surabaya, set out
-                                to bring health and wellness to the heart of our community.
+                                Warung Hati emerged as a response to the growing health challenges faced by Indonesia, particularly the rise of non-communicable diseases. Farid believes that food possesses a profound ability to not only transform individual health and well-being but also to improve environmental sustainability and the welfare of our local farmers and community.
                             </p>
                             <p>
-                                Warung Hati grew from a response to Indonesia’s growing health challenges. We believe food can
-                                transform individual wellbeing while supporting environmental sustainability, local farmers,
-                                and the wider community.
+                                Before the birth of Warung Hati, Farid was a co-founder of the Surabaya Sehat, an organization that aims to promote healthy lifestyles in the city. There, he shared his love for wholesome, healthy foods at the monthly Pasar Sehat, a vibrant monthly farmers market dedicated to promoting healthy and eco-friendly products.
                             </p>
                         </div>
                     </div>

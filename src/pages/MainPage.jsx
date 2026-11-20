@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, TextButton } from "../components/button";
 import { HeaderWithoutBG } from "../components/header";
@@ -9,31 +8,6 @@ export default function MainPage() {
     const navigate = useNavigate()
 
     const { data } = useLoadJson()
-    const instagramRef = useRef(null)
-
-    useEffect(() => {
-        const container = instagramRef.current
-        if (!container) return undefined
-
-        const loadInstagramWidget = () => {
-            if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) return
-
-            const script = document.createElement("script")
-            script.src = "https://elfsightcdn.com/platform.js"
-            script.async = true
-            document.body.appendChild(script)
-        }
-
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                loadInstagramWidget()
-                observer.disconnect()
-            }
-        }, { rootMargin: "200px" })
-
-        observer.observe(container)
-        return () => observer.disconnect()
-    }, [])
 
     const recommendations = data
         .filter(item => item.featured === true)
@@ -47,36 +21,13 @@ export default function MainPage() {
 
     return (
         <main>
-            {/* <section className="bg-[url('/assets/img/Utama/NasiCampurBali2.webp')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-screen flex bg-black/50 bg-blend-darken" id="hero-section">
-                <div className="flex h-full w-full flex-row items-center justify-start md:mt-0 mt-10 px-5">
-                    <div className="flex w-full min-w-0 flex-col justify-center gap-y-3 bg-apple-cream p-5 md:mx-5 md:w-2/5 md:p-6 lg:w-1/3 lg:p-10">
-                        <img src="/assets/img/logo2.png" className="h-auto w-40 lg:w-52" alt="Warung Hati Logo" />
-                        <h1 className="text-start text-4xl font-extrabold text-apple-heading lg:text-5xl">
-                            Nusantara Taste, Crafted with 'Hati'.
-                        </h1>
-                        <p className="text-apple-body md:text-lg">
-                            Experience the authentic flavors of Indonesia with our handcrafted dishes, made with love and the freshest ingredients.
-                        </p>
-                        <section className="flex items-center gap-5" id="cta">
-                            <Button name="Explore Menu" onClick={() => navigate('/menu')} />
-                            <TextButton
-                                name="Our story"
-                                onClick={() => navigate("/aboutus")}
-                            />
-                        </section>
-                    </div>
-                </div>
-            </section> */}
             <section className="w-full h-screen landscape:max-xl:h-[180svh] relative overflow-hidden pt-24" id="hero-section">
                 <img src="/assets/img/Utama/NasiCampurBali2.webp" alt="Nasi Campur Bali" className="absolute h-full w-full object-cover brightness-50" />
                 <div className="relative z-5 flex h-full w-full flex-row px-5 items-center justify-start">
                     <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-apple-cream p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
                         <img src="/assets/img/logo2.png" className="h-auto w-40 landscape:max-xl:w-40 lg:w-52" alt="Warung Hati Logo" />
-                        <h1 className="text-start text-4xl font-extrabold text-apple-heading landscape:max-xl:text-4xl landscape:max-xl:leading-snug lg:text-5xl">
-                            Nusantara Taste, Crafted with 'Hati'.
-                        </h1>
                         <p className="text-apple-body landscape:max-xl:text-lg md:text-lg">
-                            Experience the authentic flavors of Indonesia with our handcrafted dishes, made with love and the freshest ingredients.
+                            The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients
                         </p>
                         <section className="flex items-center gap-5 landscape:max-xl:gap-5 landscape:max-xl:mt-3" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
@@ -89,12 +40,12 @@ export default function MainPage() {
                 </div>
             </section>
             <section className="flex items-center justify-center px-4 py-24 md:px-0 md:py-32" id="short-intro">
-                <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
+                <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 ">
                     <div className="flex h-[32vh] min-h-64 w-full items-stretch gap-2 md:h-105 md:gap-4">
                         <img
                             src="/assets/img/Utama/NasiBetutu.webp"
                             alt="Freshly cooked meal"
-                            className="h-full w-2/5 min-w-0 rounded-lg object-cover"
+                            className="h-full w-[30%] min-w-0 rounded-lg object-coverr"
                         />
                         <img
                             src="/assets/img/aboutus/OurPartnerOrganicFarmerFromSidoarjo.webp"
@@ -108,9 +59,9 @@ export default function MainPage() {
                         />
                     </div>
                     <div className="flex flex-col md:basis-2/6">
-                        <HeaderWithoutBG subtitle="A table with roots" title="Indonesian heritage, served with care." />
-                        <p className="mb-4 max-w-2xl text-lg">
-                            Warung Hati brings Indonesia's cultural heritage to the table through recipes shaped by place, season, and memory. We cook with indigenous herbs, spices, and natural ingredients to keep every plate generous, grounded, and unmistakably ours.
+                        <HeaderWithoutBG subtitle="Welcome to" title="Your life-changing journey " />
+                        <p className="mb-4 max-w-2xl text-lg text-justify">
+                            Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
                         </p>
                         <TextButton
                             name="More about us"
@@ -123,94 +74,63 @@ export default function MainPage() {
             <section className="w-full bg-seed-body" id="our-recommendations">
                 <div className="mx-auto px-4 py-10 md:px-10">
                     <div className="mx-auto flex items-center container justify-between border-b-2 border-white ">
-                        <h2 className="md:text-3xl text-xl font-bold">Recommendations</h2>
+                        <h2 className="md:text-3xl text-xl font-bold text-seed-badge">Recommendations</h2>
                         <TextButton
                             name="All Dishes"
                             onClick={() => navigate("/menu")}
                         />
                     </div>
-                    {/* {recommendError ? (
-                        <div className="flex flex-col items-center gap-4 py-5 text-center">
-                            <p className="text-red-600">{recommendError}</p>
-                            <button
-                                type="button"
-                                className="font-semibold text-apple-red underline underline-offset-4"
-                                onClick={reload}
-                            >
-                                Try again
-                            </button>
-                        </div>
-                    ) : loading ? (
-                        <p className="py-10 text-center text-seed-body">Loading recommendations...</p>
-                    )
-                        : recommendations.length === 0 ? (
-                            <p className="py-10 text-center text-seed-body">Featured dishes are coming soon.</p>
-                        ) : (
-                            <div className="grid gap-3 py-7 md:grid-cols-4 md:grid-rows-2">
-                                {recommendations.slice(0, 5).map((item, index) => {
-                                    const layoutClasses = [
-                                        "md:col-span-3 md:row-span-2",
-                                        "md:col-span-1",
-                                        "md:col-span-1",
-                                        "md:col-span-2",
-                                        "md:col-span-2"
-                                    ];
-
-                                    return (
-                                        <Card
-                                            key={item.id}
-                                            title={item.title}
-                                            description={item.description}
-                                            imageUrl={item.imageUrl}
-                                            alt={item.alt}
-                                            loadMode="eager"
-                                            imageClassName="aspect-[4/3]"
-                                            descriptionClassName={index === 0 ? "line-clamp-4" : "line-clamp-3"}
-                                            className={`group min-h-48 ${layoutClasses[index]}`}
-                                        />
-                                    );
-                                })}
-                            </div>
-                        )} */}
                     <div className="mt-2 h-[75vh] w-full mx-auto overflow-hidden self-center container rounded-lg">
                         <Carrousel items={recommendations.slice(0, 5)} />
                     </div>
                 </div>
             </section>
-            <section className="flex items-center justify-center px-4 py-24 md:px-0 md:py-32" id="contact-us">
-                <div className="container flex lg:flex-row flex-col gap-10 ">
-                    <div className="w-full lg:basis-3/5">
-                        <HeaderWithoutBG subtitle="Get in touch" title="Contact us" />
-                        <div className="flex flex-col">
-                            <p className="text-lg mb-4">
-                                Curious about our food or have a special request? Drop us a
-                                line and enjoy tasty Indonesian dishes made with fresh,
-                                organic, locally sourced ingredients.
+            <section className="flex items-center justify-center px-4 py-20 md:py-28" id="contact-us">
+                <div className="container mx-auto flex flex-col items-center text-center max-w-2xl">
+                    <HeaderWithoutBG
+                        subtitle="Get in touch"
+                        title="Contact us"
+                        align="text-center"
+                        className="items-center"
+                    />
+                    <p className="text-lg mb-8">
+                        Curious about our food, event collaborations, or have a special request?
+                        Drop us a line and stay connected with us!
+                    </p>
+                    <div className="flex flex-col items-center gap-6 w-full">
+                        <div className="grid sm:grid-cols-2 gap-4 w-full max-w-lg">
+                            <Button
+                                header="Email"
+                                subheader="info&#64;warunghati.com"
+                                icon="fi fi-rr-envelope"
+                                onClick={() => window.location.href = "mailto:info@warunghati.com"}
+                            />
+                            <Button
+                                header="WhatsApp"
+                                subheader="+62 812-3456-7890"
+                                icon="fi fi-brands-whatsapp"
+                                onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
+                            />
+                        </div>
+                        <div className="flex flex-col items-center gap-3 mt-2">
+                            <p className="text-sm text-neutral-500 uppercase tracking-wider font-semibold">
+                                Follow our updates
                             </p>
-                            <div className="flex flex-col gap-4">
-                                <Button header="Email" subheader="info&#64;warunghati.com" icon="fi fi-rr-envelope" />
-                                <Button header="Phone" subheader="+62 812-3456-7890" icon="fi fi-brands-whatsapp" />
-                                <p className="text-center">or</p>
-                                <p className="text-lg">Check out our social media for more updates and special offers!</p>
-                                <div className="container mx-auto flex flex-row justify-center gap-4">
-                                    <Button
-                                        icon="fi fi-brands-instagram"
-                                        iconOnly
-                                        ariaLabel="Instagram Warung Hati"
-                                        onClick={() => window.open("https://www.instagram.com/warunghati", "_blank")}
-                                    />
-                                    <Button
-                                        icon="fi fi-brands-facebook"
-                                        iconOnly
-                                        ariaLabel="Facebook Warung Hati"
-                                        onClick={() => window.open("https://www.facebook.com/profile.php?id=100080306831431", "_blank")}
-                                    />
-                                </div>
+                            <div className="flex flex-row justify-center gap-4">
+                                <Button
+                                    icon="fi fi-brands-instagram"
+                                    iconOnly
+                                    ariaLabel="Instagram Warung Hati"
+                                    onClick={() => window.open("https://www.instagram.com/warunghati", "_blank")}
+                                />
+                                <Button
+                                    icon="fi fi-brands-facebook"
+                                    iconOnly
+                                    ariaLabel="Facebook Warung Hati"
+                                    onClick={() => window.open("https://www.facebook.com/profile.php?id=100080306831431", "_blank")}
+                                />
                             </div>
                         </div>
-                    </div>
-                    <div ref={instagramRef} className="w-full">
-                        <div className="elfsight-app-c2ec6df7-89c7-4b7d-9c3c-c4c2a9b520c4" data-elfsight-app-lazy></div>
                     </div>
                 </div>
             </section>
