@@ -26,16 +26,16 @@ export default function MainPage() {
                 <div className="relative z-5 flex h-full w-full flex-row px-5 items-center justify-start">
                     <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-apple-cream p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
                         <img src="/assets/img/logo2.png" className="h-auto w-40 landscape:max-xl:w-40 lg:w-52" alt="Warung Hati Logo" />
-                        <p className="text-apple-body landscape:max-xl:text-lg md:text-lg">
+                        <h1 className="text-apple-body text-xl font-semibold">
                             The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients
-                        </p>
-                        <section className="flex items-center gap-5 landscape:max-xl:gap-5 landscape:max-xl:mt-3" id="cta">
+                        </h1>
+                        <div className="flex items-center gap-5 landscape:max-xl:gap-5 landscape:max-xl:mt-3" id="cta">
                             <Button name="Explore Menu" onClick={() => navigate('/menu')} />
                             <TextButton
                                 name="Our story"
                                 onClick={() => navigate("/aboutus")}
                             />
-                        </section>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -45,29 +45,33 @@ export default function MainPage() {
                         <img
                             src="/assets/img/Utama/NasiBetutu.webp"
                             alt="Freshly cooked meal"
-                            className="h-full w-[30%] min-w-0 rounded-lg object-coverr"
+                            className="h-full w-[20%] sm:w-[30%] rounded-lg object-cover"
                         />
                         <img
                             src="/assets/img/aboutus/OurPartnerOrganicFarmerFromSidoarjo.webp"
                             alt="Our local farmer"
-                            className="h-full w-[30%] min-w-0 rounded-lg object-cover"
+                            className="h-full w-[60%] sm:w-[40%] rounded-lg object-cover"
                         />
                         <img
                             src="/assets/img/Minuman/EsCendol.webp"
                             alt="Refreshing Es Cendol"
-                            className="h-full w-[30%] min-w-0 rounded-lg object-cover"
+                            className="h-full w-[20%] sm:w-[30%] rounded-lg object-cover"
                         />
                     </div>
-                    <div className="flex flex-col md:basis-2/6">
-                        <HeaderWithoutBG subtitle="Welcome to" title="Your life-changing journey " />
-                        <p className="mb-4 max-w-2xl text-lg text-justify">
-                            Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
-                        </p>
-                        <TextButton
-                            name="More about us"
-                            onClick={() => navigate("/aboutus")}
-                            className="text-start"
-                        />
+                    <div className="flex gap-x-5 md:flex-row justify-center w-auto flex-col">
+                        <div className="">
+                            <HeaderWithoutBG subtitle="Welcome to" title="Your life-changing journey" />
+                        </div>
+                        <div className="flex flex-col">
+                            <p className="mb-2 max-w-2xl text-lg md:text-justify text-left">
+                                Experience the authentic taste of Indonesia's cultural heritage with Warung Hati's cuisine. Our menu is crafted with indigenous herbs, spices, and natural ingredients that have been passed down from our ancestors. We believe that this wisdom is the key to achieving the balance between humans and nature, and is also the secret to prime health and longevity.
+                            </p>
+                            <TextButton
+                                name="More about us"
+                                onClick={() => navigate("/aboutus")}
+                                className="text-start"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -107,9 +111,9 @@ export default function MainPage() {
                             />
                             <Button
                                 header="WhatsApp"
-                                subheader="+62 812-3456-7890"
+                                subheader="+62 813-3300-3734"
                                 icon="fi fi-brands-whatsapp"
-                                onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
+                                onClick={() => window.open("https://wa.me/6281333003734", "_blank")}
                             />
                         </div>
                         <div className="flex flex-col items-center gap-3 mt-2">
