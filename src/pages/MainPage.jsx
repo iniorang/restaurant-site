@@ -63,7 +63,7 @@ export default function MainPage() {
                 <div className="relative z-5 flex h-full w-full flex-row px-5 items-center justify-start">
                     <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-[#FFFDF7] p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
                         <img src="/assets/img/logo2.png" className="h-auto w-40 landscape:max-xl:w-40 lg:w-52" alt="Warung Hati Logo" />
-                        <h1 className="text-sm font-semibold">
+                        <h1 className="lg:text-lg font-semibold">
                             The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients
                         </h1>
                         <div className="flex items-center gap-5 landscape:max-xl:gap-5 landscape:max-xl:mt-3" id="cta">
