@@ -99,6 +99,25 @@ export default function MenuPage() {
                 id="menu-section"
                 className="container mx-auto px-4 py-8"
             >
+                <div
+                    className="mb-8 hidden flex-wrap justify-center gap-3 lg:flex"
+                    role="group"
+                    aria-label="Filter menu by category"
+                >
+                    {categories.map((category) => (
+                        <Button
+                            key={category}
+                            name={labelsMenu[category]}
+                            ariaLabel={`Show ${labelsMenu[category]}`}
+                            onClick={() => changeCategory(category)}
+                            variant={
+                                selectedCategory === category
+                                    ? "solid"
+                                    : "outlined"
+                            }
+                        />
+                    ))}
+                </div>
                 {errorMenu ? (
                     <div className="flex flex-col items-center gap-4 py-5 text-center">
                         <p className="text-red-600">{errorMenu}</p>
@@ -139,26 +158,6 @@ export default function MenuPage() {
                                     ))}
                                 </select>
                             </label>
-                        </div>
-
-                        <div
-                            className="mb-8 hidden flex-wrap justify-center gap-3 lg:flex"
-                            role="group"
-                            aria-label="Filter menu by category"
-                        >
-                            {categories.map((category) => (
-                                <Button
-                                    key={category}
-                                    name={labelsMenu[category]}
-                                    ariaLabel={`Show ${labelsMenu[category]}`}
-                                    onClick={() => changeCategory(category)}
-                                    variant={
-                                        selectedCategory === category
-                                            ? "solid"
-                                            : "outlined"
-                                    }
-                                />
-                            ))}
                         </div>
 
                         {menuItems.length === 0 ? (
@@ -208,11 +207,10 @@ export default function MenuPage() {
                                                 ? "page"
                                                 : undefined
                                         }
-                                        className={`size-10 rounded-lg px-3 py-2 font-bold transition-colors ${
-                                            currentPage === page
+                                        className={`size-10 rounded-lg px-3 py-2 font-bold transition-colors ${currentPage === page
                                                 ? "bg-apple-red text-white"
                                                 : "bg-apple-card text-apple-heading hover:bg-apple-red hover:text-white hover:cursor-pointer"
-                                        }`}
+                                            }`}
                                     >
                                         {page}
                                     </button>

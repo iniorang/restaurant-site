@@ -69,11 +69,11 @@ export default function AboutPage() {
                         />
                     </div>
                     <div className="flex w-full flex-col justify-center md:basis-2/6">
-                        <HeaderWithoutBG
-                            subtitle="A journey driven by purpose"
+                        {/* <HeaderWithoutBG
+                            subtitle=""
                             title={'The Story of "Hati"'}
                             titleId="story-heading"
-                        />
+                        /> */}
                         <div className="space-y-2 text-lg leading-relaxed text-justify">
                             <p>
                                 In Bahasa, “Hati” means heart. It means we pour our hearts into every dish we create, and everything we do. At Warung Hati, we're more than a catering service; we're a journey driven by passion and purpose. Our story began in January 2017, when Farid, a passionate health activist in Surabaya, embarked on a mission to bring health and wellness to the heart of our community.
@@ -92,11 +92,10 @@ export default function AboutPage() {
             <section className="bg-seed-body px-6 py-24 md:px-12" aria-labelledby="commitment-heading">
                 <div className="mx-auto max-w-7xl">
                     <HeaderWithoutBG
-                        subtitle="What we stand for"
+                        subtitle=""
                         title="Warung Hati’s Impact Commitment"
                         titleId="commitment-heading"
                         titleColor="text-seed"
-                        subtitleColor="text-apple-red-bright"
                     />
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {commitments.map((commitment) => (

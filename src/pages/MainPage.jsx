@@ -15,7 +15,7 @@ const contactItems = [
     {
         type: "manual",
         label: "Email",
-        value: ["contact.us","warunghati.com"].join("\u0040"),
+        value: ["info","warunghati.com"].join("\u0040"),
         icon: "fi fi-rr-envelope",
     },
     {
@@ -61,9 +61,9 @@ export default function MainPage() {
             <section className="w-full h-screen landscape:max-xl:h-[180svh] relative overflow-hidden pt-24" id="hero-section">
                 <img src="/assets/img/Utama/NasiCampurBali2.webp" alt="Nasi Campur Bali" className="absolute h-full w-full object-cover brightness-50" />
                 <div className="relative z-5 flex h-full w-full flex-row px-5 items-center justify-start">
-                    <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-apple-cream p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
+                    <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-[#FFFDF7] p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
                         <img src="/assets/img/logo2.png" className="h-auto w-40 landscape:max-xl:w-40 lg:w-52" alt="Warung Hati Logo" />
-                        <h1 className="text-xl font-semibold">
+                        <h1 className="text-sm font-semibold">
                             The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients
                         </h1>
                         <div className="flex items-center gap-5 landscape:max-xl:gap-5 landscape:max-xl:mt-3" id="cta">
@@ -131,7 +131,7 @@ export default function MainPage() {
                         align="text-center"
                         className="items-center"
                     />
-                    <p className="text-lg text-apple-body md:text-center text-start mb-10 max-w-xl">
+                    <p className="text-lg md:text-center text-start mb-10 max-w-xl">
                         Curious about our food, event collaborations, or have a special request?
                         Drop us a line and stay connected with us!
                     </p>
@@ -185,7 +185,7 @@ export default function MainPage() {
                             return isManual ? (
                                 <div
                                     key={item.label}
-                                    className="group flex items-center justify-between py-4 sm:py-5 px-3 sm:px-4 transition-all duration-200 hover:bg-apple-card/40 rounded-xl"
+                                    className="group flex items-center justify-between py-4 sm:py-5 px-3 sm:px-4 transition-all duration-200 hover:bg-apple-card/40"
                                 >
                                     {content}
                                 </div>
@@ -195,7 +195,7 @@ export default function MainPage() {
                                     href={item.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group flex items-center justify-between py-4 sm:py-5 px-3 sm:px-4 transition-all duration-200 hover:bg-apple-card/40 rounded-xl cursor-pointer"
+                                    className="group flex items-center justify-between py-4 sm:py-5 px-3 sm:px-4 transition-all duration-200 hover:bg-apple-card/40 cursor-pointer"
                                 >
                                     {content}
                                 </a>
