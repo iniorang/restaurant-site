@@ -213,7 +213,7 @@ export default function MenuPage() {
                                     disabled={currentPage === 1}
                                     aria-label="Go to first page"
                                     title="First page"
-                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
+                                    className="flex h-8 min-w-7 items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-10 sm:px-2.5 sm:text-sm"
                                 >
                                     <i className="fi fi-rr-angle-double-small-left flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
                                     <span className="hidden md:inline">First</span>
@@ -225,7 +225,7 @@ export default function MenuPage() {
                                     disabled={currentPage === 1}
                                     aria-label="Go to previous page"
                                     title="Previous page"
-                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
+                                    className="flex h-8 min-w-7 items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-10 sm:px-2.5 sm:text-sm"
                                 >
                                     <i className="fi fi-rr-angle-small-left flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
                                     <span className="hidden md:inline">Prev</span>
@@ -242,7 +242,7 @@ export default function MenuPage() {
                                                 : undefined
                                         }
                                         aria-label={`Go to page ${page}`}
-                                        className={`flex h-8 min-w-[28px] items-center justify-center rounded-lg px-1.5 text-xs font-bold transition-colors sm:h-10 sm:w-10 sm:min-w-0 sm:px-0 sm:text-sm ${currentPage === page
+                                        className={`flex h-8 min-w-7 items-center justify-center rounded-lg px-1.5 text-xs font-bold transition-colors sm:h-10 sm:w-10 sm:min-w-0 sm:px-0 sm:text-sm ${currentPage === page
                                             ? "bg-apple-red text-white shadow-xs"
                                             : "bg-apple-card text-apple-heading hover:cursor-pointer hover:bg-apple-red hover:text-white"
                                             }`}
@@ -257,7 +257,7 @@ export default function MenuPage() {
                                     disabled={currentPage === totalPages}
                                     aria-label="Go to next page"
                                     title="Next page"
-                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
+                                    className="flex h-8 min-w-7 items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-10 sm:px-2.5 sm:text-sm"
                                 >
                                     <span className="hidden md:inline">Next</span>
                                     <i className="fi fi-rr-angle-small-right flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
@@ -269,7 +269,7 @@ export default function MenuPage() {
                                     disabled={currentPage === totalPages}
                                     aria-label="Go to last page"
                                     title="Last page"
-                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
+                                    className="flex h-8 min-w-7 items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-10 sm:px-2.5 sm:text-sm"
                                 >
                                     <span className="hidden md:inline">Last</span>
                                     <i className="fi fi-rr-angle-double-small-right flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
