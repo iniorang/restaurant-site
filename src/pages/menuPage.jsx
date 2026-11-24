@@ -66,6 +66,26 @@ export default function MenuPage() {
         firstItemIndex + itemsPerPage
     )
 
+    const maxVisiblePages = 6
+    const visiblePageNumbers = useMemo(() => {
+        if (totalPages <= maxVisiblePages) {
+            return Array.from({ length: totalPages }, (_, index) => index + 1)
+        }
+
+        let startPage = Math.max(1, currentPage - 2)
+        let endPage = startPage + maxVisiblePages - 1
+
+        if (endPage > totalPages) {
+            endPage = totalPages
+            startPage = totalPages - maxVisiblePages + 1
+        }
+
+        return Array.from(
+            { length: endPage - startPage + 1 },
+            (_, index) => startPage + index
+        )
+    }, [currentPage, totalPages])
+
     const changeCategory = (category) => {
         setSelectedCategory(category);
         setCurrentPage(1);
@@ -151,7 +171,7 @@ export default function MenuPage() {
                                         changeCategory(event.target.value)
                                     }
                                     aria-label="Filter menu by category"
-                                    className="w-full rounded-lg border-2 border-accent bg-apple-card px-4 py-3 font-bold text-apple-heading outline-none transition-colors focus:border-accent-dark"
+                                    className="w-full rounded-lg border-2 border-accent bg-apple-card px-4 py-3 font-bold text-apple-red outline-none transition-colors focus:border-accent-dark"
                                 >
                                     {categories.map((category) => (
                                         <option key={category} value={category}>
@@ -184,22 +204,34 @@ export default function MenuPage() {
 
                         {totalPages > 1 && (
                             <nav
-                                className="mt-8 flex flex-wrap items-center justify-center gap-2"
+                                className="mt-8 flex flex-wrap items-center justify-center gap-1 sm:gap-2"
                                 aria-label="Menu pagination"
                             >
                                 <button
                                     type="button"
-                                    onClick={() => changePage(currentPage - 1)}
+                                    onClick={() => changePage(1)}
                                     disabled={currentPage === 1}
-                                    className="rounded-lg bg-accent px-4 py-2 font-bold text-white transition-colors hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-50"
+                                    aria-label="Go to first page"
+                                    title="First page"
+                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
                                 >
-                                    Previous
+                                    <i className="fi fi-rr-angle-double-small-left flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
+                                    <span className="hidden md:inline">First</span>
                                 </button>
 
-                                {Array.from(
-                                    { length: totalPages },
-                                    (_, index) => index + 1
-                                ).map((page) => (
+                                <button
+                                    type="button"
+                                    onClick={() => changePage(currentPage - 1)}
+                                    disabled={currentPage === 1}
+                                    aria-label="Go to previous page"
+                                    title="Previous page"
+                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
+                                >
+                                    <i className="fi fi-rr-angle-small-left flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
+                                    <span className="hidden md:inline">Prev</span>
+                                </button>
+
+                                {visiblePageNumbers.map((page) => (
                                     <button
                                         key={page}
                                         type="button"
@@ -209,9 +241,10 @@ export default function MenuPage() {
                                                 ? "page"
                                                 : undefined
                                         }
-                                        className={`size-10 rounded-lg px-3 py-2 font-bold transition-colors ${currentPage === page
-                                            ? "bg-apple-red text-white"
-                                            : "bg-apple-card text-apple-heading hover:bg-apple-red hover:text-white hover:cursor-pointer"
+                                        aria-label={`Go to page ${page}`}
+                                        className={`flex h-8 min-w-[28px] items-center justify-center rounded-lg px-1.5 text-xs font-bold transition-colors sm:h-10 sm:w-10 sm:min-w-0 sm:px-0 sm:text-sm ${currentPage === page
+                                            ? "bg-apple-red text-white shadow-xs"
+                                            : "bg-apple-card text-apple-heading hover:cursor-pointer hover:bg-apple-red hover:text-white"
                                             }`}
                                     >
                                         {page}
@@ -222,9 +255,24 @@ export default function MenuPage() {
                                     type="button"
                                     onClick={() => changePage(currentPage + 1)}
                                     disabled={currentPage === totalPages}
-                                    className="rounded-lg bg-accent px-4 py-2 font-bold text-white transition-colors hover:cursor-pointer hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-50"
+                                    aria-label="Go to next page"
+                                    title="Next page"
+                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
                                 >
-                                    Next
+                                    <span className="hidden md:inline">Next</span>
+                                    <i className="fi fi-rr-angle-small-right flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
+                                </button>
+
+                                <button
+                                    type="button"
+                                    onClick={() => changePage(totalPages)}
+                                    disabled={currentPage === totalPages}
+                                    aria-label="Go to last page"
+                                    title="Last page"
+                                    className="flex h-8 min-w-[28px] items-center justify-center gap-1 rounded-lg bg-apple-card px-1.5 text-xs font-bold text-apple-heading transition-colors hover:cursor-pointer hover:bg-apple-red hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-apple-card disabled:hover:text-apple-heading sm:h-10 sm:min-w-[40px] sm:px-2.5 sm:text-sm"
+                                >
+                                    <span className="hidden md:inline">Last</span>
+                                    <i className="fi fi-rr-angle-double-small-right flex items-center text-sm leading-none sm:text-base" aria-hidden="true" />
                                 </button>
                             </nav>
                         )}
