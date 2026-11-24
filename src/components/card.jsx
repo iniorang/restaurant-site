@@ -13,9 +13,9 @@ export default function Card({
     const [isLoaded, setIsLoaded] = useState(false)
     return (
         <article className={`flex h-full flex-col bg-apple-card p-4 shadow-xl transition-transform duration-300 hover:scale-[1.01] ${className}`}>
-            <div className={`relative min-h-48 w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700 ${imageClassName}`}>
+            <div className={`relative min-h-48 w-full overflow-hidden bg-neutral-300  ${imageClassName}`}>
                 {!isLoaded && (
-                    <div className="absolute inset-0 animate-pulse bg-neutral-300 dark:bg-neutral-700" />
+                    <div className="absolute inset-0 animate-pulse bg-neutral-300 " />
                 )}
                 <img
                     src={imageUrl}
@@ -38,12 +38,11 @@ export default function Card({
 export function CardSkeleton({ className = "", imageClassName = "aspect-square" }) {
     return (
         <article className={`flex h-full flex-col bg-apple-card p-4 shadow-xl animate-pulse ${className}`}>
-            <div className={`min-h-48 w-full bg-neutral-300 dark:bg-neutral-700 ${imageClassName}`} />
+            <div className={`min-h-48 w-full bg-neutral-300  ${imageClassName}`} />
             <div className="flex flex-1 flex-col px-2 pb-2 pt-4">
-                <div className="mb-2 h-8 w-3/4 rounded bg-neutral-300 dark:bg-neutral-700" />
+                <div className="mb-2 h-8 w-3/4 rounded bg-neutral-300 " />
                 <div className="space-y-2">
-                    <div className="h-4 w-full rounded bg-neutral-200 dark:bg-neutral-800" />
-                    <div className="h-4 w-4/5 rounded bg-neutral-200 dark:bg-neutral-800" />
+                    <div className="h-4 w-full rounded bg-neutral-200 " />
                 </div>
             </div>
         </article>

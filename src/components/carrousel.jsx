@@ -120,9 +120,9 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel", loading
 export function CarrouselSkeleton() {
     return (
         <div className="relative flex h-full w-full flex-col gap-3 bg-apple-card p-3 md:flex-row animate-pulse">
-            <div className="relative h-4/5 w-full overflow-hidden bg-neutral-300 dark:bg-neutral-700 md:h-full md:flex-1">
+            <div className="relative h-4/5 w-full overflow-hidden bg-neutral-300 md:h-full md:flex-1">
                 <div className="absolute bottom-0 left-0 flex h-1/5 landscape:h-1/3 md:h-1/6 landscape:md:h-1/5 w-full items-center bg-black/20 p-5">
-                    <div className="h-8 w-1/2 rounded bg-neutral-200/80 dark:bg-neutral-600/80 md:h-10" />
+                    <div className="h-8 w-1/2 rounded bg-neutral-200/80 md:h-10" />
                 </div>
             </div>
 
@@ -130,7 +130,7 @@ export function CarrouselSkeleton() {
                 {Array.from({ length: 4 }).map((_, i) => (
                     <div
                         key={i}
-                        className="h-full w-1/4 rounded-sm bg-neutral-300 dark:bg-neutral-700 md:h-1/4 md:w-full"
+                        className="h-full w-1/4 rounded-sm bg-neutral-300 md:h-1/4 md:w-full"
                     />
                 ))}
             </div>
