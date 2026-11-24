@@ -44,7 +44,7 @@ export default function MainPage() {
         setTimeout(() => setCopiedLabel(null), 2000)
     }
 
-    const { data } = useLoadJson()
+    const { data, loading } = useLoadJson()
 
     const recommendations = data
         .filter(item => item.featured === true)
@@ -120,7 +120,7 @@ export default function MainPage() {
                         />
                     </div>
                     <div className="mt-2 h-[75vh] w-full mx-auto overflow-hidden self-center container rounded-lg">
-                        <Carrousel items={recommendations.slice(0, 5)} />
+                        <Carrousel items={recommendations.slice(0, 5)} loading={loading} />
                     </div>
                 </div>
             </section>

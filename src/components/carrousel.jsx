@@ -9,24 +9,23 @@ import "swiper/css/effect-fade"
 import "swiper/css/thumbs"
 import "swiper/css/free-mode"
 
-export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
+export default function Carrousel({ items = [], ariaLabel = "Carrousel", loading = false }) {
     const hasMultipleItems = items.length > 1
     const [loadedIndexes, setLoadedIndexes] = useState(() => new Set([0]))
     const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
-    if (items.length === 0) {
+    if (loading) {
         return (
-            <div className="flex h-full items-center justify-center px-6 text-center">
-                <p className="text-lg text-primary">Loading</p>
-            </div>
+            <SkeletonCarrousel/>
         )
     }
+
 
     return (
         <div className="relative flex h-full w-full flex-col gap-3 bg-apple-card p-3 md:flex-row">
             <div className="relative h-4/5 w-full overflow-hidden md:h-full md:flex-1">
                 <Swiper
-                    modules={[Navigation, Pagination, A11y, EffectFade, Autoplay, Thumbs, Mousewheel]}
+                    modules={[Navigation, Pagination, A11y, EffectFade, Autoplay, Thumbs]}
                     thumbs={{
                         swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
                     }}
@@ -69,7 +68,7 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
                                     decoding="async"
                                 />
                             )}
-                            <div className="absolute bottom-0 left-0 flex h-1/5 lg:h-1/6 w-full items-center bg-black/40 p-5">
+                            <div className="absolute bottom-0 left-0 flex h-1/5 landscape:h-1/3 md:h-1/6 landscape:md:h-1/5 w-full items-center bg-black/40 p-5">
                                 <div className="flex flex-col text-white">
                                     <h2 className="text-3xl font-bold md:text-5xl mb-2">
                                         {item.title}
@@ -101,7 +100,7 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
                         {items.map((item, index) => (
                             <SwiperSlide
                                 key={`thumb-${item.id ?? item.imageUrl ?? index}`}
-                                className="group cursor-pointer overflow-hidden border-2 border-transparent opacity-60 transition-all duration-300 hover:opacity-100 [&.swiper-slide-thumb-active]:border-primary [&.swiper-slide-thumb-active]:opacity-100"
+                                className="group relative cursor-pointer overflow-hidden rounded-sm border-2 border-transparent transition-colors duration-300 [&.swiper-slide-thumb-active]:border-apple-red [&.swiper-slide-thumb-active>div]:opacity-0"
                             >
                                 <img
                                     src={item.imageUrl}
@@ -110,6 +109,7 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
                                     loading="lazy"
                                     decoding="async"
                                 />
+                                <div className="pointer-events-none absolute inset-0 bg-white/50 transition-opacity duration-300 ease-in-out group-hover:opacity-0" />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -117,4 +117,22 @@ export default function Carrousel({ items = [], ariaLabel = "Carrousel" }) {
             )}
         </div>
     )
+}
+
+export function SkeletonCarrousel() {
+    return (
+        <div className="relative flex h-full w-full flex-col gap-3 bg-apple-card p-3 md:flex-row animate-pulse">
+            <div className="relative h-4/5 w-full rounded-lg bg-neutral-300 dark:bg-neutral-700 md:h-full md:flex-1 flex items-end p-6">
+                <div className="h-8 w-1/2 rounded bg-neutral-400 dark:bg-neutral-600" />
+            </div>
+            <div className="hidden h-full flex-col gap-3 md:flex md:w-36 lg:w-64">
+                {Array.from({ length: 4 }).map((_, i) => (
+                    <div
+                        key={i}
+                        className="h-1/4 w-full rounded bg-neutral-300 dark:bg-neutral-700"
+                    />
+                ))}
+            </div>
+        </div>
+    );
 }
