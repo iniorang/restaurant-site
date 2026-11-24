@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, TextButton } from "../components/button";
 import { HeaderWithoutBG } from "../components/header";
 import useLoadJson from "../hook/useLoadJson";
+import useParallax from "../hook/useParallax";
 import Carrousel from "../components/carrousel";
 
 const contactItems = [
@@ -36,6 +37,7 @@ const contactItems = [
 
 export default function MainPage() {
     const navigate = useNavigate()
+    const heroBgRef = useParallax(0.35)
     const [copiedLabel, setCopiedLabel] = useState(null)
 
     const handleCopy = (label, text) => {
@@ -59,9 +61,14 @@ export default function MainPage() {
     return (
         <main>
             <section className="w-full h-screen landscape:max-xl:h-[180svh] relative overflow-hidden pt-24" id="hero-section">
-                <img src="/assets/img/Utama/NasiCampurBali2.webp" alt="Nasi Campur Bali" className="absolute h-full w-full object-cover brightness-50" />
+                <img 
+                    ref={heroBgRef}
+                    src="/assets/img/Utama/NasiCampurBali2.webp" 
+                    alt="Nasi Campur Bali" 
+                    className="absolute inset-0 h-[125%] w-full object-cover brightness-50 will-change-transform pointer-events-none" 
+                />
                 <div className="relative z-5 flex h-full w-full flex-row px-5 items-center justify-start">
-                    <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-[#FFFDF7] p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
+                    <div className="flex flex-col justify-center gap-y-3 landscape:max-xl:gap-y-4 landscape:max-xl:w-1/2 landscape:max-xl:p-10 bg-apple-cream p-10 sm:w-1/2 lg:w-1/3 h-fit self-center">
                         <img src="/assets/img/logo2.png" className="h-auto w-40 landscape:max-xl:w-40 lg:w-52" alt="Warung Hati Logo" />
                         <h1 className="lg:text-lg font-semibold">
                             The Authentic Indonesia’s Heritage Cuisine with Organic and Natural Ingredients
