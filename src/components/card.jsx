@@ -23,7 +23,7 @@ export default function Card({
                     loading={loadMode}
                     decoding="async"
                     onLoad={() => setIsLoaded(true)}
-                    className={`h-full w-full object-cover transition-opacity duration-500 ${isLoaded ? "opacity-100" : "opacity-0"
+                    className={`h-full w-full object-cover transition-opacity duration-500 ${isLoaded ? "opacity-100" : "opacity-0 "
                         }`}
                 />
             </div>
@@ -35,12 +35,12 @@ export default function Card({
     )
 }
 
-export function CardSkeleton({ className = "" }) {
+export function CardSkeleton({ className = "", imageClassName = "aspect-square" }) {
     return (
         <article className={`flex h-full flex-col bg-apple-card p-4 shadow-xl animate-pulse ${className}`}>
-            <div className="min-h-48 w-full aspect-square bg-neutral-300 dark:bg-neutral-700 rounded-md" />
+            <div className={`min-h-48 w-full bg-neutral-300 dark:bg-neutral-700 ${imageClassName}`} />
             <div className="flex flex-1 flex-col px-2 pb-2 pt-4">
-                <div className="mb-3 h-7 w-3/4 rounded bg-neutral-300 dark:bg-neutral-700" />
+                <div className="mb-2 h-8 w-3/4 rounded bg-neutral-300 dark:bg-neutral-700" />
                 <div className="space-y-2">
                     <div className="h-4 w-full rounded bg-neutral-200 dark:bg-neutral-800" />
                     <div className="h-4 w-4/5 rounded bg-neutral-200 dark:bg-neutral-800" />
