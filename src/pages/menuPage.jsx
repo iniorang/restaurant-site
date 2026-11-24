@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { HeaderWithBG } from "../components/header";
-import Card from "../components/card";
+import Card, { CardSkeleton } from "../components/card";
 import { Button } from "../components/button";
 import UseLoadJson from "../hook/useLoadJson";
 
@@ -131,9 +131,11 @@ export default function MenuPage() {
                         </button>
                     </div>
                 ) : loading ? (
-                    <p className="py-10 text-center text-seed-body">
-                        Hang on while we load the our best dishes...
-                    </p>
+                    <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
+                        {Array.from({ length: itemsPerPage }).map((_, i) => (
+                            <CardSkeleton key={i} />
+                        ))}
+                    </div>
                 ) : (
                     <>
                         <div
@@ -173,7 +175,7 @@ export default function MenuPage() {
                                         description={item.description}
                                         imageUrl={item.imageUrl}
                                         alt={item.alt}
-                                        loadmode="eager"
+                                        loadMode="eager"
                                         descriptionClassName="line-clamp-5"
                                     />
                                 ))}
@@ -208,8 +210,8 @@ export default function MenuPage() {
                                                 : undefined
                                         }
                                         className={`size-10 rounded-lg px-3 py-2 font-bold transition-colors ${currentPage === page
-                                                ? "bg-apple-red text-white"
-                                                : "bg-apple-card text-apple-heading hover:bg-apple-red hover:text-white hover:cursor-pointer"
+                                            ? "bg-apple-red text-white"
+                                            : "bg-apple-card text-apple-heading hover:bg-apple-red hover:text-white hover:cursor-pointer"
                                             }`}
                                     >
                                         {page}
