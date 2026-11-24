@@ -60,7 +60,7 @@ export default function AboutPage() {
                 aria-labelledby="story-heading"
                 id="story-section"
             >
-                <div className="container mx-auto flex w-full flex-col items-center justify-center gap-10 md:flex-row">
+                <div className="container mx-auto flex w-full items-center justify-center lg:landscape:flex-row flex-col landscape:flex-col">
                     <div className="w-full overflow-hidden rounded-lg p-5 md:basis-3/5">
                         <img
                             src="/assets/img/aboutus/HealthyFoodEducationtoYoungsters3.webp"
@@ -69,11 +69,6 @@ export default function AboutPage() {
                         />
                     </div>
                     <div className="flex w-full flex-col justify-center md:basis-2/6">
-                        {/* <HeaderWithoutBG
-                            subtitle=""
-                            title={'The Story of "Hati"'}
-                            titleId="story-heading"
-                        /> */}
                         <div className="space-y-2 text-lg leading-relaxed text-justify">
                             <p>
                                 In Bahasa, “Hati” means heart. It means we pour our hearts into every dish we create, and everything we do. At Warung Hati, we're more than a catering service; we're a journey driven by passion and purpose. Our story began in January 2017, when Farid, a passionate health activist in Surabaya, embarked on a mission to bring health and wellness to the heart of our community.
@@ -91,12 +86,7 @@ export default function AboutPage() {
 
             <section className="bg-seed-body px-6 py-24 md:px-12" aria-labelledby="commitment-heading">
                 <div className="mx-auto max-w-7xl">
-                    <HeaderWithoutBG
-                        subtitle=""
-                        title="Warung Hati’s Impact Commitment"
-                        titleId="commitment-heading"
-                        titleColor="text-seed"
-                    />
+                    <h2 className="text-seed text-5xl font-extrabold mb-6 leading-tight">Warung Hati’s Impact Commitment</h2>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {commitments.map((commitment) => (
                             <Card
