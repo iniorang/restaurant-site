@@ -19,7 +19,6 @@ export default function useParallax(speed = 0.35) {
             animationFrameId = requestAnimationFrame(handleScroll);
         };
 
-        // Jalankan sekali saat pertama kali di-load agar langsung sinkron tanpa pop/jump
         handleScroll();
 
         window.addEventListener("scroll", onScroll, { passive: true });
