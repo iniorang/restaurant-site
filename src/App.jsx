@@ -7,6 +7,7 @@ import MainPage from './pages/MainPage'
 import MenuPage from './pages/menuPage'
 import AboutPage from './pages/aboutPage'
 import PlansPage from './pages/plansPage'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/aboutus" element={<AboutPage />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/mealplans" element={<PlansPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
